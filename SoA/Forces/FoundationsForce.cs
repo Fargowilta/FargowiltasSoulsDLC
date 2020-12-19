@@ -47,6 +47,8 @@ Effects of Frigid Pendant, Lapis Pendant, and Dreadflame Emblem");
 
             ModdedPlayer modPlayer = player.GetModPlayer<ModdedPlayer>();
 
+            //lapis pendant
+            modPlayer.LapisPendant = true;
             //frosthunter
             modPlayer.frostburnRanged = true;
             //frigid pendant

@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using FargowiltasSouls.Items.Misc;
 
 namespace FargowiltasSoulsDLC.Calamity.Souls
 {
@@ -112,9 +113,9 @@ Summons several pets");
             recipe.AddIngredient(null, "DevastationForce");
             recipe.AddIngredient(null, "DesolationForce");
             recipe.AddIngredient(null, "ExaltationForce");
-            //recipe.AddIngredient(null, "MutantScale", 10);
+            recipe.AddIngredient(ModContent.ItemType<MutantScale>(), 10);
 
-            recipe.AddTile(calamity, "DraedonsForge");
+            recipe.AddTile(ModLoader.GetMod("Fargowiltas").TileType("CrucibleCosmosSheet"));
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

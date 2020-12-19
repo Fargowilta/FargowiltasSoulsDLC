@@ -25,7 +25,8 @@ namespace FargowiltasSoulsDLC.SoA.Enchantments
 Dealing damage charges up an energy forcefield around you that damages enemies and decays over time 
 Can be instantly discharged by pressing [Ability], which will cause a shockwave to damage all nearby enemies 
 Damage, range and debuff duration are increased by forcefield strength 
-Has a cooldown of 1 minute");
+Has a cooldown of 1 minute
+Damaging enemies will occasionally call upon a meteor to fall from the sky");
             DisplayName.AddTranslation(GameCulture.Chinese, "火星科技魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'有了科技, 谁还需要魔法呢?'

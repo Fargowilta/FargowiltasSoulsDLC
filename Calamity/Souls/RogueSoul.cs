@@ -85,7 +85,7 @@ Effects of Eclipse Mirror, Nanotech, Venerated Locket, and Dragon Scales");
             recipe.AddIngredient(ModContent.ItemType<Celestus>());
             recipe.AddIngredient(ModContent.ItemType<ScarletDevil>());
 
-            recipe.AddTile(ModLoader.GetMod("FargowiltasSoulsDLC").TileType("CrucibleCosmosSheet"));
+            recipe.AddTile(ModLoader.GetMod("Fargowiltas").TileType("CrucibleCosmosSheet"));
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

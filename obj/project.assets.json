@@ -9,10 +9,12 @@
   },
   "libraries": {
     "tModLoader.CodeAssist/0.1.1": {
-      "sha512": "mX0SfS72ADg1viuaR1AgKsGs4uuTzn0Gw3EEkhRZ+aTZiVfSoW4umxs36ou3QXvQCRrSM5W00H2+LjGqHezTJg==",
+      "sha512": "bUQ4HAiRYq8Zisms7FI9ffSf4nZHwFFZU5j8Hpc/9rFB16GOGJg2ulHV0ZDErzoAAbXBeRdO8/VbSltBwmDcpA==",
       "type": "package",
       "path": "tmodloader.codeassist/0.1.1",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "NugetIcon.png",
         "analyzers/dotnet/cs/tModLoader.CodeAssist.dll",
@@ -29,30 +31,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liam\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\leele\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liam\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\FargowiltasSoulsDLC.csproj",
+      "projectUniqueName": "C:\\Users\\leele\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\FargowiltasSoulsDLC.csproj",
       "projectName": "FargowiltasSoulsDLC",
-      "projectPath": "C:\\Users\\Liam\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\FargowiltasSoulsDLC.csproj",
-      "packagesPath": "C:\\Users\\Liam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liam\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\obj\\",
+      "projectPath": "C:\\Users\\leele\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\FargowiltasSoulsDLC.csproj",
+      "packagesPath": "C:\\Users\\leele\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leele\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Liam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\leele\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net45"
@@ -79,7 +71,8 @@
             "target": "Package",
             "version": "[0.1.*, )"
           }
-        }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

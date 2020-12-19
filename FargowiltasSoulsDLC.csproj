@@ -18,10 +18,7 @@
       <HintPath>..\folder for wip\CalamityMod.XNA.dll</HintPath>
     </Reference>
     <Reference Include="FargowiltasSouls">
-      <HintPath>..\folder for wip\FargowiltasSouls.dll</HintPath>
-    </Reference>
-    <Reference Include="FargowiltasSouls">
-      <HintPath>..\folder for wip\FargowiltasSouls.dll</HintPath>
+      <HintPath>..\folder for wip\FargowiltasSouls.XNA.dll</HintPath>
     </Reference>
     <Reference Include="SacredTools">
       <HintPath>..\folder for wip\SacredTools\SacredTools.dll</HintPath>

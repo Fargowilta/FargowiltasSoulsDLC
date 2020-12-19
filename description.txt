@@ -1,0 +1,14 @@
+Fargo's Soul Mod DLC
+-This mod adds all cross mod support and a few other things that don't exactly fit in with the main mod
+-Fargo's Soul Mod is required for this mod to work
+
+V 0.1
+-Added all Thorium, Calamity, Shadows of Abaddon, and Dragon Ball Terraria Souls and Enchantments
+-Added Pandora's Box and Pandora's Tome
+-Added Guntera and Celing of Moon Lord
+
+
+V 0.2
+-Added EchDeath
+-Fixed modded souls not needing Abominable Energy
+-Fixed a few recipe issues

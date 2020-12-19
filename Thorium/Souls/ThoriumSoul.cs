@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
+using FargowiltasSouls.Items.Misc;
 
 namespace FargowiltasSoulsDLC.Thorium.Souls
 {
@@ -108,7 +109,7 @@ Summons several pets");
             recipe.AddIngredient(null, "VanaheimForce");
             recipe.AddIngredient(null, "HelheimForce");
             recipe.AddIngredient(null, "AsgardForce");
-            //recipe.AddIngredient(null, "MutantScale", 10);
+            recipe.AddIngredient(ModContent.ItemType<MutantScale>(), 10);
 
             recipe.AddTile(ModLoader.GetMod("Fargowiltas").TileType("CrucibleCosmosSheet"));
 
