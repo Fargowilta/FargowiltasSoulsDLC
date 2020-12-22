@@ -34,6 +34,22 @@ namespace FargowiltasSoulsDLC.Base.Items
         public override bool UseItem(Player player)
         {
             Tile centerTile = Framing.GetTileSafely(player.Center);
+            
+            if (centerTile.type == ModLoader.GetMod("Fargowiltas").TileType("EchPaintingSheet")
+                && centerTile.wall == WallID.LihzahrdBrickUnsafe && Main.eclipse && Main.moonPhase == 0
+                && NPC.AnyNPCs(NPCID.DungeonGuardian)
+                && player.controlUp && player.controlDown && !player.controlLeft && !player.controlRight)
+            {
+                Tile floorTile = Framing.GetTileSafely(new Vector2(player.Center.X, player.position.Y + player.height + 8));
+                if (floorTile.type == TileID.LunarBrick)
+                {
+                    int type = mod.NPCType("Echdeath");
+                    NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
+                    Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
+                    return true;
+                }
+            }
+            
             if (centerTile.type == TileID.PlanteraBulb) //spawn guntera when in front of bulb
             {
                 int type = ModContent.NPCType<NPCs.Guntera.Guntera>();
