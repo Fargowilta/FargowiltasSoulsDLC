@@ -54,9 +54,9 @@ Effects of Crietz, Band of Replenishment, and Fan Letter");
             //diverman meme
             modPlayer.ThoriumEnchant = true;
             //crietz
-            thoriumPlayer.crietzAcc = true;
+            //thoriumPlayer.crietzAcc = true;
             //band of replenish
-            thoriumPlayer.BandofRep = true;
+            thoriumPlayer.accReplenishment = true;
             //jester bonus
             modPlayer.JesterEnchant = true;
             //fan letter

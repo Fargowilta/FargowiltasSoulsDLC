@@ -47,7 +47,7 @@ Summons a living wood sapling and its attacks will home in on enemies");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
-            thoriumPlayer.livingWood = true;
+            thoriumPlayer.setLivingWood = true;
             //free boi
             modPlayer.LivingWoodEnchant = true;
             modPlayer.AddMinion(SoulConfig.Instance.thoriumToggles.SaplingMinion, thorium.ProjectileType("MinionSapling"), 10, 2f);

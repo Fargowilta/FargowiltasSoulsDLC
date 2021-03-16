@@ -91,7 +91,7 @@ Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
             recipe.AddIngredient(ModContent.ItemType<CrystalSpearTip>());
             recipe.AddIngredient(ModContent.ItemType<DurasteelRepeater>());
             recipe.AddIngredient(ModContent.ItemType<SpudBomber>());
-            recipe.AddIngredient(ModContent.ItemType<ThiefDagger>());
+            //recipe.AddIngredient(ModContent.ItemType<ThiefDagger>());
             recipe.AddIngredient(ModContent.ItemType<SeaMine>());
 
             recipe.AddTile(TileID.CrystalBall);

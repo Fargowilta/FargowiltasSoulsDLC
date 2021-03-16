@@ -62,7 +62,7 @@ Summons a pet Flying Blister");
             //demon blood badge
             thoriumPlayer.CrimsonBadge = true;
             //vile core
-            thoriumPlayer.vileCore = true;
+            thoriumPlayer.accVileCore = true;
             //flesh set bonus
             thoriumPlayer.Symbiotic = true;
             //vampire gland

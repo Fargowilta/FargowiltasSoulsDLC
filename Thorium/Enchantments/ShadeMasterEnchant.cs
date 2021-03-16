@@ -47,7 +47,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
-            thoriumPlayer.shadeSet = true;
+            thoriumPlayer.setShade = true;
         }
 
         public override void AddRecipes()

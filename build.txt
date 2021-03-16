@@ -1,5 +1,5 @@
 displayName = Fargo's Soul Mod DLC
 author = Fargowilta and Terry N Muse
-version = 0.1
+version = 0.2.2
 modReferences = FargowiltasSouls@1.3.90
 weakReferences = ThoriumMod@1.6.2.0, CalamityMod@1.4.2.107, DBZMOD@1.0.9.4, SacredTools@1.1.0.8

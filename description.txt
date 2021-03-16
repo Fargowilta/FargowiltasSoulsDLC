@@ -7,8 +7,13 @@ V 0.1
 -Added Pandora's Box and Pandora's Tome
 -Added Guntera and Celing of Moon Lord
 
-
 V 0.2
--Added EchDeath
+-Added EchDeath and a spawn method 
 -Fixed modded souls not needing Abominable Energy
 -Fixed a few recipe issues
+
+V 0.2.1
+-Fixed Thorium incompatability
+
+V 0.2.2
+-Fixed Thorium incompatability again

@@ -82,7 +82,7 @@ Summons several pets");
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.IcyBarrier))
             {
                 //icy set bonus
-                thoriumPlayer.icySet = true;
+                thoriumPlayer.setIcy = true;
                 if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
                 {
                     Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("IcyAura"), 0, 0f, player.whoAmI, 0f, 0f);

@@ -54,7 +54,7 @@ Effects of Inner Flame");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
-            thoriumPlayer.spiritTrapper = true;
+            thoriumPlayer.setSpiritTrapper = true;
             modPlayer.SpiritTrapperEnchant = true;
             //inner flame
             thoriumPlayer.spiritFlame = true;

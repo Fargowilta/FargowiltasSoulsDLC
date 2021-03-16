@@ -69,7 +69,7 @@ Effects of Crietz and Terrarium Surround Sound");
             }
 
             //shade
-            thoriumPlayer.shadeSet = true;
+            thoriumPlayer.setShade = true;
 
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.TerrariumSpirits))
             {
@@ -94,7 +94,7 @@ Effects of Crietz and Terrarium Surround Sound");
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.Crietz))
             {
                 //crietz
-                thoriumPlayer.crietzAcc = true;
+                //thoriumPlayer.crietzAcc = true;
             }
 
             if (modPlayer.ThoriumSoul) return;

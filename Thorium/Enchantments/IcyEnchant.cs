@@ -48,7 +48,7 @@ An icy aura surrounds you, which freezes nearby enemies after a short delay");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
-            thoriumPlayer.icySet = true;
+            thoriumPlayer.setIcy = true;
             if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
             {
                 Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("IcyAura"), 0, 0f, player.whoAmI, 0f, 0f);

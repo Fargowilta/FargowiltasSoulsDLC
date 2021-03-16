@@ -87,9 +87,9 @@ Effects of Terrarium Surround Sound and Fan Letter");
             //diverman meme
             modPlayer.ThoriumEnchant = true;
             //crietz
-            thoriumPlayer.crietzAcc = true;
+            //thoriumPlayer.crietzAcc = true;
             //band of replenishment
-            thoriumPlayer.BandofRep = true;
+            thoriumPlayer.accReplenishment = true;
             //jester bonus
             modPlayer.JesterEnchant = true;
             //fan letter

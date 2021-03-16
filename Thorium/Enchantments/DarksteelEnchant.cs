@@ -87,7 +87,7 @@ Effects of Spiked Bracer");
             recipe.AddIngredient(ModContent.ItemType<gDarkSteelCrossBow>());
             recipe.AddIngredient(ModContent.ItemType<ElephantGun>());
             recipe.AddIngredient(ModContent.ItemType<StrongestLink>());
-            recipe.AddIngredient(ModContent.ItemType<DarksteelHelmetStand>());
+            //recipe.AddIngredient(ModContent.ItemType<DarksteelHelmetStand>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

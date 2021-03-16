@@ -69,7 +69,7 @@ Summons several pets");
 
             //spirit trapper
             modPlayer.SpiritTrapperEnchant = true;
-            thoriumPlayer.spiritTrapper = true;
+            thoriumPlayer.setSpiritTrapper = true;
             //inner flame
             thoriumPlayer.spiritFlame = true;
 

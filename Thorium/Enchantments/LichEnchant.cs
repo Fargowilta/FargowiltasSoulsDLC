@@ -53,7 +53,7 @@ Effects of Lich's Gaze");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //plague effect
-            thoriumPlayer.plagueSet = true;
+            thoriumPlayer.setPlague = true;
             //lich effect
             modPlayer.LichEnchant = true;
             //lich gaze

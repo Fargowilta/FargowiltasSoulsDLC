@@ -85,7 +85,7 @@ Summons a pet Wyvern");
             player.moveSpeed -= 0.15f;
             player.maxRunSpeed -= 1f;
             //cursed core
-            thoriumPlayer.cursedCore = true;
+            thoriumPlayer.accCursedCore = true;
             //dragon 
             thoriumPlayer.dragonSet = true;
             //dragon tooth necklace

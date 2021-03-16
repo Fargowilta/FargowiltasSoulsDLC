@@ -50,7 +50,7 @@ Your plague gas will linger in the air twice as long and your plague reactions w
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //plague effect
-            thoriumPlayer.plagueSet = true;
+            thoriumPlayer.setPlague = true;
         }
 
         public override void AddRecipes()

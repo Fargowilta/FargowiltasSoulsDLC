@@ -22,7 +22,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
         
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bulb Enchantment");
+            DisplayName.SetDefault("Blooming Enchantment");
             Tooltip.SetDefault(
 @"'Has a surprisingly sweet aroma'
 Your damage has a chance to poison hit enemies with a spore cloud
@@ -72,9 +72,9 @@ Effects of Bee Booties and Petal Shield, and Kick Petal");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<BulbHood>());
-            recipe.AddIngredient(ModContent.ItemType<BulbChestplate>());
-            recipe.AddIngredient(ModContent.ItemType<BulbLeggings>());
+            //recipe.AddIngredient(ModContent.ItemType<BloomingCrown>());
+            //recipe.AddIngredient(ModContent.ItemType<BloomingTabard>());
+            //recipe.AddIngredient(ModContent.ItemType<BloomingLeggings>());
             recipe.AddIngredient(ModContent.ItemType<PetalShield>());
             recipe.AddIngredient(ModContent.ItemType<KickPetal>());
             recipe.AddIngredient(ModContent.ItemType<BeeBoots>());

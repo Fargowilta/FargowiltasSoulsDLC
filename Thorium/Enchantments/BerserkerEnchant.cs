@@ -101,7 +101,7 @@ Effects of Spring Steps and Slag Stompers");
             recipe.AddIngredient(ModContent.ItemType<MagmaEnchant>());
             recipe.AddIngredient(ModContent.ItemType<BerserkBlade>());
             recipe.AddIngredient(ModContent.ItemType<DoomFireAxe>());
-            recipe.AddIngredient(ModContent.ItemType<SurtrsSword>());
+            //recipe.AddIngredient(ModContent.ItemType<SurtrsSword>());
             recipe.AddIngredient(ModContent.ItemType<ThermogenicImpaler>());
             recipe.AddIngredient(ItemID.BreakerBlade);
 

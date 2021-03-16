@@ -60,7 +60,7 @@ Effects of Lich's Gaze and Ascension Statuette");
             //lich gaze
             thoriumPlayer.lichGaze = true;
             //plague doctor
-            thoriumPlayer.plagueSet = true;
+            thoriumPlayer.setPlague = true;
 
             //white dwarf
             modPlayer.WhiteDwarfEnchant = true;

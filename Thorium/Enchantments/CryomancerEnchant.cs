@@ -60,7 +60,7 @@ Summons a pet Owl");
             //pets
             modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.OwlPet, hideVisual, thorium.BuffType("SnowyOwlBuff"), thorium.ProjectileType("SnowyOwlPet"));
             //icy set bonus
-            thoriumPlayer.icySet = true;
+            thoriumPlayer.setIcy = true;
             if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
             {
                 Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("IcyAura"), 0, 0f, player.whoAmI, 0f, 0f);

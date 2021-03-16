@@ -419,7 +419,7 @@ namespace FargowiltasSoulsDLC
                 }
                 if (target.boss || NPCID.Sets.BossHeadTextures[target.type] > -1)
                 {
-                    thoriumPlayer.spiritTrapperHit++;
+                    thoriumPlayer.setSpiritTrapperHit++;
                 }
             }
 
@@ -458,7 +458,7 @@ namespace FargowiltasSoulsDLC
             }
 
             //life bloom
-            if (LifeBloomEnchant && target.type != NPCID.TargetDummy && Main.rand.Next(4) == 0 && thoriumPlayer.lifeBloomMax < 50)
+            if (LifeBloomEnchant && target.type != NPCID.TargetDummy && Main.rand.Next(4) == 0 && thoriumPlayer.setLifeBloomMax < 50)
             {
                 for (int l = 0; l < 10; l++)
                 {
@@ -468,7 +468,7 @@ namespace FargowiltasSoulsDLC
                 int num8 = Main.rand.Next(1, 4);
                 player.statLife += num8;
                 player.HealEffect(num8, true);
-                thoriumPlayer.lifeBloomMax += num8;
+                thoriumPlayer.setLifeBloomMax += num8;
             }
 
             //demon blood
@@ -534,7 +534,7 @@ namespace FargowiltasSoulsDLC
                 }
                 if (target.boss || NPCID.Sets.BossHeadTextures[target.type] > -1)
                 {
-                    thoriumPlayer.spiritTrapperHit++;
+                    thoriumPlayer.setSpiritTrapperHit++;
                 }
             }
 
@@ -573,7 +573,7 @@ namespace FargowiltasSoulsDLC
             }
 
             //life bloom
-            if (LifeBloomEnchant && target.type != NPCID.TargetDummy && Main.rand.Next(4) == 0 && thoriumPlayer.lifeBloomMax < 50)
+            if (LifeBloomEnchant && target.type != NPCID.TargetDummy && Main.rand.Next(4) == 0 && thoriumPlayer.setLifeBloomMax < 50)
             {
                 for (int l = 0; l < 10; l++)
                 {
@@ -583,7 +583,7 @@ namespace FargowiltasSoulsDLC
                 int num8 = Main.rand.Next(1, 4);
                 player.statLife += num8;
                 player.HealEffect(num8, true);
-                thoriumPlayer.lifeBloomMax += num8;
+                thoriumPlayer.setLifeBloomMax += num8;
             }
 
             //demon blood

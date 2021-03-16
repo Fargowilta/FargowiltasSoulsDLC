@@ -62,7 +62,7 @@ Summons a pet Glitter");
             //chrysalis
             thoriumPlayer.cocoonAcc = true;
             //living wood set bonus
-            thoriumPlayer.livingWood = true;
+            thoriumPlayer.setLivingWood = true;
             //free boi
             modPlayer.LivingWoodEnchant = true;
             modPlayer.AddMinion(SoulConfig.Instance.thoriumToggles.SaplingMinion, thorium.ProjectileType("MinionSapling"), 10, 2f);
