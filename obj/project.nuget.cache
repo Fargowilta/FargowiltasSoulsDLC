@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/dYe6viJjq8IfAQqEmOgrx3AO/rOFT5AtXR20+su82leu4Lr5D+fRExwyy/xu7noA7I/a6jzP9lxkJ9JHR6emw==",
+  "dgSpecHash": "PAEgxvRwvhZ2QFsNw3fWOxggyiS2ikj7qH2qMLTq2R2O5r2BcqIdWg+vCEpi81jhi3CCRwG14X24+jbLOn18HQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leele\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\FargowiltasSoulsDLC.csproj",
+  "projectFilePath": "C:\\Users\\Stevie\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\FargowiltasSoulsDLC\\FargowiltasSoulsDLC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\leele\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
+    "C:\\Users\\Stevie\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
   ],
   "logs": []
 }
