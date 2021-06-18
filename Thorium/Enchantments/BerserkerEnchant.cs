@@ -32,12 +32,10 @@ Effects of Spring Steps and Slag Stompers");
             DisplayName.AddTranslation(GameCulture.Chinese, "狂战士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'我更愿意为自己的生命而战斗, 而不只是为活而活'
-生命值每下降25%, 增加15%伤害
-随着时间的推移,被你点燃或烧伤的敌人会受到额外的伤害
-点燃附近敌人
-死亡时剧烈爆炸,造成大量伤害
-拥有弹簧鞋和熔渣重踏的效果
-拥有炽热枪尖和橙色播放器的效果");
+生命值每下降25%, 增加5%伤害
+火焰围绕着你的盔甲和近战武器
+被你点燃或烧伤的敌人会受到额外的持续伤害
+拥有弹簧鞋和熔渣重踏的效果");
         }
 
         public override void SetDefaults()
