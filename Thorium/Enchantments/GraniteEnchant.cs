@@ -30,8 +30,8 @@ Effects of Eye of the Storm");
             DisplayName.AddTranslation(GameCulture.Chinese, "花岗岩魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'防御激增'
-免疫火块灼烧和击退，但大幅度降低移动速度
-拥有风暴之眼和充能音箱的效果");
+免疫炎热和击退但会降低你的移速
+拥有风暴之眼的效果");
         }
 
         public override void SetDefaults()
