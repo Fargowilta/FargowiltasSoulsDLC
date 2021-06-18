@@ -38,7 +38,7 @@ Effects of Spiked Bracer");
 没有什么能阻止你的移动
 获得冲刺能力
 免疫蹒跚者的链球效果
-拥有尖刺索的效果");
+拥有尖刺锁的效果");
         }
 
         public override void SetDefaults()
