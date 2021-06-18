@@ -29,16 +29,16 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 The energy of Terraria seeks to protect you
 Shortlived Divermen will occasionally spawn when hitting enemies
 Critical strikes ring a bell over your head, slowing all nearby enemies briefly
-Effects of Crietz and Band of Replenishmen
+Effects of Crietz and Band of Replenishment
 Effects of Terrarium Surround Sound and Fan Letter");
             DisplayName.AddTranslation(GameCulture.Chinese, "元素之灵魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'万物都臣服于你的力量...'
-泰拉瑞亚的能量试图保护你
+泰拉瑞亚的元素之灵会守卫着你
 攻击敌人时偶尔会召唤暂时存在的潜水员
-暴击短暂缓慢所有附近敌人
+暴击时会奏响头顶的铃铛，微幅减速周围所有敌人
 拥有精准项链和大恢复戒指的效果
-拥有粉丝的信函和界元音箱的效果");
+拥有界元音箱和粉丝的信函的效果");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
