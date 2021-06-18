@@ -27,8 +27,8 @@ Effects of Equalizer");
             DisplayName.AddTranslation(GameCulture.Chinese, "光辉魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'五颜六色'
-光辉伤害有15%的概率造成闪光爆炸
-闪光爆炸将迷惑敌人并治疗附近队友(受额外治疗量影响)
+你的光辉伤害有15%几率释放光之火
+治疗周围友军量等于你的额外治疗量并令敌人混乱
 拥有平等护符的效果");
         }
 
