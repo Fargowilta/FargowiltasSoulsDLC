@@ -22,9 +22,9 @@ namespace FargowiltasSoulsDLC.SoA.Forces
 @"':HeyMF:'
 All armor bonuses from Prairie, Frosthunter, Lapis, and Blightbone
 Effects of Frigid Pendant, Lapis Pendant, and Dreadflame Emblem");
-            DisplayName.AddTranslation(GameCulture.Chinese, "世代之力");
+            DisplayName.AddTranslation(GameCulture.Chinese, "基层之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
-@"'这么多年来, 从未出现过像你这样的人'
+@"''
 拥有Prairie, 霜冻猎人，青金石和荒骨的套装效果
 拥有青金石挂饰, 极寒吊坠和南瓜护身符的效果");
         }
