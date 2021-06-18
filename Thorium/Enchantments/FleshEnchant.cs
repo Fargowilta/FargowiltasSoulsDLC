@@ -31,9 +31,9 @@ Summons a pet Flying Blister");
             DisplayName.AddTranslation(GameCulture.Chinese, "血肉魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'与你共生'
-连续攻击敌人时概率掉落肉, 拾取肉会获得额外生命并增加伤害
+连续攻击敌人时概率掉落肉，拾起肉时增加生命值和伤害
 拥有吸血鬼试剂的效果
-召唤宠物泡泡虫");
+召唤泡泡虫宠物");
         }
 
         public override void SetDefaults()
