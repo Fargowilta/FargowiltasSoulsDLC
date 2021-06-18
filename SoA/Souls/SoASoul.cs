@@ -41,8 +41,7 @@ Effects of Ring of the Fallen, Memento Mori, and Arcanum of the Caster");
 拥有阿斯德罗特的套装效果
 拥有恐惧火焰徽记, 青金石挂饰, 极寒吊坠和南瓜护身符的效果
 拥有努巴的祝福, 诺瓦尼尔的决心和天体星环的效果
-拥有堕落之戒, 死亡意志和魔法奥秘的效果
-召唤数个宠物");
+拥有堕落之戒, 死亡意志和魔法奥秘的效果");
         }
 
         public override void SetDefaults()
