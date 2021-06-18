@@ -28,8 +28,8 @@ Effects of Ring of Unity and Waxy Rosin");
             DisplayName.AddTranslation(GameCulture.Chinese, "贵族魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'富有, 并且有教养'
-咒音Buff能额外持续5秒
-拥有杂集磁带, 团结之戒和恶魔音箱的效果");
+灵感音符掉率翻倍并微幅增加音波伤害
+拥有团结之戒和蜡质松香的效果");
         }
 
         public override void SetDefaults()
