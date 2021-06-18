@@ -29,7 +29,7 @@ Effects of Night Shade Petal
 Summons a pet Glitter");
             DisplayName.AddTranslation(GameCulture.Chinese, "致危魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
-@"'乘险抵巇'
+@"'更加致命'
 免疫霜冻，中毒，着火了！，流血和毒液减益
 拥有影缀花的效果
 召唤闪光宠物");
