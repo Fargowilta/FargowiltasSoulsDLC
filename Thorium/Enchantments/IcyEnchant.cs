@@ -27,8 +27,7 @@ An icy aura surrounds you, which freezes nearby enemies after a short delay");
             DisplayName.AddTranslation(GameCulture.Chinese, "碎冰魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'触感冰凉'
-环绕的冰锥将冰冻敌人
-拥有霜火粉袋的效果");
+环绕的冰锥将冰冻敌人");
         }
 
         public override void SetDefaults()
