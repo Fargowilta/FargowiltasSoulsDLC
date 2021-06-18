@@ -31,8 +31,7 @@ Effects of Shade Band");
 @"'不惜一切代价保护电工妹'
 攻击友善NPC的敌人将被标记为恶棍
 对恶棍造成50%额外伤害
-拥有暗影护符的效果
-召唤宠物小喵");
+拥有暗影护符的效果");
         }
 
         public override void SetDefaults()
