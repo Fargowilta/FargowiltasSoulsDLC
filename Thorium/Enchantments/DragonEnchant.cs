@@ -29,10 +29,10 @@ Effects of Dragon Talon Necklace
 Summons a pet Wyvern");
             DisplayName.AddTranslation(GameCulture.Chinese, "绿龙魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
-@"'由神秘鳞片制成'
+@"'由神话中的鳞片制作而成'
 攻击有概率释放龙焰爆炸
 拥有龙爪项链的效果
-召唤宠物小飞龙");
+召唤白龙宠物");
         }
 
         public override void SetDefaults()
