@@ -41,9 +41,11 @@ Summons a Levi and Supreme Calamitas pet");
             DisplayName.AddTranslation(GameCulture.Chinese, "魔影魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'你身上散发着恶魔之力...'
-所有攻击会造成恶魔之火debuff
-当你受到伤害时暗影光束和恶魔镰刀会从天上掉落 一个友好的红恶魔会跟着你
-按Y发动嘲讽激怒附近的敌人10秒，这会让你造成和受到的伤害提高25%
+所有攻击会造成恶魔之炎减益
+受伤时发射暗影射线和恶魔锄刀
+一只友善的红恶魔为你战斗
+按Y键以黑魔法咒语激怒周围的敌人
+这道咒语使他们对你造成25%额外伤害，同时额外受到125%的额外伤害
 拥有渎神魂晶的效果
 召唤利维和迷你至尊灾厄眼宠物");
         }
