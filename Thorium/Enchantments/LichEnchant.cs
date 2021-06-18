@@ -31,9 +31,9 @@ Effects of Lich's Gaze");
             DisplayName.AddTranslation(GameCulture.Chinese, "巫妖魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'拥抱死亡...'
-杀死敌人会释放灵魂碎片
-触摸灵魂碎片会在短时间内极大增加移动速度和投掷速度
-拥有巫妖之视效果");
+击杀敌人释放灵魂碎片
+触碰灵魂碎片短暂地大幅增加你的投掷速度和移速
+拥有巫妖之凝的效果");
         }
 
         public override void SetDefaults()
