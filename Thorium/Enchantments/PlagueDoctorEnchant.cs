@@ -27,10 +27,7 @@ Your plague gas will linger in the air twice as long and your plague reactions w
             DisplayName.AddTranslation(GameCulture.Chinese, "瘟疫医生魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'你都能酿出什么恶心的药剂呢?'
-瓦斯持续时间翻倍, 瓦斯反应多造成20%伤害
-杀死敌人会释放灵魂碎片
-触摸灵魂碎片会在短时间内极大增加移动速度和投掷速度
-拥有瘟疫之主药剂瓶和巫妖之视效果");
+你的瘟疫瓦斯在空中停留时间翻倍，与其他瓦斯瓶产生反应时造成额外20%伤害");
         }
 
         public override void SetDefaults()
