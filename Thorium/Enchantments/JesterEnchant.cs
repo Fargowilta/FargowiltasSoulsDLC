@@ -27,7 +27,7 @@ Effects of Fan Letter");
             DisplayName.AddTranslation(GameCulture.Chinese, "小丑魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'开个玩笑'
-暴击时在头顶鸣铃, 减缓周围敌人的速度
+暴击时会奏响头顶的铃铛,微幅减速周围所有敌人
 拥有粉丝的信函的效果");
         }
 
