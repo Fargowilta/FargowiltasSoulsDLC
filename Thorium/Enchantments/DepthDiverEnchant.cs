@@ -36,7 +36,8 @@ Summons a pet Jellyfish");
 使你和附近的队友能够水下呼吸
 获得游泳能力
 你和附近的队友获得10%伤害和移动速度加成
-拥有海洋通行证, 泡泡磁铁和渊暗音箱的效果");
+拥有海洋通行证, 泡泡磁铁的效果
+召唤水母宠物");
         }
 
         public override void SetDefaults()
