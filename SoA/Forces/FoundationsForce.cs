@@ -25,8 +25,8 @@ Effects of Frigid Pendant, Lapis Pendant, and Dreadflame Emblem");
             DisplayName.AddTranslation(GameCulture.Chinese, "基层之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
-拥有Prairie, 霜冻猎人，青金石和荒骨的套装效果
-拥有青金石挂饰, 极寒吊坠和南瓜护身符的效果");
+拥有草原，霜冻猎人，青金石和荒骨的套装效果
+拥有青金石挂饰，极寒吊坠和南瓜护身符的效果");
         }
 
         public override void SetDefaults()
