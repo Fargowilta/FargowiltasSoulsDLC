@@ -25,7 +25,7 @@ While in combat, a rainbow of damaging symphonic symbols will follow your moveme
             DisplayName.AddTranslation(GameCulture.Chinese, "仪仗队魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'脚步合拍'
-掉落的灵感音符双倍强度, 短暂增加音波伤害");
+在战斗中,一枚可眩晕敌人的彩虹音符会跟随你");
         }
 
         public override void SetDefaults()
