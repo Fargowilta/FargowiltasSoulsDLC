@@ -26,9 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.AddTranslation(GameCulture.Chinese, "暗影大师魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'匿于阴影, 致命一击'
-所受伤害的50%将被分摊到接下来的10秒内
-扔烟雾弹进行传送,获得先发制人Buff
-召唤宠物黑猫");
+受到伤害的50%不会立即生效，而是分摊到接下来的10秒内");
         }
 
         public override void SetDefaults()
