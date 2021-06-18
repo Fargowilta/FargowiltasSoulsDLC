@@ -26,15 +26,9 @@ Effects of Auto Tuner, Concert Tickets, and Metronome");
             DisplayName.AddTranslation(GameCulture.Chinese, "尼福尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'迷雾之界, 死亡的象征...'
-增加10%灵感回复
-咒音Buff能额外持续5秒
-音波暴击使玩家的咒音增幅提升到等级4
-掉落的灵感音符双倍强度, 短暂增加音波伤害
-按下'特殊能力'键循环切换增幅状态
-同样会召唤亡灵合唱团
-拥有团结之戒, 杂集磁带和恶魔音箱的效果
-拥有自动校音器, 音乐会门票和节拍器的效果
-拥有红色播放器, 棕色和播放器和紫色播放器的效果");
+拥有传讯员，贵族，赛博朋克，华贵和大师的套装效果
+拥有团结之戒和杂集磁带的效果
+拥有自动校音器, 音乐会门票和节拍器的效果");
         }
 
         public override void SetDefaults()
