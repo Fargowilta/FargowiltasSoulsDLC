@@ -30,7 +30,7 @@ Effects of Bee Booties and Petal Shield, and Kick Petal");
             DisplayName.AddTranslation(GameCulture.Chinese, "花瓣魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'香气逼人'
-攻击有概率召唤使敌人中毒的毒孢子云
+你的伤害有几率释放孢子云并让敌人中毒
 拥有蜜蜂靴，花之盾和活力花瓣的效果");
         }
 
