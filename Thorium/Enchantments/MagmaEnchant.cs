@@ -32,10 +32,10 @@ Enemies that you set on fire or singe will take additional damage over time
 Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
             DisplayName.AddTranslation(GameCulture.Chinese, "熔岩魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
-@"'充斥热能'
-火焰环绕着你的盔甲和近战武器
-随着时间的推移,被你点燃或烧伤的敌人会受到额外的伤害
-拥有弹簧鞋, 熔渣重踏和炽热枪尖的效果");
+@"'爆发巨大的热能'
+火焰会萦绕在你和你的武器周围
+对燃烧的敌人造成伤害，能使此减益对该敌人造成更多伤害
+拥有弹簧鞋，熔渣重踏和炽热枪尖的效果");
         }
 
         public override void SetDefaults()
