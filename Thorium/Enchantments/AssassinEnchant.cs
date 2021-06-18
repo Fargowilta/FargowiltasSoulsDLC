@@ -31,7 +31,8 @@ Effects of Dart Pouch");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'遮蔽天空，抹除弱者'
 攻击有10%概率复制并增加15%伤害
-攻击有5%概率即死敌人");
+攻击有5%概率即死敌人
+拥有飞镖袋的效果");
         }
 
         public override void SetDefaults()
