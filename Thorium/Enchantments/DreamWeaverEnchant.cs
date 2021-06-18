@@ -35,7 +35,7 @@ Allies will receive greatly increased movement and attack speed");
 按下'特殊能力'键消耗400魔力值并令你进入梦境和扭曲现实
 入梦时，被治疗的盟友的减益会消失并获得一小段无敌时间
 大幅降低敌人的移动速度并使敌人受到15%额外伤害
-n大幅增加队友的移动速度和攻击速度");
+大幅增加队友的移动速度和攻击速度");
         }
 
         public override void SetDefaults()
