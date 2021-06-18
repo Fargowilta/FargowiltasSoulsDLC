@@ -26,7 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Pressing the 'Special Ability' key will summon an incredibly powerful aura around your cursor
 Creating this aura costs 150 mana
 Effects of Ascension Statuette");
-            DisplayName.AddTranslation(GameCulture.Chinese, "天界魔石");
+            DisplayName.AddTranslation(GameCulture.Chinese, "大天使魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'谐能环绕着你'
 按下'套装技能'键'会在鼠标位置召唤一个极为强大的光环
