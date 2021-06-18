@@ -32,8 +32,8 @@ Effects of Inner Flame");
             DisplayName.AddTranslation(GameCulture.Chinese, "猎魂者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'这么多失落的灵魂...'
-杀死敌人或持续攻击Boss会产生灵魂碎片
-集齐5个后,它们会立即被消耗,治疗10点生命
+击杀一个敌人会释放魂灵
+释放出5个魂灵后,你会立刻消耗魂灵并恢复10点生命
 拥有心灵之火效果");
         }
 
