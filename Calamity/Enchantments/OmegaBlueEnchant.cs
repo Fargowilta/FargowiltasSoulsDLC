@@ -46,7 +46,7 @@ Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift
 Effects of Corrosive Spine and Lumenous Amulet
 Effects of Sand Cloak and Alluring Bait
 Summons several pets");
-            DisplayName.AddTranslation(GameCulture.Chinese, "欧米伽蓝魔石");
+            DisplayName.AddTranslation(GameCulture.Chinese, "蓝色欧米茄魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'深渊的黑暗压垮了你...'
 提高50点护甲穿透
