@@ -34,7 +34,7 @@ Summons a pet Magic Lantern and Lock Box");
 增加50%采掘速度
 显示敌人，陷阱和宝藏位置
 散发光芒
-召唤魔法灯笼, 振奋魔镜和海神宝盒");
+召唤魔法灯笼和宝箱宠物");
         }
 
         public override void SetDefaults()
