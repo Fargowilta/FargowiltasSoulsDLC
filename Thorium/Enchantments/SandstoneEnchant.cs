@@ -28,7 +28,7 @@ Desert winds will augment your boots, giving you a double jump");
             DisplayName.AddTranslation(GameCulture.Chinese, "砂石魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'沙暴环绕'
-沙暴增强了你的靴子, 能够额外跳跃一次");
+沙尘暴的力量被注入你的双脚，获得2段跳的能力");
             //Thrown attacks might refresh your jump
         }
 
