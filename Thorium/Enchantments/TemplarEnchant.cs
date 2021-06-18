@@ -26,7 +26,7 @@ If an ally is below half health, you will gain increased healing abilities");
             DisplayName.AddTranslation(GameCulture.Chinese, "圣殿骑士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'为了教堂!'
-队友生命值低于一半时, 增强治疗能力");
+如果一个队友低于50%生命，你的治疗属性会增强");
         }
 
         public override void SetDefaults()
