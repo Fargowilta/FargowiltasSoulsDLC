@@ -30,11 +30,11 @@ Summons a pet Holy Goat");
             DisplayName.AddTranslation(GameCulture.Chinese, "生命束缚者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'植物从你的之间生长'
-治疗队友将会短暂增加其50最大生命值
-光辉伤害有15%概率造成闪光爆炸
-闪光爆炸将迷惑敌人并治疗队友(受额外治疗量影响)
+治疗法术会短时间增加被治疗者50点生命上限
+你的光辉伤害有15%几率释放光之火
+治疗周围友军量等于你的额外治疗量并令敌人混乱
 拥有芦荟叶和平等护符效果
-召唤宠物神圣山羊");
+召唤神圣山羊宠物");
         }
 
         public override void SetDefaults()
