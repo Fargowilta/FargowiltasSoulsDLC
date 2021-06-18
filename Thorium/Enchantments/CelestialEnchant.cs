@@ -29,8 +29,8 @@ Effects of Ascension Statuette");
             DisplayName.AddTranslation(GameCulture.Chinese, "天界魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'谐能环绕着你'
-按下'特殊能力'键将在光标处召唤无比强大的光环
-召唤光环消耗150魔力值
+按下'套装技能'键'会在鼠标位置召唤一个极为强大的光环
+消耗150魔力值
 拥有飞升雕像的效果");
         }
 
