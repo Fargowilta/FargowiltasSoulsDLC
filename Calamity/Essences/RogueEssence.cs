@@ -27,6 +27,13 @@ namespace FargowiltasSoulsDLC.Calamity.Essences
 5% increased rogue velocity
 5% increased rogue critical strike chance
 'This is only the beginning..'");
+            DisplayName.AddTranslation(GameCulture.Chinese, "逃犯精华");
+            Tooltip.AddTranslation(GameCulture.Chinese, 
+@"'这是个开始...'
+增加18%盗贼伤害
+增加5%盗贼弹幕速度
+增加5%盗贼暴击率
+");
         }
 
         /*public override void ModifyTooltips(List<TooltipLine> list)
