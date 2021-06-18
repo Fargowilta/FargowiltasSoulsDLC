@@ -38,7 +38,7 @@ Effects of Heart of the Elements and The Sponge");
 @"'你的力量能与丛林暴君的力量相媲美...'
 拥有龙蒿, 血炎, 弑神者和始源林海的套装效果
 所有攻击生成圣金源光球治疗玩家
-拥有元素之心和化绵留香石的效果");
+拥有元灵之心和化绵留香石的效果");
         }
 
         public override void SetDefaults()
