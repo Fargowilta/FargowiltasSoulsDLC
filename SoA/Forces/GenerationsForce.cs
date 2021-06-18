@@ -25,8 +25,8 @@ All armor bonuses from Space Junk and Marstech
 Effects of Pumpkin Amulet");
             DisplayName.AddTranslation(GameCulture.Chinese, "世代之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
-@"'这么多年来, 从未出现过像你这样的人'
-拥有Eerie，铋和惧焰的套装效果
+@"'这么多年来，从未出现过像你这样的人'
+拥有怪诞，铋和惧焰的套装效果
 拥有太空垃圾和火星科技的套装效果
 拥有南瓜护身符的效果");
         }
