@@ -33,12 +33,11 @@ Summons a pet Flying Blister");
             DisplayName.AddTranslation(GameCulture.Chinese, "魔血魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'注满了腐化之血'
-攻击提供'蓄血'Buff
-充能完毕时, 你的下一次攻击会造成双倍伤害, 并将伤害的20%转化为治疗
+造成伤害会给你'鲜血充能'增益
+在充能完毕时，你的下一次攻击会造成双倍伤害并把伤害的20%转化为治疗
 连续攻击敌人时概率掉落肉, 拾取肉会获得额外生命并增加伤害
 拥有吸血鬼试剂, 魔血徽章和邪恶链锤核心的效果
-拥有血魔音箱和黄色播放器的效果
-召唤宠物泡泡虫");
+召唤泡泡虫宠物");
         }
 
         public override void SetDefaults()
