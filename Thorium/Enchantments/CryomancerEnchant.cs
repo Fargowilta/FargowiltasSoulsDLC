@@ -31,8 +31,8 @@ Summons a pet Owl");
             DisplayName.AddTranslation(GameCulture.Chinese, "极寒巫师魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'是什么灭绝了恐龙? 冰河时代!'
-你的攻击会冻结敌人2秒
-一个冰环围绕着你，冰环会冻结附近的敌人
+你的伤害会冻结敌人2秒
+一个寒冰光环为围绕着你并减速附近的敌人
 拥有遁蛛契约的效果
 召唤雪鸮宠物");
         }
