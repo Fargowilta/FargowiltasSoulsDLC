@@ -30,8 +30,8 @@ Effects of Spiked Bracers");
             DisplayName.AddTranslation(GameCulture.Chinese, "钢魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'铁匠精心打造'
-满血时增加33%伤害减免
-拥有尖刺索的效果");
+满血时增加10%伤害减免
+拥有尖刺锁的效果");
         }
 
         public override void SetDefaults()
