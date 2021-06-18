@@ -36,9 +36,9 @@ Effects of the Astral Arcanum, Hide of Astrum Deus, and Gravistar Sabaton
 Summons a pet Astrophage");
             DisplayName.AddTranslation(GameCulture.Chinese, "星幻魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
-@"'星体感染侵蚀了你...'
+@"'星辉瘟疫侵蚀了你...'
 每当你对敌人造成暴击，天空会降落神圣和星辉陨星
-此效果1秒内最多触发一次
+此效果有1秒的冷却时间
 拥有星辉秘术，星神隐壳和引力靴的效果
 召唤噬星体宠物");
         }
