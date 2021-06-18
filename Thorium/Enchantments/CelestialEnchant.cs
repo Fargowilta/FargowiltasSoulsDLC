@@ -30,7 +30,7 @@ Effects of Ascension Statuette");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'谐能环绕着你'
 按下'特殊能力'键将在光标处召唤无比强大的光环
-召唤光环消耗150法力
+召唤光环消耗150魔力值
 拥有飞升雕像的效果");
         }
 
