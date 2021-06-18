@@ -31,7 +31,7 @@ Effects of Mask of the Crystal Eye, Abyssal Shell, and Rock Music Player");
             DisplayName.AddTranslation(GameCulture.Chinese, "泰坦魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'充溢着原始能量'
-增加15%伤害
+增加10%伤害
 拥有水晶之眼, 深渊贝壳和青色播放器的效果");
         }
 
