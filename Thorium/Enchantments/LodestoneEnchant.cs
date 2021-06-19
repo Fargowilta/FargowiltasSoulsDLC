@@ -31,9 +31,9 @@ Effects of Astro-Beetle Husk and Obsidian Scale");
             DisplayName.AddTranslation(GameCulture.Chinese, "地脉魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'坚实'
-生命值每下降25%, 增加10%伤害减免
-生命值低于50%时达到上限: 30%
-拥有太空甲虫壳效果");
+每损失25%生命增加10%伤害减免
+低于50%血量后增加30%伤害减免，此为最大值
+拥有太空甲虫壳和黑曜石片效果");
         }
 
         public override void SetDefaults()

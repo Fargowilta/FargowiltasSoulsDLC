@@ -26,8 +26,8 @@ Heals ally life equal to your bonus healing");
             DisplayName.AddTranslation(GameCulture.Chinese, "生物工程魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'不管怎样, 这就是我怎么丢掉我的行医执照的'
-召唤一个生物工程探测器协助你治疗队友
-治疗量等于你的额外治疗量");
+一个基于生物技术的探测器能够辅助你治疗友军
+治疗盟友的数值相当于你的额外治疗量");
         }
 
         public override void SetDefaults()

@@ -32,11 +32,10 @@ Allies will receive greatly increased movement and attack speed");
             DisplayName.AddTranslation(GameCulture.Chinese, "织梦者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'通过你的盟友显化你甜蜜的美梦, 用时间之苦痛束缚你未来的敌人'
-按下'特殊能力'键消耗400法力, 入梦并扭曲现实结构
-入梦时, 治疗队友会使其短暂无敌, 并治愈所有Debuff
-极大减缓敌人, 并增加15%其所受伤害
-队友获得大幅度攻击速度和移动速度加成
-召唤宠物女仆");
+按下'特殊能力'键消耗400魔力值并令你进入梦境和扭曲现实
+入梦时，被治疗的盟友的减益会消失并获得一小段无敌时间
+大幅降低敌人的移动速度并使敌人受到15%额外伤害
+大幅增加队友的移动速度和攻击速度");
         }
 
         public override void SetDefaults()

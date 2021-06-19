@@ -32,8 +32,9 @@ Effects of Bee Booties, Petal Shield, and Flawless Chrysalis");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'大自然的一员'
 攻击有33%的概率治疗你
-召唤具有追踪攻击能力的小树苗
-拥有无暇之蛹和植物纤维绳索宝典的效果");
+召唤攻击会跟踪敌人的生命之种
+你的伤害有几率释放孢子云并让敌人中毒
+拥有蜜蜂靴，花之盾和无暇之蛹的效果");
         }
 
         public override void SetDefaults()

@@ -29,8 +29,8 @@ Effects of Goblin War Shield and Agnor's Bowl");
             DisplayName.AddTranslation(GameCulture.Chinese, "猎潮者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'不单是为了捕鱼'
-暴击释放飞溅泡沫, 缓慢附近的敌人
-连续4次攻击不暴击时, 下一次攻击造成150%伤害
+暴击会释放一片泡泡，减速敌人
+如果四次攻击都没有暴击，那么下一次远程攻击会造成额外150%的伤害
 拥有哥布林战盾和琵琶鱼球碗的效果");
         }
 

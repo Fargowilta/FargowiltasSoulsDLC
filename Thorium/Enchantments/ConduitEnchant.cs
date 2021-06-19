@@ -34,10 +34,10 @@ Summons a pet Omega");
             DisplayName.AddTranslation(GameCulture.Chinese, "电容魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'震惊世界'
-移动时产生最多5层静电环, 静电环可以回复护盾值
-完全充能时, 产生一个能量泡保护你免受一次伤害
-泡泡消耗时, 向周围敌人放电
-召唤召唤宠物欧米茄核心, 天外来客和生化水母");
+移动时，积攒最多5个静电环，静电环会施加护盾
+蓄力满时会产生一个保护你的能量罩
+当能量罩抵挡住一次攻击时会释放一圈电能激荡攻击敌人
+召唤奥米茄驱动器宠物");
         }
 
         public override void SetDefaults()

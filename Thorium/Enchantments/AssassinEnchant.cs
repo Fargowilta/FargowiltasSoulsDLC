@@ -30,8 +30,9 @@ Effects of Dart Pouch");
             DisplayName.AddTranslation(GameCulture.Chinese, "刺客魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'遮蔽天空，抹除弱者'
-攻击有10%概率复制并增加15%伤害
-攻击有5%概率即死敌人");
+你造成的伤害有10%几率复制自身并造成额外15%的伤害
+你的伤害有5%的几率秒杀敌人
+拥有飞镖袋的效果");
         }
 
         public override void SetDefaults()

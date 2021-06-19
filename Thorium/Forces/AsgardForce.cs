@@ -26,19 +26,8 @@ All armor bonuses from Dream Weaver and Rhapsodist");
             DisplayName.AddTranslation(GameCulture.Chinese, "阿斯加德之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'诸神黄昏是怎么回事?'
-每0.5秒产生一颗浮球
-每颗浮球都将增加防御力, 并使下一次投掷攻击变为小型暴击
-攻击有20%概率释放6把会追踪的波纹飞刀
-攻击有10%概率复制并增加15%伤害
-攻击有5%概率即死敌人
-攻击将焚烧目标及所有临近敌人
-按下'特殊能力'键开启以下效果:
-将你包裹在封闭泡泡中,
-释放熔火之灵的余烬,
-入梦并扭曲现实结构,
-获得无限灵感, 增加音波伤害和演奏速度,
-超载附近队友, 给予他们所有种类的3级咒音增幅
-召唤宠物女仆");
+拥有洪流逆潮者，刺客和炎法的套装效果
+拥有织梦者和狂想者的套装效果");
         }
 
         public override void SetDefaults()

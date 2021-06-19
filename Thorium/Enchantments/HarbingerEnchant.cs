@@ -33,12 +33,12 @@ Summons a Moogle pet");
             DisplayName.AddTranslation(GameCulture.Chinese, "先知魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'末日将至'
-增加50%最大法力值
-法力值高于75%时变得不稳定
+增加50%最大魔力值
+魔力超过最大魔力值的75%时你会陷入'不稳定'状态
 攻击友善NPC的敌人将被标记为恶棍
 对恶棍造成50%额外伤害
-拥有暗影护符和白色播放器的效果
-召唤宠物小喵");
+拥有暗影护符的效果
+召唤小猫宠物");
         }
 
         public override void SetDefaults()

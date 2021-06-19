@@ -30,12 +30,10 @@ Summons a pet Glitter");
             DisplayName.AddTranslation(GameCulture.Chinese, "穆斯贝尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'炽热之火, 史尔特尔的标志...'
-沙暴增强了你的靴子, 能够额外跳跃一次
-免疫一些造成伤害的Debuff
-暴击获得野性咆哮效果, 并短暂增加召唤物伤害
-攻击有33%的概率治疗你
-召唤具有追踪攻击能力的小树苗
-拥有无暇之蛹和植物纤维绳索宝典的效果");
+拥有砂石，致危，飞羽和真菌的套装效果
+拥有生命木，花瓣和树人的套装效果
+拥有影缀花，无暇之蛹和蜜蜂靴的效果
+召唤闪光宠物");
         }
 
         public override void SetDefaults()

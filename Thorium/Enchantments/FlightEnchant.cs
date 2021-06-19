@@ -29,7 +29,8 @@ Effects of the Faberge Egg");
             DisplayName.AddTranslation(GameCulture.Chinese, "飞羽魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'天空是你的游戏场'
-增加100%飞行时间");
+增加100%飞行时间
+拥有皇家彩蛋的效果");
         }
 
         public override void SetDefaults()

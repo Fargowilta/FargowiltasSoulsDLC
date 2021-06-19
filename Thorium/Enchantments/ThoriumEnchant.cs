@@ -31,7 +31,7 @@ Effects of Crietz, Band of Replenishment, and Fan Letter");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'发出阵阵能量脉冲'
 攻击敌人时偶尔会召唤暂时存在的潜水员
-暴击短暂缓慢所有附近敌人
+暴击时会奏响头顶的铃铛，微幅减速周围所有敌人
 拥有精准项链, 大恢复戒指和粉丝的信函的效果");
         }
 

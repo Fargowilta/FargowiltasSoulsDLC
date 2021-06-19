@@ -33,7 +33,8 @@ Summons a pet Coin Bag");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'宙斯的青睐'
 攻击有概率释放闪电链
-拥有奥林匹克圣火, 反击之盾, 斯巴达凉鞋和斯巴达音箱的效果");
+拥有奥林匹克圣火, 反击之盾和斯巴达凉鞋的效果
+召唤硬币袋宠物");
         }
 
         public override void SetDefaults()

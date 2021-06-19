@@ -25,11 +25,11 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Pressing the Special Ability key will summon a chorus of music playing ghosts
 While in combat, a rainbow of damaging symphonic symbols will follow your movement and stun enemies
 Effects of Metronome and Purple Music Player");
-            DisplayName.AddTranslation(GameCulture.Chinese, "指挥魔石");
+            DisplayName.AddTranslation(GameCulture.Chinese, "大师魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'我就是现代巴赫'
-按下'特殊能力'键召唤亡灵合唱团
-掉落的灵感音符双倍强度, 短暂增加音波伤害
+按下'套装能力'键以召唤鬼灵乐团
+鬼灵会用铜管、风、弦和打击乐器迅速的对敌人造成伤害
 拥有节拍器和粉色播放器的效果");
         }
 

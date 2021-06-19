@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
@@ -29,17 +29,10 @@ Effects of Crietz and Terrarium Surround Sound");
             DisplayName.AddTranslation(GameCulture.Chinese, "米德加德之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'人类的力量'
-生命值每下降25%, 增加10%伤害减免
-生命值低于50%时达到上限: 30%
-按'上'键逆转重力
-重力颠倒时增加12%远程伤害
-每3次攻击会发射荧光导弹
-泰拉瑞亚的能量试图保护你
-攻击敌人时偶尔会召唤暂时存在的潜水员
-暴击短暂缓慢所有附近敌人
-拥有太空甲虫壳和注者之眼的效果
-拥有精准项链和界元音箱的效果
-召唤宠物粉红史莱姆");
+拥有地脉，虚金，荧光和暗影大师的套装效果
+拥有小丑，瑟银和元素之灵的套装效果
+拥有太空甲虫壳和注视者之眼的效果
+拥有精准项链和界元音箱的效果");
         }
 
         public override void SetDefaults()

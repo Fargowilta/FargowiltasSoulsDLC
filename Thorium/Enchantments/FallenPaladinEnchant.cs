@@ -28,8 +28,8 @@ Effects of Wynebgwrthucher and Rebirth Statuette");
             DisplayName.AddTranslation(GameCulture.Chinese, "堕落圣骑士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'静静地在地牢游荡'
-受到伤害的15%将治疗附近队友
-队友生命值低于50%时, 增加治疗量
+受到伤害后治疗周围队友相当于受到伤害的15%血量
+如果一个队友低于50%生命，你的治疗属性会增强
 拥有祝福之盾和重生雕像的效果");
         }
 

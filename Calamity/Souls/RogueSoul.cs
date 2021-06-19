@@ -29,6 +29,13 @@ namespace FargowiltasSoulsDLC.Calamity.Souls
 15% increased rogue velocity
 15% increased rogue critical strike chance
 Effects of Eclipse Mirror, Nanotech, Venerated Locket, and Dragon Scales");
+            DisplayName.AddTranslation(GameCulture.Chinese, "流浪者之魂");
+            Tooltip.AddTranslation(GameCulture.Chinese,
+@"'尔等永不见君临'
+增加30%盗贼伤害
+增加15%盗贼弹幕速度
+增加15%盗贼暴击率
+拥有日蚀魔镜，纳米技术，敬天神盗盒和浴火龙鳞的效果");
         }
 
         /*public override void ModifyTooltips(List<TooltipLine> list)

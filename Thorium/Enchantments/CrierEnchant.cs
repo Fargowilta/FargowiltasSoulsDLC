@@ -25,8 +25,7 @@ Your symphonic empowerments will last an additional 3 seconds");
             DisplayName.AddTranslation(GameCulture.Chinese, "传迅员魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'没什么可说的'
-增加10%灵感回复
-拥有音符的效果");
+增加你的咒音增幅持续时间3秒");
         }
 
         public override void SetDefaults()

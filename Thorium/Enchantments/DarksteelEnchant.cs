@@ -35,10 +35,10 @@ Effects of Spiked Bracer");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'轻巧而耐用'
 满血时增加10%伤害减免
-没有什么能阻止你的移动
-获得冲刺能力
+你无可阻挡
+双击方向键冲刺
 免疫蹒跚者的链球效果
-拥有尖刺索的效果");
+拥有尖刺锁的效果");
         }
 
         public override void SetDefaults()

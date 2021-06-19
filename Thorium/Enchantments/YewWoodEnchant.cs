@@ -26,7 +26,7 @@ Effects of Goblin War Shield");
             DisplayName.AddTranslation(GameCulture.Chinese, "紫杉木魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'这种奇怪的木头来自遥远的大陆'
-连续4次攻击不暴击时, 下一次攻击造成150%伤害
+如果四次攻击都没有暴击，那么下一次远程攻击会造成额外150%的伤害
 拥有哥布林战盾的效果");
         }
 

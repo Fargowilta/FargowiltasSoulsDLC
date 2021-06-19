@@ -28,14 +28,14 @@ Every 5 seconds you generate up to 3 holy crosses
 When casting healing spells, a cross is used instead of mana
 Effects of Karmic Holder
 Summons a pet Life Spirit");
-            DisplayName.AddTranslation(GameCulture.Chinese, "圣骑士魔石");
+            DisplayName.AddTranslation(GameCulture.Chinese, "崇圣魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'闪耀抚慰人心的力量'
 生命药水额外回复50%生命值
-每5秒产生一个圣十字架, 上限为3个
-施放治疗法术时, 十字架将代替魔力消耗
-召唤小天使周期性治疗队友
-召唤宠物生命之灵");
+每5秒钟获得一个十字架，至多3个
+施放治疗法术时,消耗十字架而非魔法值
+拥有业果之握的效果
+召唤生命之灵宠物");
         }
 
         public override void SetDefaults()

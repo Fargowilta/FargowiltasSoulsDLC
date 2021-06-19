@@ -29,7 +29,11 @@ Effects of Auto Tuner and Metal Music Player");
             DisplayName.AddTranslation(GameCulture.Chinese, "赛博朋克魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'科技电音狂欢!'
-按下'特殊能力'键循环切换增幅状态
+按下'套装技能'键使你在下列四种状态下切换：
+红色 - 你和周围友军获得降调伤害II与伤害II
+绿色 - 你和周围友军获得移速II与飞行时间II
+紫色 - 你和周围友军获得资源上限II与资源再生II
+蓝色 - 你和周围友军获得防御II与伤害减免II
 拥有自动校音器和红色播放器的效果");
         }
 

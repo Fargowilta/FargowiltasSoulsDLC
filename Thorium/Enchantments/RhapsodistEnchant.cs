@@ -33,11 +33,10 @@ These effects needs to recharge for 1 minute");
             DisplayName.AddTranslation(GameCulture.Chinese, "狂想曲魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'歌曲振奋军队, 向所有人证明你的才华独一无二'
-凋落的灵感音符强度增加
-此外, 给予附近所有队友随机的1级咒音增幅
-按下'特殊能力'键获得无限灵感, 增加音波伤害和演奏速度
-同时也会超载附近队友, 给予他们所有种类的3级咒音增幅
-该能力需充能1分钟");
+掉落的灵感音符会更有效
+同时，这些灵感音符会随机给所有队友提供一个等级为1的咒音增幅
+按'套装技能'键会鼓舞周围友军,给他们提供所有等级为3的咒音增幅，持续15秒
+此效果有1分钟冷却时间");
         }
 
         public override void SetDefaults()

@@ -28,8 +28,8 @@ When casting healing spells, a cross is used instead of mana");
             DisplayName.AddTranslation(GameCulture.Chinese, "牧师学徒魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'扫除一切恶'
-每5秒产生一个圣十字架, 上限为3个
-施放治疗法术时, 十字架将代替魔力消耗");
+每5秒钟获得一个十字架，至多3个
+施放治疗法术时，消耗十字架而非魔力值");
         }
 
         public override void SetDefaults()

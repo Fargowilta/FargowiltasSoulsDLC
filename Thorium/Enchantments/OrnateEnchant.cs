@@ -27,8 +27,8 @@ Effects of Concert Tickets");
             DisplayName.AddTranslation(GameCulture.Chinese, "华贵魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'精心设计'
-音波暴击使玩家的咒音增幅提升到等级4
-拥有音乐会门票和棕色播放器效果");
+音波暴击会将咒音增幅直接升级至第四等级
+拥有音乐会门票的效果");
         }
 
         public override void SetDefaults()

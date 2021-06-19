@@ -27,15 +27,9 @@ Effects of Lich's Gaze and Ascension Statuette");
             DisplayName.AddTranslation(GameCulture.Chinese, "华纳海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'对未来的一瞥...'
-神秘屏障环绕周身
-每7次攻击会释放魔法箭
-暴击释放长时间的宇宙星光和虚空之焰吞没敌人
-按下'特殊能力'键将在光标处召唤无比强大的光环
-召唤光环消耗150法力
-每拥有一种咒音, 获得以下增益:
-增加8%伤害
-增加3%移动速度
-拥有魔力充能火箭靴和飞升雕像效果");
+拥有巫妖，瘟疫医生和白矮星的套装效果
+拥有大天使和流星爆破的套装效果
+拥有巫妖之凝和飞升雕像效果");
         }
 
         public override void SetDefaults()

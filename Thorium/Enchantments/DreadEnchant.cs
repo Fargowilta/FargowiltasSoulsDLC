@@ -33,12 +33,11 @@ Summons a pet Wyvern");
             DisplayName.AddTranslation(GameCulture.Chinese, "恐惧魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'充满被诅咒的灵魂'
-你的靴子以不真实的频率振动着, 显著提高移动速度
-移动时增加伤害和暴击率
-攻击有概率释放龙焰爆炸
-拥有震地, 龙爪项链和诅咒链球核心的效果
-拥有恐惧音箱和绿色播放器的效果
-召唤宠物小飞龙");
+你的身法之飘逸超脱现实,大幅增加移速
+移动时，增加伤害和暴击率
+你的攻击有几率释放龙息爆裂
+拥有震地靴, 龙爪项链和诅咒链球核心的效果
+召唤白龙宠物");
         }
 
         public override void SetDefaults()

@@ -35,12 +35,11 @@ Attacks have a 20% chance to unleash aquatic homing daggers all around you");
             DisplayName.AddTranslation(GameCulture.Chinese, "洪流逆潮者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'像潮水一样势不可挡, 向敌人释放波涛的愤怒'
-按下'特殊能力'键将你包裹在封闭泡泡中
-泡泡激活时, 收到的所有伤害转化为治疗
-每0.5秒产生一颗浮球
-每颗浮球都将增加防御力, 并使下一次攻击变为小型暴击
-溢出的伤害转化为能量攻击附近的敌人
-攻击有20%概率释放6把会追踪的波纹飞刀");
+按下'套装技能'键会将你包裹在一个坚不可摧的水球之中
+水球存在时,所有受到的伤害转化为对你的治疗
+每0.5秒制造漂浮水泡
+每个泡泡增加防御并且会令下一次非暴击攻击的伤害增加
+造成伤害时有20%的几率释放会追踪的波纹飞刀萦绕身周");
         }
 
         public override void SetDefaults()

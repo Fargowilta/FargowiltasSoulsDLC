@@ -29,10 +29,9 @@ Effects of Demon Tongue and Dark Effigy");
             DisplayName.AddTranslation(GameCulture.Chinese, "术士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'比巫师更强'
-暴击产生至多15个暗影魂火
-按下'特殊能力'键向光标方向释放所有存留的暗影魂火
-拥有恶魔之舌的效果
-召唤小恶魔攻击敌人");
+暴击能生成最多15只暗影精灵
+按下'套装技能'键会将生成的暗影精灵投向鼠标所在位置
+拥有恶魔之舌和鬼影塑像的效果");
         }
 
         public override void SetDefaults()

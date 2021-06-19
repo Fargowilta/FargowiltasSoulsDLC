@@ -31,9 +31,8 @@ Effects of Jazz Music Player");
             DisplayName.AddTranslation(GameCulture.Chinese, "荧光魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'好像还不够粉'
-每3次攻击会发射荧光导弹
-拥有粉色播放器的效果
-召唤宠物粉红史莱姆");
+每三次攻击都会发射荧光火箭
+拥有粉色播放器的效果");
         }
 
         public override void SetDefaults()

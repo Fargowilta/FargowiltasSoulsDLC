@@ -31,8 +31,8 @@ Effects of Mirror of the Beholder");
             DisplayName.AddTranslation(GameCulture.Chinese, "虚金魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'哪儿是上?'
-按'上'键逆转重力
-重力颠倒时增加12%伤害
+按上（W）键来反转重力
+反转状态时，你增加12%远程伤害
 拥有注视者之眼的效果");
         }
 

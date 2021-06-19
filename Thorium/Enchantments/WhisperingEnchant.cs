@@ -26,11 +26,11 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Now R'lyeh on the old god's power'
 You occasionally birth a tentacle of abyssal energy that attacks nearby enemies
 You can have up to six tentacles and their damage saps 1 life & mana from the hit enemy");
-            DisplayName.AddTranslation(GameCulture.Chinese, "黑暗低语者魔石");
+            DisplayName.AddTranslation(GameCulture.Chinese, "低语者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
-偶尔在地面产生深渊能量触手攻击附近的敌人
-最多产生6根触手, 触手的攻击将会为你偷取1点生命值和法力");
+你有时会释放由深渊能量凝聚的触手攻击周围敌人
+最多6条触手,触手的每一次抽击都会回复你1点生命值和1点魔力值");
         }
 
         public override void SetDefaults()

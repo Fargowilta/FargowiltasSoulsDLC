@@ -30,8 +30,8 @@ Dealing damage to enemies infected with mycelium briefly increases throwing spee
             DisplayName.AddTranslation(GameCulture.Chinese, "真菌魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'我们中出了个真菌'
-对真菌寄生状态的敌人加伤10%
-攻击真菌寄生状态的敌人能增加10%投掷速度");
+对被真菌感染的敌人造成10%额外伤害
+对被真菌感染的敌人造成伤害后增加10%投掷速度");
         }
 
         public override void SetDefaults()

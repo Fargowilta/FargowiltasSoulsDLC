@@ -27,12 +27,12 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 12% damage reduction at Full HP
 Grants immunity to shambler chain-balls
 Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
-            DisplayName.AddTranslation(GameCulture.Chinese, "耐刚魔石");
+            DisplayName.AddTranslation(GameCulture.Chinese, "耐钢魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'精工打造'
-满血时增加90%伤害减免
+满血时增加12%伤害减免
 免疫蹒跚者的链球效果
-拥有炽热火花, 尖刺索和贪婪磁铁的效果");
+拥有食人魔的凉鞋, 水晶枪尖和尖刺锁的效果");
         }
 
         public override void SetDefaults()

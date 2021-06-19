@@ -30,8 +30,8 @@ Ivory flares deal 0.1% of the hit target's maximum life as damage");
             DisplayName.AddTranslation(GameCulture.Chinese, "白矮星魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'以核聚变的伟力抛出'
-暴击将释放宇宙星光
-宇宙星光造成敌人生命上限0.5%的伤害");
+暴击会释放白宇晨光
+白宇晨光会造成相当于敌人最大生命值的0.1%的伤害");
         }
 
         public override void SetDefaults()

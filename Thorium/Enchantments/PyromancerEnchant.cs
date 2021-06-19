@@ -32,7 +32,7 @@ Pressing the 'Special Ability' key will unleash an echo of Slag Fury's power");
             DisplayName.AddTranslation(GameCulture.Chinese, "炎法魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'你那熔岩加护的军队炽热的注视令人畏惧'
-攻击将焚烧目标, 并伤害所有相邻的敌人
+你的魔法伤害会重度烧伤附近的敌人
 按下'特殊能力'键释放熔火之灵的余烬");
         }
 

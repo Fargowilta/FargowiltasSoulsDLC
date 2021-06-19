@@ -23,11 +23,12 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Great for brooding'
 Corrupts your radiant powers, causing them to take on dark forms and deal additional effects
-Effects if Dark Heart");
+Effects of Dark Heart");
             DisplayName.AddTranslation(GameCulture.Chinese, "黑檀魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'适合沉思'
-腐化你的光辉之力, 使它们转化为暗面形态并造成额外效果");
+污染你的光辉力量，令其转化为黑暗形态并附着一些特殊效果
+拥有黑暗之心的效果");
         }
 
         public override void SetDefaults()
