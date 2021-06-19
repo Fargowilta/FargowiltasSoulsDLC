@@ -32,7 +32,7 @@ Effects of Crietz and Terrarium Surround Sound");
 拥有地脉，虚金，荧光和暗影大师的套装效果
 拥有小丑，瑟银和元素之灵的套装效果
 拥有太空甲虫壳和注视者之眼的效果
-拥有精准项链和界元音箱的效果);
+拥有精准项链和界元音箱的效果");
         }
 
         public override void SetDefaults()
