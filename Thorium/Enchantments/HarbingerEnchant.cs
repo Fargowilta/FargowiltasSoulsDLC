@@ -38,7 +38,7 @@ Summons a Moogle pet");
 攻击友善NPC的敌人将被标记为恶棍
 对恶棍造成50%额外伤害
 拥有暗影护符的效果
-召唤小猫宠物);
+召唤小猫宠物");
         }
 
         public override void SetDefaults()
