@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using System.Collections.Generic;
 using Terraria.Localization;
+using ThoriumMod.Items.HealerItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Souls
 {
@@ -80,8 +81,7 @@ Nearby allies that die drop a wisp of spirit energy");
             thoriumPlayer.healingSpeed += 0.2f;
             thoriumPlayer.radiantCrit += 15;
             //support stash
-            thoriumPlayer.supportSash = true;
-            thoriumPlayer.quickBelt = true;
+            thorium.GetItem("SupportSash").UpdateAccessory(player, true);
             //saving grace
             thoriumPlayer.crossHeal = true;
             thoriumPlayer.healBloom = true;

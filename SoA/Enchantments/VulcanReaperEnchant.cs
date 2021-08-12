@@ -60,8 +60,6 @@ Provides immunity to Flarium Inferno and Obsidian Curse");
             //set bonus
             player.buffImmune[soa.BuffType("SerpentWrath")] = true;
             player.buffImmune[soa.BuffType("ObsidianCurse")] = true;
-
-            //pet soon tm
         }
 
         private readonly string[] items =

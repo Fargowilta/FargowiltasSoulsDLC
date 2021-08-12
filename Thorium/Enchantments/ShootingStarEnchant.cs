@@ -67,13 +67,10 @@ Each unique empowerment you have grants you:
             recipe.AddIngredient(ModContent.ItemType<BalladeerHat>());
             recipe.AddIngredient(ModContent.ItemType<BalladeerShirt>());
             recipe.AddIngredient(ModContent.ItemType<BalladeerBoots>());
-            recipe.AddIngredient(ModContent.ItemType<BalladeersTurboTuba>());
             recipe.AddIngredient(ModContent.ItemType<Headset>());
             recipe.AddIngredient(ModContent.ItemType<Acoustic>());
             recipe.AddIngredient(ModContent.ItemType<SunflareGuitar>());
-            recipe.AddIngredient(ModContent.ItemType<BlackOtamatone>());
-            recipe.AddIngredient(ModContent.ItemType<Pungi>());
-            recipe.AddIngredient(ModContent.ItemType<RockstarsDoubleBassBlastGuitar>());
+
             
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

@@ -35,9 +35,7 @@ While using a ranged weapon you have a 10% chance to fire a powerful rocket
 Your magic projectiles emit a burst of spore gas on enemy hits
 Summons a reaver orb that emits spore gas when enemies are near
 You emit a cloud of spores when you are hit
-Rage activates when you are damaged
-Effects of Fabled Tortoise Shell
-Summons a Sparks pet");
+Rage activates when you are damaged");
             DisplayName.AddTranslation(GameCulture.Chinese, "掠夺者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'痛苦的死亡等待着你的敌人...'
@@ -99,18 +97,6 @@ Summons a Sparks pet");
                     }
                 }
             }
-
-            //fabled tortoise shell
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.FabledTurtleShell))
-            {
-                calamity.GetItem("FabledTortoiseShell").UpdateAccessory(player, hideVisual);
-                player.statDefense += 35;
-            }
-
-            //pet
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.ReaverEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.SparksPet, hideVisual, ModContent.BuffType<SparksBuff>(), ModContent.ProjectileType<Sparks>());
         }
 
         public override void AddRecipes()
@@ -122,17 +108,9 @@ Summons a Sparks pet");
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyReaverHelmet");
             recipe.AddIngredient(ModContent.ItemType<ReaverScaleMail>());
             recipe.AddIngredient(ModContent.ItemType<ReaverCuisses>());
-            recipe.AddIngredient(ModContent.ItemType<FabledTortoiseShell>());
-            recipe.AddIngredient(ModContent.ItemType<EvilSmasher>());
-            recipe.AddIngredient(ModContent.ItemType<MantisClaws>());
             recipe.AddIngredient(ModContent.ItemType<SandSharknadoStaff>());
-            recipe.AddIngredient(ModContent.ItemType<Keelhaul>());
             recipe.AddIngredient(ModContent.ItemType<Triploon>());
             recipe.AddIngredient(ModContent.ItemType<MagnaStriker>());
-            recipe.AddIngredient(ModContent.ItemType<PearlGod>());
-            recipe.AddIngredient(ModContent.ItemType<ConferenceCall>());
-            recipe.AddIngredient(ModContent.ItemType<ResurrectionButterfly>());
-            recipe.AddIngredient(ModContent.ItemType<SparksSummon>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -65,10 +65,6 @@ Effects of Equalizer");
             recipe.AddIngredient(ModContent.ItemType<Equalizer>());
             recipe.AddIngredient(ModContent.ItemType<HereticBreaker>());
             recipe.AddIngredient(ModContent.ItemType<SpiritPouch>());
-            recipe.AddIngredient(ModContent.ItemType<TranquilLyre>());
-            recipe.AddIngredient(ModContent.ItemType<IridescentStaff>());
-            recipe.AddIngredient(ModContent.ItemType<SerpentsBubbleWand>());
-            recipe.AddIngredient(ModContent.ItemType<Recuperate>());
 
 
             recipe.AddTile(TileID.CrystalBall);

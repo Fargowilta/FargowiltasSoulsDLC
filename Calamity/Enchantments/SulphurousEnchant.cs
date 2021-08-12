@@ -31,8 +31,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 Attacking and being attacked by enemies inflicts poison
 Grants a sulphurous bubble jump that applies venom on hit
 Slightly reduces breath loss in the abyss
-Effects of Sand Cloak and Alluring Bait
-Summons a Danny Devito and Radiator pet");
+Effects of Sand Cloak and Alluring Bait");
             DisplayName.AddTranslation(GameCulture.Chinese, "硫磺魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
@@ -74,12 +73,6 @@ Summons a Danny Devito and Radiator pet");
             //calamity.Call("SetSetBonus", player, "sulphur", true); hopefully soon
             calamity.GetItem("SandCloak").UpdateAccessory(player, hideVisual);
             calamity.GetItem("AlluringBait").UpdateAccessory(player, hideVisual);
-
-            //pets
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.SulphurEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.DannyPet, hideVisual, ModContent.BuffType<DannyDevito>(), ModContent.ProjectileType<DannyDevitoPet>());
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.RadiatorPet, hideVisual, ModContent.BuffType<RadiatorBuff>(), ModContent.ProjectileType<RadiatorPet>());
         }
 
         public override void AddRecipes()
@@ -93,11 +86,8 @@ Summons a Danny Devito and Radiator pet");
             recipe.AddIngredient(ModContent.ItemType<SulfurLeggings>());
             recipe.AddIngredient(ModContent.ItemType<SandCloak>());
             recipe.AddIngredient(ModContent.ItemType<AlluringBait>());
-            recipe.AddIngredient(ModContent.ItemType<DuneHopper>());
-            recipe.AddIngredient(ModContent.ItemType<UrchinStinger>(), 300);
             recipe.AddIngredient(ModContent.ItemType<CausticCroakerStaff>());
-            recipe.AddIngredient(ModContent.ItemType<TrashmanTrashcan>());
-            recipe.AddIngredient(ModContent.ItemType<RadiatingCrystal>());
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

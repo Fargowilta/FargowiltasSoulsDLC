@@ -64,21 +64,19 @@ Boss和8000血以上的敌人不受该效果影响
             //set bonus
             modPlayer.voidDefense = true;
             modPlayer.voidOffense = true;
-
-            //pets soon tm
         }
 
         private readonly string[] items =
         {
             "VoidHelm",
-            "VoidChest",
-            "VoidChestOffense",
+            "VoidChest", //any..
+            //"VoidChestOffense",
             "VoidLegs",
             "Skill_FuryForged",
             "DarkRemnant",
             "EdgeOfGehenna",
-            "OblivionMagnum",
-            "ArachnesGaze"
+           // "OblivionMagnum",
+            //"ArachnesGaze"
         };
 
         public override void AddRecipes()

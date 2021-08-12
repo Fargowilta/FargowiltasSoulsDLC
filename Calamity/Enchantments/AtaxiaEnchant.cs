@@ -119,15 +119,7 @@ Effects of Hallowed Rune and Ethereal Extorter");
             recipe.AddIngredient(ModContent.ItemType<AtaxiaSubligar>());
             recipe.AddIngredient(ModContent.ItemType<HallowedRune>());
             recipe.AddIngredient(ModContent.ItemType<EtherealExtorter>());
-            recipe.AddIngredient(ModContent.ItemType<SpearofDestiny>());
-            recipe.AddIngredient(ModContent.ItemType<Hellborn>());
-            recipe.AddIngredient(ModContent.ItemType<Terracotta>());
             recipe.AddIngredient(ModContent.ItemType<BarracudaGun>());
-            recipe.AddIngredient(ModContent.ItemType<Vesuvius>());
-            recipe.AddIngredient(ModContent.ItemType<LeadWizard>());
-            recipe.AddIngredient(ModContent.ItemType<BrimlashBuster>());
-            recipe.AddIngredient(ModContent.ItemType<Impaler>());
-            recipe.AddIngredient(ModContent.ItemType<HolidayHalberd>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

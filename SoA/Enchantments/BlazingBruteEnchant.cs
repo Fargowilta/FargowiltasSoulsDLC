@@ -70,10 +70,10 @@ Getting hit or moving resets the counter");
             "Nyanmere",
             "StarShower",
             "AsteroidShower",
-            "OblivionSpear",
-            "FlareFlail",
-            "AsthralBlade",
-            "Phaselash"
+            //"OblivionSpear",
+            //"FlareFlail",
+            //"AsthralBlade",
+            //"Phaselash"
         };
 
         public override void AddRecipes()

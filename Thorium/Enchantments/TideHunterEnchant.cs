@@ -70,11 +70,8 @@ Effects of Goblin War Shield and Agnor's Bowl");
             recipe.AddIngredient(ModContent.ItemType<TideHunterLeggings>());
             recipe.AddIngredient(ModContent.ItemType<YewWoodEnchant>());
             recipe.AddIngredient(ModContent.ItemType<AnglerBowl>());
-            recipe.AddIngredient(ModContent.ItemType<BlunderBuss>());
-            recipe.AddIngredient(ModContent.ItemType<PearlPike>());
             recipe.AddIngredient(ModContent.ItemType<HydroCannon>());
-            recipe.AddIngredient(ModContent.ItemType<MarineLauncher>());
-            recipe.AddIngredient(ModContent.ItemType<JollyRogerPaint>());
+ 
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

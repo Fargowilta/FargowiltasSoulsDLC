@@ -67,11 +67,7 @@ If an ally is below half health, you will gain increased healing abilities");
             recipe.AddIngredient(ModContent.ItemType<TemplarsLeggings>());
             recipe.AddIngredient(ModContent.ItemType<LifesGift>());
             recipe.AddIngredient(ModContent.ItemType<TemplarsGrace>());
-            recipe.AddIngredient(ModContent.ItemType<TemplarJudgment>());
-            recipe.AddIngredient(ModContent.ItemType<GraniteIonStaff>());
             recipe.AddIngredient(ModContent.ItemType<Prophecy>());
-            recipe.AddIngredient(ModContent.ItemType<LifeDisperser>());
-            recipe.AddIngredient(ModContent.ItemType<BoneTrumpet>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

@@ -64,19 +64,19 @@ You will have one minute of increased strength after rebirth
             //set bonus
             modPlayer.DragonSetEffect = true;
 
-            //pets soon tm
         }
 
         private readonly string[] items =
         {
             "FlariumChest",
             "FlariumLeggings",
-            "FlariumStaff",
+
+            //"FlariumStaff",
             "FlariumRocketLauncher",
-            "FlariumJavelin",
+            //"FlariumJavelin",
             "SolusKatana",
-            "SunSigil",
-            "FlariumEarring",
+            //"SunSigil",
+            //"FlariumEarring",
             "SerpentSceptre",
         };
 

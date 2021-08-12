@@ -63,7 +63,7 @@ Effects of Pumpkin Amulet");
             //space junk
             modPlayer.spaceJunk = true;
 
-            //pets soon tm
+
         }
 
 

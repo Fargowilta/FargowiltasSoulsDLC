@@ -97,10 +97,6 @@ Effects of Scuttler's Jewel");
             recipe.AddIngredient(calamity.ItemType("SnowRuffianChestplate"));
             recipe.AddIngredient(calamity.ItemType("SnowRuffianGreaves"));
             recipe.AddIngredient(ModContent.ItemType<ScuttlersJewel>());
-            recipe.AddIngredient(ModContent.ItemType<Cryophobia>());
-            recipe.AddIngredient(ModContent.ItemType<ThrowingBrick>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<FrostBlossomStaff>());
-            recipe.AddIngredient(ModContent.ItemType<Warblade>());
             recipe.AddIngredient(ModContent.ItemType<Waraxe>());
             recipe.AddIngredient(calamity.ItemType("TundraLeash"));
 

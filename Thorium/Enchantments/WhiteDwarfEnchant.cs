@@ -61,11 +61,7 @@ Ivory flares deal 0.1% of the hit target's maximum life as damage");
             recipe.AddIngredient(ModContent.ItemType<WhiteDwarfGuard>());
             recipe.AddIngredient(ModContent.ItemType<WhiteDwarfGreaves>());
             recipe.AddIngredient(ModContent.ItemType<BlackHammer>());
-            recipe.AddIngredient(ModContent.ItemType<GeodeMallet>());
-            recipe.AddIngredient(ModContent.ItemType<LodeStoneHammer>());
-            recipe.AddIngredient(ModContent.ItemType<BlackDagger>());
             recipe.AddIngredient(ModContent.ItemType<WhiteDwarfPickaxe>());
-            recipe.AddIngredient(ModContent.ItemType<WhiteDwarfKunai>(), 300);
             recipe.AddIngredient(ModContent.ItemType<AngelsEnd>());
 
             recipe.AddTile(TileID.LunarCraftingStation);

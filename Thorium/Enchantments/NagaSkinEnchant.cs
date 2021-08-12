@@ -77,12 +77,9 @@ Allows quicker movement in water");
             recipe.AddIngredient(ModContent.ItemType<NagaSkinSuit>());
             recipe.AddIngredient(ModContent.ItemType<NagaSkinTail>());
             recipe.AddIngredient(ModContent.ItemType<Eelrod>());
-            recipe.AddIngredient(ModContent.ItemType<CycloneBook>());
-            recipe.AddIngredient(ModContent.ItemType<NagaSpitStaff>());
             recipe.AddIngredient(ModContent.ItemType<HydromancerCatalyst>());
-            recipe.AddIngredient(ModContent.ItemType<Leviathan>());
             recipe.AddIngredient(ModContent.ItemType<OldGodGrasp>());
-            recipe.AddIngredient(ModContent.ItemType<UnderseaBountyPaint>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

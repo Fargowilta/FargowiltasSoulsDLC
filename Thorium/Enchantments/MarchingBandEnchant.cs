@@ -21,7 +21,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Marching Band Enchantment");
             Tooltip.SetDefault(
 @"'Step to the beat'
-While in combat, a rainbow of damaging symphonic symbols will follow your movement and stun enemies");
+While in combat, a rainbow of damaging symphonic symbols will follow your movement and stun enemies
+Effects of Full Score");
             DisplayName.AddTranslation(GameCulture.Chinese, "仪仗队魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'脚步合拍'
@@ -50,7 +51,7 @@ While in combat, a rainbow of damaging symphonic symbols will follow your moveme
                 thoriumPlayer.setMarchingBand = true;
             }
 
-            //fullscore
+            thorium.GetItem("FullScore").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -64,11 +65,7 @@ While in combat, a rainbow of damaging symphonic symbols will follow your moveme
             recipe.AddIngredient(ModContent.ItemType<MarchingBandLeggings>());
             recipe.AddIngredient(ModContent.ItemType<FullScore>());
             recipe.AddIngredient(ModContent.ItemType<Cymbals>());
-            recipe.AddIngredient(ModContent.ItemType<Violin>());
-            recipe.AddIngredient(ModContent.ItemType<Trombone>());
             recipe.AddIngredient(ModContent.ItemType<SummonerWarhorn>());
-            recipe.AddIngredient(ModContent.ItemType<Tuba>());
-            recipe.AddIngredient(ModContent.ItemType<DragonsWail>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

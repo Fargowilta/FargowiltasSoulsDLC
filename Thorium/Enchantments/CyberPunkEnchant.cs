@@ -25,7 +25,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Techno rave!'
 Pressing the 'Special Ability' key will cycle you through four states
-Effects of Auto Tuner and Metal Music Player");
+Effects of Auto Tuner, Metal Music Player, and Diss Track");
             DisplayName.AddTranslation(GameCulture.Chinese, "赛博朋克魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'科技电音狂欢!'
@@ -138,13 +138,10 @@ Effects of Auto Tuner and Metal Music Player");
 
             if (player.GetModPlayer<FargoDLCPlayer>().ThoriumSoul) return;
 
-            //auto tuner
-            thoriumPlayer.accAutoTuner = true;
-            //music player
-            thoriumPlayer.accMusicPlayer = true;
-            thoriumPlayer.accMP3Brass = true;
 
-            //disstrck, mention/fix music player
+            thorium.GetItem("AutoTuner").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("TunePlayerDamage").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("DissTrack").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -159,10 +156,7 @@ Effects of Auto Tuner and Metal Music Player");
             recipe.AddIngredient(ModContent.ItemType<AutoTuner>());
             recipe.AddIngredient(ModContent.ItemType<TunePlayerDamage>());
             recipe.AddIngredient(ModContent.ItemType<DissTrack>());
-            recipe.AddIngredient(ModContent.ItemType<Kazoo>());
-            recipe.AddIngredient(ModContent.ItemType<HallowedMegaphone>());
-            recipe.AddIngredient(ModContent.ItemType<MidnightBassBooster>());
-            recipe.AddIngredient(ModContent.ItemType<RiffWeaver>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

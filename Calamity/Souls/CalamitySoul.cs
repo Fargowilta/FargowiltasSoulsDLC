@@ -34,23 +34,22 @@ All armor bonuses from God Slayer, Silva, and Auric
 Effects of Gladiator's Locket and Unstable Prism
 Effects of Counter Scarf and Fungal Symbiote
 Effects of Hallowed Rune, Ethereal Extorter, and The Community
-Effects of The Evolution, Spectral Veil, and Statis' Void Sash
-Effects of Scuttler's Jewel, Permafrost's Concoction, and Regenator
+Effects of Spectral Veil and Statis' Void Sash
+Effects of Scuttler's Jewel and Permafrost's Concoction
 Effects of Thief's Dime, Vampiric Talisman, and Momentum Capacitor
-Effects of the Astral Arcanum, Hide of Astrum Deus, and Gravistar Sabaton
-Effects of the Abyssal Diving Suit, Mutated Truffle, and Old Duke's Scales
+Effects of the Astral Arcanum and Gravistar Sabaton
+Effects of the Abyssal Diving Suit and Mutated Truffle
 Effects of Giant Pearl and Amidias' Pendant
 Effects of Aquatic Emblem and Enchanted Pearl
-Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift
+Effects of Ocean's Crest and Luxor's Gift
 Effects of Corrosive Spine and Lumenous Amulet
 Effects of Sand Cloak and Alluring Bait
-Effects of Trinket of Chi, Fabled Tortoise Shell, and Plague Hive
-Effects of Plagued Fuel Pack, The Bee, The Camper, and Profaned Soul Crystal
+Effects of Trinket of Chi and Plague Hive
+Effects of Plagued Fuel Pack, The Camper, and Profaned Soul Crystal
 Effects of Blazing Core, Dark Sun Ring, and Core of the Blood God
-Effects of Affliction, Nebulous Core, and Draedon's Heart
-Effects of the The Amalgam, Dynamo Stem Cells, and Godly Soul Artifact
-Effects of Yharim's Gift, Heart of the Elements, and The Sponge
-Summons several pets");
+Effects of Nebulous Core and Draedon's Heart
+Effects of the The Amalgam and Godly Soul Artifact
+Effects of Yharim's Gift, Heart of the Elements, and The Sponge");
             DisplayName.AddTranslation(GameCulture.Chinese, "暴君之魂");
             Tooltip.AddTranslation(GameCulture.Chinese,
 @"'然后大地再次恢复了宁静...'

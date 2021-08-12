@@ -1,19 +1,12 @@
 Fargo's Soul Mod DLC
--This mod adds all cross mod support and a few other things that don't exactly fit in with the main mod
+-This mod adds cross mod Enchantments and Souls for Thorium, Calamity, Shadows of Abbadon, and DragonBall Terraria
 -Fargo's Soul Mod is required for this mod to work
 
-V 0.1
--Added all Thorium, Calamity, Shadows of Abaddon, and Dragon Ball Terraria Souls and Enchantments
--Added Pandora's Box and Pandora's Tome
--Added Guntera and Celing of Moon Lord
-
-V 0.2
--Added EchDeath and a spawn method 
--Fixed modded souls not needing Abominable Energy
--Fixed a few recipe issues
-
-V 0.2.1
--Fixed Thorium incompatability
-
-V 0.2.2
--Fixed Thorium incompatability again
+NEW UPDATE - V 0.3
+-Added Icon
+-All Enchantment recipes drastically reduced (especially Calamity)
+-All pets removed
+-Several missing effects added
+-Several tooltips fixed
+-Essence recipes updated to be post Mechanical Bosses
+-Fixed several issues with new Thorium beta

@@ -28,8 +28,7 @@ Maximum mana increased by 50%
 While above 75% maximum mana, you become unstable
 Enemies that attack friendly NPCs are marked as Villains
 You deal 50% bonus damage to Villains
-Effects of Shade Band
-Summons a Moogle pet");
+Effects of Shade Band");
             DisplayName.AddTranslation(GameCulture.Chinese, "先知魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'末日将至'
@@ -82,10 +81,6 @@ Summons a Moogle pet");
             recipe.AddIngredient(ModContent.ItemType<HarbingerGreaves>());
             recipe.AddIngredient(ModContent.ItemType<WhiteKnightEnchant>());
             recipe.AddIngredient(ModContent.ItemType<BlackholeCannon>());
-            recipe.AddIngredient(ModContent.ItemType<GodKiller>());
-            recipe.AddIngredient(ModContent.ItemType<HarbingerSpear>());
-            recipe.AddIngredient(ModContent.ItemType<HarbingerBow>());
-            recipe.AddIngredient(ModContent.ItemType<HarbingerSurgeWand>());
             recipe.AddIngredient(ModContent.ItemType<SpiritStaff>());
 
             recipe.AddTile(TileID.CrystalBall);

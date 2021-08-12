@@ -28,8 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Allows you and nearby allies to breathe underwater
 Grants the ability to swim
 You and nearby allies gain 10% increased damage and movement speed
-Effects of Sea Breeze Pendant and Bubble Magnet
-Summons a pet Jellyfish");
+Effects of Sea Breeze Pendant and Bubble Magnet");
             DisplayName.AddTranslation(GameCulture.Chinese, "深渊潜游者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'成为无私的保卫者'
@@ -79,7 +78,6 @@ Summons a pet Jellyfish");
             //bubble magnet
             thoriumPlayer.bubbleMagnet = true;
             modPlayer.DepthEnchant = true;
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.JellyfishPet, hideVisual, thorium.BuffType("JellyPet"), thorium.ProjectileType("JellyfishPet"));
         }
 
         public override void AddRecipes()
@@ -94,10 +92,7 @@ Summons a pet Jellyfish");
             recipe.AddIngredient(ModContent.ItemType<OceanEnchant>());
             recipe.AddIngredient(ModContent.ItemType<MagicConch>());
             recipe.AddIngredient(ModContent.ItemType<GeyserStaff>());
-            recipe.AddIngredient(ModContent.ItemType<AnglerBulb>());
-            recipe.AddIngredient(ModContent.ItemType<QueensGlowstick>());
-            recipe.AddIngredient(ModContent.ItemType<JellyFishIdol>());
-            recipe.AddIngredient(ModContent.ItemType<AquaticParadisePaint>());
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

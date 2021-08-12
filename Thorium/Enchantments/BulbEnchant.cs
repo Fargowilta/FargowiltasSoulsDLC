@@ -8,6 +8,7 @@ using ThoriumMod.Items.BardItems;
 using ThoriumMod.Items.BasicAccessories;
 using ThoriumMod.Items.SummonItems;
 using ThoriumMod.Items.NPCItems;
+using ThoriumMod.Items.HealerItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -26,7 +27,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Has a surprisingly sweet aroma'
 Your damage has a chance to poison hit enemies with a spore cloud
-Effects of Bee Booties and Petal Shield, and Kick Petal");
+Effects of Bee Booties, Petal Shield, and Kick Petal");
             DisplayName.AddTranslation(GameCulture.Chinese, "花瓣魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'香气逼人'
@@ -63,7 +64,7 @@ Effects of Bee Booties and Petal Shield, and Kick Petal");
                 player.maxRunSpeed -= 1f;
             }
 
-            //kickpetal
+            thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -72,16 +73,13 @@ Effects of Bee Booties and Petal Shield, and Kick Petal");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            //recipe.AddIngredient(ModContent.ItemType<BloomingCrown>());
-            //recipe.AddIngredient(ModContent.ItemType<BloomingTabard>());
-            //recipe.AddIngredient(ModContent.ItemType<BloomingLeggings>());
+            recipe.AddIngredient(ModContent.ItemType<BloomingCrown>());
+            recipe.AddIngredient(ModContent.ItemType<BloomingTabard>());
+            recipe.AddIngredient(ModContent.ItemType<BloomingLeggings>());
             recipe.AddIngredient(ModContent.ItemType<PetalShield>());
             recipe.AddIngredient(ModContent.ItemType<KickPetal>());
             recipe.AddIngredient(ModContent.ItemType<BeeBoots>());
-            recipe.AddIngredient(ModContent.ItemType<BloomingBlade>());
-            recipe.AddIngredient(ModContent.ItemType<BloomerBell>());
-            recipe.AddIngredient(ModContent.ItemType<CreepingVineStaff>());
-            recipe.AddIngredient(ModContent.ItemType<CactusFruit>());
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

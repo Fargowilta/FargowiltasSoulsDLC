@@ -80,15 +80,12 @@ These effects needs to recharge for 1 minute");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<SoloistHat>());
-            recipe.AddIngredient(ModContent.ItemType<RallyHat>());
+            recipe.AddIngredient(ModContent.ItemType<SoloistHat>()); //any..
+            //recipe.AddIngredient(ModContent.ItemType<RallyHat>());
             recipe.AddIngredient(ModContent.ItemType<RhapsodistChestWoofer>());
             recipe.AddIngredient(ModContent.ItemType<RhapsodistBoots>());
-            recipe.AddIngredient(ModContent.ItemType<SirensAllure>());
             recipe.AddIngredient(ModContent.ItemType<JingleBells>());
-            //recipe.AddIngredient(ModContent.ItemType<TerrariumAutoharp>()); theset
             recipe.AddIngredient(ModContent.ItemType<Sousaphone>());
-            recipe.AddIngredient(ModContent.ItemType<Holophonor>());
             recipe.AddIngredient(ModContent.ItemType<EdgeofImagination>());
 
             recipe.AddTile(TileID.LunarCraftingStation);

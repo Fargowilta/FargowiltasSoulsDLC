@@ -27,7 +27,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 50% increased mining speed
 Shows the location of enemies, traps, and treasures
 Light is emitted from the player
-Summons a pet Magic Lantern and Lock Box");
+Effects of Crystaline Charm");
             DisplayName.AddTranslation(GameCulture.Chinese, "晶体魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'用极尽奢华的材料制成'
@@ -54,14 +54,10 @@ Summons a pet Magic Lantern and Lock Box");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
 
-            //increase range from crystallinecharm
+            thorium.GetItem("CrystalineCharm").UpdateAccessory(player, hideVisual);
 
             thoriumPlayer.geodeShine = true;
             Lighting.AddLight(player.position, 1.2f, 0.8f, 1.2f);
-            //pets
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.BoxPet, hideVisual, thorium.BuffType("LockBoxBuff"), thorium.ProjectileType("LockBoxPet"));
-            //mining speed, spelunker, dangersense, light, hunter, pet
-            //modPlayer.MinerEffect(hideVisual, .5f);
         }
 
         public override void AddRecipes()
@@ -73,13 +69,9 @@ Summons a pet Magic Lantern and Lock Box");
             recipe.AddIngredient(ModContent.ItemType<GeodeHelmet>());
             recipe.AddIngredient(ModContent.ItemType<GeodeChestplate>());
             recipe.AddIngredient(ModContent.ItemType<GeodeGreaves>());
-            //recipe.AddIngredient(ModContent.ItemType<MinerEnchant>());
             recipe.AddIngredient(ModContent.ItemType<CrystalineCharm>());
             recipe.AddIngredient(ModContent.ItemType<EnchantedPickaxe>());
             recipe.AddIngredient(ModContent.ItemType<GnomePick>());
-            recipe.AddIngredient(ModContent.ItemType<CrystalPhaser>());
-            recipe.AddIngredient(ModContent.ItemType<Lantern>());
-            recipe.AddIngredient(ModContent.ItemType<JonesLockBox>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

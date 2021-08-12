@@ -72,9 +72,10 @@ Effects Dreadflame Emblem");
             "BlightLegs",
             "DreadflameEmblem",
             "FeatherHairpin",
-            "MoodSummon",
-            "HarpyBoomerang",
-            "BoneThrone",
+
+           // "MoodSummon",
+            //"HarpyBoomerang",
+           // "BoneThrone",
             "PumpGlove",
         };
 
@@ -86,7 +87,7 @@ Effects Dreadflame Emblem");
 
             foreach (string i in items) recipe.AddIngredient(soa.ItemType(i));
 
-            recipe.AddIngredient(soa.ItemType("Pumpnade"), 300);
+            //recipe.AddIngredient(soa.ItemType("Pumpnade"), 300);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

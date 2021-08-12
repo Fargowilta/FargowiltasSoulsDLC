@@ -3,7 +3,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
-using ThoriumMod.Buffs.Pet;
 using FargowiltasSoulsDLC.Thorium.Enchantments;
 using FargowiltasSouls;
 
@@ -25,8 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 @"'A blazing heat, the mark of Surtr...'
 All armor bonuses from Sandstone, Danger, Flight, and Fungus
 All armor bonuses Living Wood, Bulb, and Life Bloom
-Effects of Night Shade Petal, Flawless Chrysalis, and Bee Booties
-Summons a pet Glitter");
+Effects of Night Shade Petal, Flawless Chrysalis, and Bee Booties");
             DisplayName.AddTranslation(GameCulture.Chinese, "穆斯贝尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'炽热之火, 史尔特尔的标志...'

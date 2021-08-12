@@ -31,8 +31,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 You fall quicker and are immune to fall damage
 Taking over 25 damage in one hit causes several homing feathers to fall
 Summons a Valkyrie minion to protect you
-Effects of Gladiator's Locket and Unstable Prism
-Summons a Rotom pet");
+Effects of Gladiator's Locket and Unstable Prism");
             DisplayName.AddTranslation(GameCulture.Chinese, "天蓝魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"天空向你施以援手...
@@ -91,10 +90,6 @@ Summons a Rotom pet");
                 calamity.GetItem("GladiatorsLocket").UpdateAccessory(player, hideVisual);
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.UnstablePrism))
                 calamity.GetItem("UnstablePrism").UpdateAccessory(player, hideVisual);
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.AerospecEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.RotomPet, hideVisual, ModContent.BuffType<RotomBuff>(), ModContent.ProjectileType<RotomPet>());
         }
 
         public override void AddRecipes()
@@ -109,10 +104,6 @@ Summons a Rotom pet");
             recipe.AddIngredient(ModContent.ItemType<GladiatorsLocket>());
             recipe.AddIngredient(ModContent.ItemType<UnstablePrism>());
             recipe.AddIngredient(ModContent.ItemType<StormSurge>());
-            recipe.AddIngredient(ModContent.ItemType<FlurrystormCannon>());
-            recipe.AddIngredient(ModContent.ItemType<PerfectDark>());
-            recipe.AddIngredient(ModContent.ItemType<SausageMaker>());
-            recipe.AddIngredient(ModContent.ItemType<RotomRemote>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

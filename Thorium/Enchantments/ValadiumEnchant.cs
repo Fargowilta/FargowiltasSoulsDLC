@@ -79,12 +79,9 @@ Effects of Mirror of the Beholder");
             recipe.AddIngredient(ModContent.ItemType<ValadiumBreastPlate>());
             recipe.AddIngredient(ModContent.ItemType<ValadiumGreaves>());
             recipe.AddIngredient(ModContent.ItemType<EyeofBeholder>());
-            recipe.AddIngredient(ModContent.ItemType<GlacialSting>());
-            recipe.AddIngredient(ModContent.ItemType<Obliterator>());
             recipe.AddIngredient(ModContent.ItemType<ValadiumBow>());
-            recipe.AddIngredient(ModContent.ItemType<ValadiumStaff>());
             recipe.AddIngredient(ModContent.ItemType<TommyGun>());
-            recipe.AddIngredient(ModContent.ItemType<CrystalBalloon>(), 300);
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

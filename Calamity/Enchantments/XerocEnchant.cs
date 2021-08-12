@@ -84,15 +84,7 @@ Effects of The Community");
             recipe.AddIngredient(ModContent.ItemType<XerocPlateMail>());
             recipe.AddIngredient(ModContent.ItemType<XerocCuisses>());
             recipe.AddIngredient(ModContent.ItemType<TheCommunity>());
-            recipe.AddIngredient(ModContent.ItemType<Xerocodile>());
-            recipe.AddIngredient(ModContent.ItemType<BrinyBaron>());
-            recipe.AddIngredient(ModContent.ItemType<StormRuler>());
-            recipe.AddIngredient(ModContent.ItemType<ThornBlossom>());
-            recipe.AddIngredient(ModContent.ItemType<Interfacer>());
             recipe.AddIngredient(ModContent.ItemType<ElephantKiller>());
-            recipe.AddIngredient(ModContent.ItemType<UtensilPoker>());
-            recipe.AddIngredient(ModContent.ItemType<Infinity>());
-            recipe.AddIngredient(ModContent.ItemType<GrandDad>());
             recipe.AddIngredient(ModContent.ItemType<ElementalBlaster>());
 
             recipe.AddTile(TileID.LunarCraftingStation);

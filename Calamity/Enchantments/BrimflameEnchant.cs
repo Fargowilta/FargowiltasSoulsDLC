@@ -31,8 +31,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 @"''
 Press Y to trigger a brimflame frenzy effect
 While under this effect, your damage is significantly boosted
-However, this comes at the cost of rapid life loss and no mana regeneration
-Summons a Brimling pet");
+However, this comes at the cost of rapid life loss and no mana regeneration");
             DisplayName.AddTranslation(GameCulture.Chinese, "硫火魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
@@ -69,10 +68,6 @@ Summons a Brimling pet");
 
             //set bonus
             calamity.Call("SetSetBonus", player, "brimflame", true);
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.BrimflameEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.BrimlingPet, hideVisual, calamity.BuffType("BrimlingBuff"), calamity.ProjectileType("BrimlingPet"));
         }
 
         public override void AddRecipes()
@@ -84,17 +79,10 @@ Summons a Brimling pet");
             recipe.AddIngredient(ModContent.ItemType<BrimflameScowl>());
             recipe.AddIngredient(ModContent.ItemType<BrimflameRobes>());
             recipe.AddIngredient(ModContent.ItemType<BrimflameBoots>());
-            recipe.AddIngredient(ModContent.ItemType<DragoonDrizzlefish>());
+
             recipe.AddIngredient(ModContent.ItemType<Butcher>());
-            recipe.AddIngredient(ModContent.ItemType<FulgurationHalberd>());
-            recipe.AddIngredient(ModContent.ItemType<Roxcalibur>());
             recipe.AddIngredient(ModContent.ItemType<IgneousExaltation>());
             recipe.AddIngredient(ModContent.ItemType<BlazingStar>());
-            recipe.AddIngredient(ModContent.ItemType<DormantBrimseeker>());
-            recipe.AddIngredient(ModContent.ItemType<BrimstoneFlameblaster>());
-            recipe.AddIngredient(ModContent.ItemType<TheEyeofCalamitas>());
-            recipe.AddIngredient(ModContent.ItemType<SlurperPole>());
-            recipe.AddIngredient(ModContent.ItemType<CharredRelic>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

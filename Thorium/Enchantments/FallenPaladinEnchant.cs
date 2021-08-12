@@ -77,10 +77,6 @@ Effects of Wynebgwrthucher and Rebirth Statuette");
             recipe.AddIngredient(ModContent.ItemType<TemplarEnchant>());
             recipe.AddIngredient(ModContent.ItemType<Wynebgwrthucher>());
             recipe.AddIngredient(ModContent.ItemType<RebirthStatuette>());
-            recipe.AddIngredient(ModContent.ItemType<TwilightStaff>());
-            recipe.AddIngredient(ModContent.ItemType<BulwarkStaff>());
-            recipe.AddIngredient(ModContent.ItemType<LightBringerWarhammer>());
-            recipe.AddIngredient(ModContent.ItemType<GoldDuck>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -36,32 +36,24 @@ namespace FargowiltasSoulsDLC
                 AddToggle("ThoriumYumasPendantConfig", "Yuma's Pendant", "ConjuristsSoul", "ffffff");
                 AddToggle("ThoriumHeadMirrorConfig", "Head Mirror", "GuardianAngelsSoul", "ffffff");
                 //AddToggle("ThoriumAirWalkersConfig", "Air Walkers", "SupersonicSoul", "ffffff");
-                AddToggle("ThoriumGlitterPetConfig", "Glitter Pet", "DangerEnchant", "ffffff");
-                AddToggle("ThoriumCoinPetConfig", "Coin Bag Pet", "BronzeEnchant", "ffffff");
-                AddToggle("ThoriumBioFeederPetConfig", "Bio-Feeder Pet", "MeteorEnchant", "ffffff");
-                AddToggle("ThoriumLanternPetConfig", "Inspiring Lantern Pet", "GeodeEnchant", "ffffff");
-                AddToggle("ThoriumBoxPetConfig", "Lock Box Pet", "GeodeEnchant", "ffffff");
 
                 AddToggle("MuspelheimForce", "Force of Muspelheim", "MuspelheimForce", "ffffff");
                 AddToggle("ThoriumBeeBootiesConfig", "Bee Booties", "BulbEnchant", "ffffff");
                 AddToggle("ThoriumSaplingMinionConfig", "Sapling Minion", "LivingWoodEnchant", "ffffff");
 
                 AddToggle("JotunheimForce", "Force of Jotunheim", "JotunheimForce", "ffffff");
-                AddToggle("ThoriumJellyfishPetConfig", "Jellyfish Pet", "DepthDiverEnchant", "ffffff");
                 AddToggle("ThoriumTideFoamConfig", "Tide Hunter Foam", "TideHunterEnchant", "ffffff");
                 AddToggle("ThoriumYewCritsConfig", "Yew Wood Crits", "YewWoodEnchant", "ffffff");
                 AddToggle("ThoriumCryoDamageConfig", "Cryo-Magus Damage", "CryomancerEnchant", "ffffff");
-                AddToggle("ThoriumOwlPetConfig", "Owl Pet", "CryomancerEnchant", "ffffff");
                 AddToggle("ThoriumIcyBarrierConfig", "Icy Barrier", "IcyEnchant", "ffffff");
                 AddToggle("ThoriumWhisperingTentaclesConfig", "Whispering Tentacles", "WhisperingEnchant", "ffffff");
 
                 AddToggle("AlfheimForce", "Force of Alfheim", "AlfheimForce", "ffffff");
                 AddToggle("ThoriumCherubMinionConfig", "Li'l Cherub Minion", "SacredEnchant", "ffffff");
-                AddToggle("ThoriumSpiritPetConfig", "Life Spirit Pet", "SacredEnchant", "ffffff");
+
                 AddToggle("ThoriumWarlockWispsConfig", "Warlock Wisps", "WarlockEnchant", "ffffff");
                 AddToggle("ThoriumDevilMinionConfig", "Li'l Devil Minion", "WarlockEnchant", "ffffff");
                 AddToggle("ThoriumBiotechProbeConfig", "Biotech Probe", "BiotechEnchant", "ffffff");
-                AddToggle("ThoriumGoatPetConfig", "Holy Goat Pet", "LifeBinderEnchant", "ffffff");
 
                 AddToggle("NiflheimForce", "Force of Niflheim", "NiflheimForce", "ffffff");
                 AddToggle("ThoriumMixTapeConfig", "Mix Tape", "NobleEnchant", "ffffff");
@@ -75,14 +67,11 @@ namespace FargowiltasSoulsDLC
                 AddToggle("ThoriumIncandescentSparkConfig", "Incandescent Spark", "DurasteelEnchant", "ffffff");
                 AddToggle("ThoriumGreedyMagnetConfig", "Greedy Magnet", "DurasteelEnchant", "ffffff");
                 AddToggle("ThoriumConduitShieldConfig", "Conduit Shield", "ConduitEnchant", "ffffff");
-                AddToggle("ThoriumOmegaPetConfig", "Omega Pet", "ConduitEnchant", "ffffff");
-                AddToggle("ThoriumIFOPetConfig", "I.F.O. Pet", "ConduitEnchant", "ffffff");
 
                 AddToggle("MidgardForce", "Force of Midgard", "MidgardForce", "ffffff");
                 AddToggle("ThoriumLodestoneConfig", "Lodestone Resistance", "LodestoneEnchant", "ffffff");
                 AddToggle("ThoriumBeholderEyeConfig", "Eye of the Beholder", "ValadiumEnchant", "ffffff");
                 AddToggle("ThoriumIllumiteMissileConfig", "Illumite Missile", "IllumiteEnchant", "ffffff");
-                AddToggle("ThoriumSlimePetConfig", "Pink Slime Pet", "IllumiteEnchant", "ffffff");
                 AddToggle("ThoriumTerrariumSpiritsConfig", "Terrarium Spirits", "TerrariumEnchant", "ffffff");
                 AddToggle("ThoriumDiverConfig", "Spawn Divers", "ThoriumEnchant", "ffffff");
                 AddToggle("ThoriumCrietzConfig", "Crietz", "ThoriumEnchant", "ffffff");
@@ -100,16 +89,13 @@ namespace FargowiltasSoulsDLC
                 AddToggle("ThoriumSpiritWispsConfig", "Spirit Trapper Wisps", "SpiritTrapperEnchant", "ffffff");
                 AddToggle("ThoriumDreadConfig", "Dread Speed", "DreadEnchant", "ffffff");
                 AddToggle("ThoriumDragonFlamesConfig", "Dragon Flames", "DragonEnchant", "ffffff");
-                AddToggle("ThoriumWyvernPetConfig", "Wyvern Pet", "DragonEnchant", "ffffff");
                 AddToggle("ThoriumDemonBloodConfig", "Demon Blood Effect", "DemonBloodEnchant", "ffffff");
                 AddToggle("ThoriumFleshDropsConfig", "Flesh Drops", "FleshEnchant", "ffffff");
                 AddToggle("ThoriumVampireGlandConfig", "Vampire Gland", "FleshEnchant", "ffffff");
-                AddToggle("ThoriumBlisterPetConfig", "Blister Pet", "FleshEnchant", "ffffff");
                 AddToggle("ThoriumBerserkerConfig", "Berserker Effect", "BerserkerEnchant", "ffffff");
                 AddToggle("ThoriumSlagStompersConfig", "Slag Stompers", "MagmaEnchant", "ffffff");
                 AddToggle("ThoriumSpringStepsConfig", "Spring Steps", "MagmaEnchant", "ffffff");
                 AddToggle("ThoriumHarbingerOverchargeConfig", "Harbinger Overcharge", "HarbingerEnchant", "ffffff");
-                AddToggle("ThoriumMooglePetConfig", "Moogle Pet", "WhiteKnightEnchant", "ffffff");
                 AddToggle("ThoriumPlagueFlaskConfig", "Plague Lord's Flask", "PlagueDoctorEnchant", "ffffff");
 
                 AddToggle("AsgardForce", "Force of Asgard", "AsgardForce", "ffffff");
@@ -117,7 +103,6 @@ namespace FargowiltasSoulsDLC
                 AddToggle("ThoriumTideDaggersConfig", "Tide Turner Daggers", "TideTurnerEnchant", "ffffff");
                 AddToggle("ThoriumAssassinDamageConfig", "Assassin Damage", "AssassinEnchant", "ffffff");
                 AddToggle("ThoriumpyromancerBurstsConfig", "Pyromancer Bursts", "PyromancerEnchant", "ffffff");
-                AddToggle("ThoriumMaidPetConfig", "Maid Pet", "DreamWeaverEnchant", "ffffff");
             }
             else
             {
@@ -133,45 +118,32 @@ namespace FargowiltasSoulsDLC
                 AddToggle("CalamityValkyrieMinionConfig", "Valkyrie Minion", "AerospecEnchant", "ffffff");
                 AddToggle("CalamityGladiatorLocketConfig", "Gladiator's Locket", "AerospecEnchant", "ffffff");
                 AddToggle("CalamityUnstablePrismConfig", "Unstable Prism", "AerospecEnchant", "ffffff");
-                AddToggle("CalamityRotomConfig", "Rotom Pet", "AerospecEnchant", "ffffff");
                 AddToggle("CalamityFungalSymbiote", "Fungal Symbiote", "StatigelEnchant", "ffffff");
                 AddToggle("CalamityAtaxiaEffectsConfig", "Ataxia Effects", "AtaxiaEnchant", "ffffff");
                 AddToggle("CalamityChaosMinionConfig", "Chaos Spirit Minion", "AtaxiaEnchant", "ffffff");
                 AddToggle("CalamityHallowedRuneConfig", "Hallowed Rune", "AtaxiaEnchant", "ffffff");
                 AddToggle("CalamityEtherealExtorterConfig", "Ethereal Extorter", "AtaxiaEnchant", "ffffff");
                 AddToggle("CalamityXerocEffectsConfig", "Xeroc Effects", "XerocEnchant", "ffffff");
-                AddToggle("CalamityTheEvolutionConfig", "The Evolution", "FearmongerEnchant", "ffffff");
+                
                 AddToggle("CalamityStatisBeltOfCursesConfig", "Statis' Void Sash", "FearmongerEnchant", "ffffff");
 
                 AddToggle("DevastationForce", "Force of Devastation", "DevastationForce", "ffffff");
                 AddToggle("CalamityReaverEffectsConfig", "Reaver Effects", "ReaverEnchant", "ffffff");
                 AddToggle("CalamityReaverMinionConfig", "Reaver Orb Minion", "ReaverEnchant", "ffffff");
-                AddToggle("CalamityFabledTurtleConfig", "Fabled Turtle Shell", "ReaverEnchant", "ffffff");
-                AddToggle("CalamitySparksConfig", "Sparks Pet", "ReaverEnchant", "ffffff");
                 AddToggle("CalamityPlagueHiveConfig", "Plague Hive", "PlagueReaperEnchant", "ffffff");
                 AddToggle("CalamityPlaguedFuelPackConfig", "Plague Fuel Pack", "PlagueReaperEnchant", "ffffff");
-                AddToggle("CalamityTheBeeConfig", "The Bee", "PlagueReaperEnchant", "ffffff");
                 AddToggle("CalamityTheCamperConfig", "The Camper", "PlagueReaperEnchant", "ffffff");
                 AddToggle("CalamityDevilMinionConfig", "Red Devil Minion", "DemonShadeEnchant", "ffffff");
                 AddToggle("CalamityProfanedSoulConfig", "Profaned Soul Crystal", "DemonShadeEnchant", "ffffff");
-                AddToggle("CalamityLeviConfig", "Levi Pet", "DemonShadeEnchant", "ffffff");
-                AddToggle("CalamityScalConfig", "SCal Pet", "DemonShadeEnchant", "ffffff");
-
 
 
                 AddToggle("DesolationForce", "Force of Desolation", "DesolationForce", "ffffff");
                 AddToggle("CalamityDaedalusEffectsConfig", "Daedalus Effects", "DaedalusEnchant", "ffffff");
                 AddToggle("CalamityDaedalusMinionConfig", "Daedalus Crystal Minion", "DaedalusEnchant", "ffffff");
                 AddToggle("CalamityPermafrostPotionConfig", "Permafrost's Concoction", "DaedalusEnchant", "ffffff");
-                AddToggle("CalamityRegeneratorConfig", "Regenator", "DaedalusEnchant", "ffffff");
-                AddToggle("CalamityKendraConfig", "Kendra Pet", "DaedalusEnchant", "ffffff");
-                AddToggle("CalamityBearConfig", "Bear Pet", "DaedalusEnchant", "ffffff");
-                AddToggle("CalamityThirdSageConfig", "Third Sage Pet", "DaedalusEnchant", "ffffff");
 
                 AddToggle("CalamityAstralStarsConfig", "Astral Stars", "AstralEnchant", "ffffff");
-                AddToggle("CalamityHideofAstrumDeusConfig", "Hide of Astrum Deus", "AstralEnchant", "ffffff");
                 AddToggle("CalamityGravistarSabatonConfig", "GravistarSabaton", "AstralEnchant", "ffffff");
-                AddToggle("CalamityAstrophageConfig", "Astrophage Pet", "AstralEnchant", "ffffff");
 
                 AddToggle("CalamityOmegaTentaclesConfig", "Omega Blue Tentacles", "OmegaBlueEnchant", "ffffff");
                 AddToggle("CalamityDivingSuitConfig", "Abyssal Diving Suit", "OmegaBlueEnchant", "ffffff");
@@ -180,18 +152,8 @@ namespace FargowiltasSoulsDLC
                 AddToggle("CalamityUrchinConfig", "Victide Sea Urchin", "VictideEnchant", "ffffff");
                 AddToggle("CalamityLuxorGiftConfig", "Luxor's Gift", "VictideEnchant", "ffffff");
 
-
-
-
-
-
-                //e
-
                 AddToggle("CalamityBloodflareEffectsConfig", "Bloodflare Effects", "BloodflareEnchant", "ffffff");
                 AddToggle("CalamityPolterMinesConfig", "Polterghast Mines", "BloodflareEnchant", "ffffff");
-
-
-
 
                 AddToggle("CalamitySilvaEffectsConfig", "Silva Effects", "SilvaEnchant", "ffffff");
                 AddToggle("CalamitySilvaMinionConfig", "Silva Crystal Minion", "SilvaEnchant", "ffffff");
@@ -199,33 +161,15 @@ namespace FargowiltasSoulsDLC
                 AddToggle("CalamityYharimGiftConfig", "Yharim's Gift", "SilvaEnchant", "ffffff");
                 AddToggle("CalamityFungalMinionConfig", "Fungal Clump Minion", "SilvaEnchant", "ffffff");
                 AddToggle("CalamityPoisonSeawaterConfig", "Poisonous Sea Water", "SilvaEnchant", "ffffff");
-                AddToggle("CalamityAkatoConfig", "Akato Pet", "SilvaEnchant", "ffffff");
-                AddToggle("CalamityFoxConfig", "Fox Pet", "SilvaEnchant", "ffffff");
 
-                AddToggle("CalamityFlakConfig", "Flak Pet", "FathomSwarmerEnchant", "ffffff");
-                AddToggle("CalamityGhostBellConfig", "Ghost Bell Pet", "MolluskEnchant", "ffffff");
-                AddToggle("CalamityRadiatorConfig", "Radiator Pet", "SulphurousEnchant", "ffffff");
-
-
-
-
-                AddToggle("CalamitySirenConfig", "Siren Pet", "OmegaBlueEnchant", "ffffff");
                 AddToggle("CalamityGodSlayerEffectsConfig", "God Slayer Effects", "GodSlayerEnchant", "ffffff");
                 AddToggle("CalamityMechwormMinionConfig", "Mechworm Minion", "GodSlayerEnchant", "ffffff");
                 AddToggle("CalamityNebulousCoreConfig", "Nebulous Core", "GodSlayerEnchant", "ffffff");
-                AddToggle("CalamityChibiiConfig", "Chibii Pet", "GodSlayerEnchant", "ffffff");
                 AddToggle("CalamityAuricEffectsConfig", "Auric Tesla Effects", "AuricEnchant", "ffffff");
                 AddToggle("CalamityWaifuMinionsConfig", "Elemental Waifus", "AuricEnchant", "ffffff");
 
-
                 AddToggle("CalamityShellfishMinionConfig", "Shellfish Minions", "MolluskEnchant", "ffffff");
-                AddToggle("CalamityAmidiasPendantConfig", "Amidias' Pendant", "MolluskEnchant", "ffffff");
                 AddToggle("CalamityGiantPearlConfig", "Giant Pearl", "MolluskEnchant", "ffffff");
-                AddToggle("CalamityDannyConfig", "Danny Pet", "SulphurousEnchant", "ffffff");
-
-
-
-                AddToggle("CalamityBrimlingConfig", "Brimling Pet", "AtaxiaEnchant", "ffffff");
 
                 AddToggle("CalamityTarragonEffectsConfig", "Tarragon Effects", "TarragonEnchant", "ffffff");
 
@@ -258,22 +202,7 @@ namespace FargowiltasSoulsDLC
                     AddThoriumPets();
                 }
 
-                if (CalamityLoaded)
-                {
-                    Mod calamity = ModLoader.GetMod("CalamityMod");
-
-                    String[] calamityPets = { "KendraPet" , "PerforaMini", "ThirdSage", "Bear", "BrimlingPet", "DannyDevitoPet",
-                    "SirenYoung", "ChibiiDoggo", "ChibiiDoggoFly", "Akato", "Fox", "LeviPet", "RotomPet", "Astrophage", "Sparks", "RadiatorPet", "BabyGhostBell", "FlakPet", "SCalPet" };
-                    int calamityIndex = 101;
-
-                    for (int i = 0; i < calamityPets.Length; i++)
-                    {
-                        if (!ModProjDict.ContainsKey(calamity.ProjectileType(calamityPets[i])))
-                        {
-                            ModProjDict.Add(calamity.ProjectileType(calamityPets[i]), calamityIndex++);
-                        }
-                    }
-                }
+                
             }
             catch (Exception e)
             {
@@ -284,23 +213,9 @@ namespace FargowiltasSoulsDLC
         private void AddThoriumPets()
         {
             Mod thorium = ModLoader.GetMod("ThoriumMod");
-            ModProjDict.Add(ModContent.ProjectileType<BioFeederPet>(), 2);
-            ModProjDict.Add(ModContent.ProjectileType<BlisterPet>(), 3);
-            ModProjDict.Add(ModContent.ProjectileType<WyvernPet>(), 4);
-            ModProjDict.Add(ModContent.ProjectileType<SupportLantern>(), 5);
-            ModProjDict.Add(ModContent.ProjectileType<LockBoxPet>(), 6);
-            ModProjDict.Add(ModContent.ProjectileType<Devil>(), 7);
-            ModProjDict.Add(ModContent.ProjectileType<Angel>(), 8);
-            ModProjDict.Add(ModContent.ProjectileType<LifeSpirit>(), 9);
-            ModProjDict.Add(ModContent.ProjectileType<HolyGoat>(), 10);
+            
             ModProjDict.Add(ModContent.ProjectileType<MinionSapling>(), 11);
-            ModProjDict.Add(ModContent.ProjectileType<SnowyOwlPet>(), 12);
-            ModProjDict.Add(ModContent.ProjectileType<JellyfishPet>(), 13);
-            ModProjDict.Add(ModContent.ProjectileType<LilMog>(), 14);
-            ModProjDict.Add(ModContent.ProjectileType<Maid1>(), 15);
-            ModProjDict.Add(ModContent.ProjectileType<PinkSlime>(), 16);
-            ModProjDict.Add(ModContent.ProjectileType<ShinyPet>(), 17);
-            ModProjDict.Add(ModContent.ProjectileType<DrachmaBag>(), 18);
+            
         }
 
         public override void AddRecipes()

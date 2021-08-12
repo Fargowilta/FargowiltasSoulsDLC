@@ -75,12 +75,13 @@ Effects of Novaniel's Resolve");
             "FallenPrinceChest",
             "FallenPrinceBoots",
             "NovanielResolve",
+
             "CosmicDesolation",
             "LunaticsGamble",
-            "Dawnfall",
-            "FlariumDisc",
-            "AsthralSaber",
-            "AsthralKnives"
+           // "Dawnfall",
+           // "FlariumDisc",
+           // "AsthralSaber",
+           // "AsthralKnives"
         };
 
         public override void AddRecipes()

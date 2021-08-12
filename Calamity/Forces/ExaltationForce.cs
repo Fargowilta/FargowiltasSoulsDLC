@@ -22,10 +22,9 @@ namespace FargowiltasSoulsDLC.Calamity.Forces
 All armor bonuses from Tarragon, Bloodflare, and Brimflame
 All armor bonuses from God Slayer, Silva, and Auric
 Effects of Blazing Core, Dark Sun Ring, and Core of the Blood God
-Effects of Affliction, Nebulous Core, and Draedon's Heart
-Effects of the The Amalgam, Dynamo Stem Cells, and Godly Soul Artifact
-Effects of Yharim's Gift, Heart of the Elements, and The Sponge
-Summons several pets");
+Effects of Nebulous Core and Draedon's Heart
+Effects of the The Amalgam and Godly Soul Artifact
+Effects of Yharim's Gift, Heart of the Elements, and The Sponge");
             DisplayName.AddTranslation(GameCulture.Chinese, "晋升之力");
             Tooltip.AddTranslation(GameCulture.Chinese,
 @"''

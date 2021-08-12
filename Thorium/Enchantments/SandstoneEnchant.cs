@@ -65,12 +65,10 @@ Desert winds will augment your boots, giving you a double jump");
             recipe.AddIngredient(ModContent.ItemType<iSandStoneMail>());
             recipe.AddIngredient(ModContent.ItemType<jSandStoneGreaves>());
             recipe.AddIngredient(ModContent.ItemType<Wreath>());
-            recipe.AddIngredient(ModContent.ItemType<BaseballBat>());
             recipe.AddIngredient(ModContent.ItemType<StoneThrowingSpear>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<gSandStoneThrowingKnife>(), 300);
             recipe.AddIngredient(ModContent.ItemType<TalonBurst>());
-            recipe.AddIngredient(ModContent.ItemType<ThunderOverDesertSkiesPaint>());
-            recipe.AddIngredient(ItemID.BlackScorpion);
+
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

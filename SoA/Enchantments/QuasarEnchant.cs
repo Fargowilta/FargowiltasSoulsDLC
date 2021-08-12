@@ -67,13 +67,13 @@ Energy surges attempt to home into enemies");
             "NovaHelmet",
             "NovaBreastplate",
             "NovaLegs",
-            "NovaWings",
-            "NovaPickaxe",
-            "NovaHamaxe",
+           // "NovaWings",
+           // "NovaPickaxe",
+           // "NovaHamaxe",
             "Ainfijarnar",
             "NovaknifePack",
             "NovaLance",
-            "FairGame"
+            //"FairGame"
         };
 
         public override void AddRecipes()

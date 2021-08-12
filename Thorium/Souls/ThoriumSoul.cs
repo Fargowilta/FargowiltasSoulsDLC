@@ -38,8 +38,7 @@ Effects of Eye of the Storm and Champion's Rebuttal
 Effects of the Abyssal Shell and Astro-Beetle Husk
 Effects of Eye of the Beholder, Crietz, and Mana-Charged Rocketeers 
 Effects of Inner Flame, Crash Boots, Vampire Gland, and Spring Steps
-Effects of Slag Stompers, Demon Blood Badge, and Lich's Gaze
-Summons several pets");
+Effects of Slag Stompers, Demon Blood Badge, and Lich's Gaze");
             DisplayName.AddTranslation(GameCulture.Chinese, "世界树之魂");
             Tooltip.AddTranslation(GameCulture.Chinese, @"'九界的真正力量归于汝身!'
 冰霜光环围绕着你, 在短暂的延迟后冻结附近的敌人

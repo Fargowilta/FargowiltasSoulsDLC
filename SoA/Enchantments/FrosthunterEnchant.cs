@@ -74,8 +74,6 @@ Effects of Frigid Pendant");
             {
                 modPlayer.decreePendantHide = true;
             }
-
-            //pets soon tm
         }
 
         private readonly string[] items =
@@ -84,12 +82,13 @@ Effects of Frigid Pendant");
             "FrosthunterWrappings",
             "FrosthunterBoots",
             "DecreeCharm",
-            "OmegaStrongbow",
-            "IceclawShuriken",
+
+            //"OmegaStrongbow",
+            //"IceclawShuriken",
             "FrostGlobeStaff",
             "FrostBeam",
-            "DecreeChop",
-            "CharmOfH"
+            //"DecreeChop",
+            //"CharmOfH"
         };
 
         public override void AddRecipes()

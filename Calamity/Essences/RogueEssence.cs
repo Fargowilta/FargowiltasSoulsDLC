@@ -74,9 +74,9 @@ namespace FargowiltasSoulsDLC.Calamity.Essences
             recipe.AddIngredient(ModContent.ItemType<PoisonPack>(), 3);
             recipe.AddIngredient(ModContent.ItemType<HardenedHoneycomb>(), 300);
             recipe.AddIngredient(ModContent.ItemType<ShinobiBlade>());
-            recipe.AddIngredient(ModContent.ItemType<MetalMonstrosity>());
             recipe.AddIngredient(ModContent.ItemType<InfernalKris>(), 300);
             recipe.AddIngredient(ModContent.ItemType<AshenStalactite>());
+            recipe.AddIngredient(ItemID.HallowedBar, 5);
 
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);

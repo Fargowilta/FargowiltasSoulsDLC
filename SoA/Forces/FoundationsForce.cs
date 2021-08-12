@@ -62,7 +62,6 @@ Effects of Frigid Pendant, Lapis Pendant, and Dreadflame Emblem");
             //dreadflame emblem
             modPlayer.dreadEmblem = true;
 
-            //pets soon tm
         }
 
 

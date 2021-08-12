@@ -50,7 +50,7 @@ Effects of the Faberge Egg");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             fargoPlayer.wingTimeModifier += 1f;
 
-            //faberge egg efectc
+            thorium.GetItem("FabergeEgg").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -64,10 +64,6 @@ Effects of the Faberge Egg");
             recipe.AddIngredient(ModContent.ItemType<FlightBoots>());
             recipe.AddIngredient(ModContent.ItemType<ChampionWing>());
             recipe.AddIngredient(ModContent.ItemType<FabergeEgg>());
-            recipe.AddIngredient(ModContent.ItemType<HarpyTalon>());
-            recipe.AddIngredient(ModContent.ItemType<Aerial>());
-            recipe.AddIngredient(ModContent.ItemType<RodFlocking>());
-            recipe.AddIngredient(ModContent.ItemType<HarpiesBarrage>(), 300);
             recipe.AddIngredient(ModContent.ItemType<Bolas>(), 300);
 
             recipe.AddTile(TileID.DemonAltar);

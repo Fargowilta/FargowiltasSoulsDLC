@@ -79,11 +79,8 @@ Effects of Sea Breeze Pendant and Bubble Magnet");
             recipe.AddIngredient(ModContent.ItemType<OceanGreaves>());
             recipe.AddIngredient(ModContent.ItemType<SeaBreezePendant>());
             recipe.AddIngredient(ModContent.ItemType<BubbleMagnet>());
-            recipe.AddIngredient(ModContent.ItemType<OceanSlasher>());
-            recipe.AddIngredient(ModContent.ItemType<OceanPolearm>());
-            //recipe.AddIngredient(ModContent.ItemType<StarfishWand>());
             recipe.AddIngredient(ItemID.Swordfish);
-            recipe.AddIngredient(ModContent.ItemType<JellyintheWaterPaint>());          
+        
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

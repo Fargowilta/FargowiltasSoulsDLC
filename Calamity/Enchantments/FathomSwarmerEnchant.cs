@@ -35,8 +35,7 @@ Provides a moderate amount of light and moderately reduces breath loss in the ab
 Attacking and being attacked by enemies inflicts poison
 Grants a sulphurous bubble jump that applies venom on hit
 Effects of Corrosive Spine and Lumenous Amulet
-Effects of Sand Cloak and Alluring Bait
-Summons several pets");
+Effects of Sand Cloak and Alluring Bait");
             DisplayName.AddTranslation(GameCulture.Chinese, "幻渊鱼群魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
@@ -84,10 +83,6 @@ Summons several pets");
             calamity.GetItem("LumenousAmulet").UpdateAccessory(player, hideVisual);
             mod.GetItem("SulphurousEnchant").UpdateAccessory(player, hideVisual);
 
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.FathomEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.SirenPet, hideVisual, calamity.BuffType("StrangeOrb"), calamity.ProjectileType("SirenYoung"));
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.FlakPet, hideVisual, ModContent.BuffType<FlakPetBuff>(), ModContent.ProjectileType<FlakPet>());
         }
 
         public override void AddRecipes()
@@ -102,14 +97,7 @@ Summons several pets");
             recipe.AddIngredient(ModContent.ItemType<SulphurousEnchant>());
             recipe.AddIngredient(ModContent.ItemType<CorrosiveSpine>());
             recipe.AddIngredient(ModContent.ItemType<LumenousAmulet>());
-            recipe.AddIngredient(ModContent.ItemType<SeasSearing>());
-            recipe.AddIngredient(ModContent.ItemType<BelchingSaxophone>());
-            recipe.AddIngredient(ModContent.ItemType<SulphurousGrabber>());
-            recipe.AddIngredient(ModContent.ItemType<FlakKraken>());
-            recipe.AddIngredient(ModContent.ItemType<Atlantis>());
-            recipe.AddIngredient(ModContent.ItemType<BrackishFlask>());
-            recipe.AddIngredient(ModContent.ItemType<StrangeOrb>());
-            recipe.AddIngredient(ModContent.ItemType<GeyserShell>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -27,8 +27,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'You have the favor of Zeus'
 Attacks have a chance to cause a lightning bolt to strike
-Effects of Olympic Torch, Champion's Rebuttal, and Spartan Sandals
-Summons a pet Coin Bag");
+Effects of Olympic Torch, Champion's Rebuttal, and Spartan Sandals");
             DisplayName.AddTranslation(GameCulture.Chinese, "青铜魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'宙斯的青睐'
@@ -62,9 +61,7 @@ Summons a pet Coin Bag");
             player.maxRunSpeed -= 1f;
             //olympic torch
             thoriumPlayer.olympicTorch = true;
-
-            //spawn pet
-            player.GetModPlayer<FargoDLCPlayer>().AddPet(SoulConfig.Instance.thoriumToggles.CoinPet, hideVisual, thorium.BuffType("DrachmaBuff"), thorium.ProjectileType("DrachmaBag"));
+           
         }
 
         public override void AddRecipes()
@@ -79,10 +76,6 @@ Summons a pet Coin Bag");
             recipe.AddIngredient(ModContent.ItemType<OlympicTorch>());
             recipe.AddIngredient(ModContent.ItemType<ChampionsBarrier>());
             recipe.AddIngredient(ModContent.ItemType<SpartanSandles>());
-            recipe.AddIngredient(ModContent.ItemType<ChampionBlade>());
-            recipe.AddIngredient(ModContent.ItemType<SpikyCaltrop>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<BronzeThrowing>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<AncientDrachma>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

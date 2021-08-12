@@ -60,16 +60,14 @@ Effects of Ascension Statuette");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<CelestialCrown>());
+            recipe.AddIngredient(ModContent.ItemType<CelestialCrown>()); 
             recipe.AddIngredient(ModContent.ItemType<CelestialVestment>());
             recipe.AddIngredient(ModContent.ItemType<CelestialLeggings>());
-            recipe.AddIngredient(ModContent.ItemType<CelestialTrinity>());
+            //recipe.AddIngredient(ModContent.ItemType<CelestialTrinity>());
             recipe.AddIngredient(ModContent.ItemType<AscensionStatuette>());
+
             recipe.AddIngredient(ModContent.ItemType<HealingRain>());
             recipe.AddIngredient(ModContent.ItemType<AncientTome>());
-            recipe.AddIngredient(ModContent.ItemType<Buisine>());
-            recipe.AddIngredient(ModContent.ItemType<BlackScythe>());
-            recipe.AddIngredient(ModContent.ItemType<DivineStaff>());
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

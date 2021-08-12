@@ -59,12 +59,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             recipe.AddIngredient(ModContent.ItemType<ShadeMasterMask>());
             recipe.AddIngredient(ModContent.ItemType<ShadeMasterGarb>());
             recipe.AddIngredient(ModContent.ItemType<ShadeMasterTreads>());
-            recipe.AddIngredient(ModContent.ItemType<ClockWorkBomb>(), 300);
-            //recipe.AddIngredient(ModContent.ItemType<KrakenThrown>());
-            recipe.AddIngredient(ModContent.ItemType<BugenkaiShuriken>(), 300);
             recipe.AddIngredient(ModContent.ItemType<ShadeKunai>(), 300);
             recipe.AddIngredient(ModContent.ItemType<Soulslasher>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<LihzahrdKukri>(), 300);
             recipe.AddIngredient(ModContent.ItemType<TechniqueShadowDance>());
 
             recipe.AddTile(TileID.CrystalBall);

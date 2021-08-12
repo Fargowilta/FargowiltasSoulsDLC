@@ -26,8 +26,7 @@ All armor bonuses from Spirit Trapper, Malignant, Dragon, Dread, Flesh, and Demo
 All armor bonuses from Magma, Berserker, White Knight, and Harbinger
 Effects of Inner Flame, Crash Boots, and Dragon Talon Necklace
 Effects of Vampire Gland, Demon Blood Badge, Spring Steps, and Slag Stompers
-Effects of Shade Band and Mana-Charged Rocketeers
-Summons several pets");
+Effects of Shade Band and Mana-Charged Rocketeers");
             DisplayName.AddTranslation(GameCulture.Chinese, "海姆冥界之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'从海姆冥界的大厅起始, 一派终末的景象...'
@@ -112,8 +111,6 @@ Summons several pets");
                 //dragon 
                 thoriumPlayer.dragonSet = true;
             }
-            //wyvern pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.WyvernPet, hideVisual, thorium.BuffType("WyvernPetBuff"), thorium.ProjectileType("WyvernPet"));
             modPlayer.DragonEnchant = true;
 
             //demon blood effect
@@ -130,10 +127,7 @@ Summons several pets");
                 //vampire gland
                 thoriumPlayer.vampireGland = true;
             }
-            //blister pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.BlisterPet, hideVisual, thorium.BuffType("BlisterBuff"), thorium.ProjectileType("BlisterPet"));
             modPlayer.FleshEnchant = true;
-            //pet
             modPlayer.KnightEnchant = true;
             
             //berserker

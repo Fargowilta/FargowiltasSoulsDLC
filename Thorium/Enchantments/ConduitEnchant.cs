@@ -29,8 +29,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Shocked out of this world'
 Moving around generates up to 5 static rings, with each one generating life shielding
 When fully charged, a bubble of energy will protect you from one attack 
-When the bubble blocks an attack, an electrical discharge is released at nearby enemies
-Summons a pet Omega");
+When the bubble blocks an attack, an electrical discharge is released at nearby enemies");
             DisplayName.AddTranslation(GameCulture.Chinese, "电容魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'震惊世界'
@@ -74,8 +73,7 @@ Summons a pet Omega");
                     }
                 }
             }
-            //pets
-            //ModContent.\1Type<\2>\(\));
+
             modPlayer.ConduitEnchant = true;
         }
 
@@ -89,12 +87,9 @@ Summons a pet Omega");
             recipe.AddIngredient(ModContent.ItemType<ConduitSuit>());
             recipe.AddIngredient(ModContent.ItemType<ConduitLeggings>());
             recipe.AddIngredient(ModContent.ItemType<VegaPhaser>());
-            recipe.AddIngredient(ModContent.ItemType<LivewireCrasher>());
             recipe.AddIngredient(ModContent.ItemType<ElectroRebounder>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<Triangle>());
-            recipe.AddIngredient(ModContent.ItemType<Turntable>());
             recipe.AddIngredient(ModContent.ItemType<AncientSpark>());
-            recipe.AddIngredient(ModContent.ItemType<OmegaDrive>());
+
             
 
             recipe.AddTile(TileID.CrystalBall);

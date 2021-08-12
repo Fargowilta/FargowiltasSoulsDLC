@@ -24,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Rich with culture'
 Inspiration notes that drop are twice as potent and increase your symphonic damage briefly
-Effects of Ring of Unity and Waxy Rosin");
+Effects of Ring of Unity, Brass Cap, and Waxy Rosin");
             DisplayName.AddTranslation(GameCulture.Chinese, "贵族魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'富有, 并且有教养'
@@ -49,21 +49,14 @@ Effects of Ring of Unity and Waxy Rosin");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             
-            //ring of unity
             thorium.GetItem("RingofUnity").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("BrassCap").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("WaxyRosin").UpdateAccessory(player, hideVisual);
 
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.MixTape))
-            {
-                //mix tape
-                modPlayer.MixTape = true;
-            }
-            
             if (modPlayer.ThoriumSoul) return;
 
             //noble set bonus
             thoriumPlayer.setNoble = true;
-
-           // brasscap/waxyrosin
         }
 
         public override void AddRecipes()
@@ -78,10 +71,6 @@ Effects of Ring of Unity and Waxy Rosin");
             recipe.AddIngredient(ModContent.ItemType<RingofUnity>());
             recipe.AddIngredient(ModContent.ItemType<BrassCap>());
             recipe.AddIngredient(ModContent.ItemType<WaxyRosin>());
-            recipe.AddIngredient(ModContent.ItemType<JarOMayo>());
-            recipe.AddIngredient(ModContent.ItemType<Bongos>());
-            recipe.AddIngredient(ModContent.ItemType<Nocturne>());
-            recipe.AddIngredient(ModContent.ItemType<Roboboe>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

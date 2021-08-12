@@ -45,8 +45,7 @@ Magic weapons will sometimes fire ghostly bolts
 Magic critical strikes cause flame explosions every 2 seconds
 Summons polterghast mines to circle you
 Rogue critical strikes have a 50% chance to heal you
-Effects of the Core of the Blood God and Affliction
-Summons a Brimling pet");
+Effects of the Core of the Blood God and Eldritch Soul Artifact");
             DisplayName.AddTranslation(GameCulture.Chinese, "血炎魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'堕落者的灵魂由你支配...'
@@ -110,20 +109,10 @@ Summons a Brimling pet");
                 calamity.Call("SetSetBonus", player, "bloodflare_summon", true);
             }
 
-            //core of the blood god
             calamity.GetItem("CoreOfTheBloodGod").UpdateAccessory(player, hideVisual);
-            //affliction
-            calamity.GetItem("Affliction").UpdateAccessory(player, hideVisual);
+            calamity.GetItem("EldritchSoulArtifact").UpdateAccessory(player, hideVisual);
             //brimflame
             mod.GetItem("BrimflameEnchant").UpdateAccessory(player, hideVisual);
-
-            /* modPlayer.StatigelEnchant = true;
-             //modPlayer.AddPet("Perforator Pet", hideVisual, calamity.BuffType("BloodBound"), calamity.ProjectileType("PerforaMini"));
-
-             if (player.FindBuffIndex(calamity.BuffType("BloodBound")) == -1 && player.ownedProjectileCounts[calamity.ProjectileType("PerforaMini")] < 1)
-             {
-                 Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, -1f, calamity.ProjectileType("PerforaMini"), 0, 0f, player.whoAmI);
-             }*/
         }
 
         public override void AddRecipes()
@@ -138,14 +127,7 @@ Summons a Brimling pet");
             recipe.AddIngredient(ModContent.ItemType<BrimflameEnchant>());
             recipe.AddIngredient(ModContent.ItemType<CoreOfTheBloodGod>());
             recipe.AddIngredient(ModContent.ItemType<EldritchSoulArtifact>());
-            recipe.AddIngredient(ModContent.ItemType<Affliction>());
-            recipe.AddIngredient(ModContent.ItemType<DevilsSunrise>());
-            recipe.AddIngredient(ModContent.ItemType<DarkSpark>());
-            recipe.AddIngredient(ModContent.ItemType<DodusHandcannon>());
-            recipe.AddIngredient(ModContent.ItemType<TheLastMourning>());
-            recipe.AddIngredient(ModContent.ItemType<LightGodsBrilliance>());
-            recipe.AddIngredient(ModContent.ItemType<LanternoftheSoul>());
-            recipe.AddIngredient(ModContent.ItemType<BloodyVein>());
+
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

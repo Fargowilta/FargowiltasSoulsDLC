@@ -36,8 +36,7 @@ Shadowbeams and Demon Scythes fall from the sky on hit
 A friendly red devil follows you around
 Press Y to enrage nearby enemies with a dark magic spell for 10 seconds
 This makes them do 1.5 times more damage but they also take five times as much damage
-Effects of Profaned Soul Crystal
-Summons a Levi and Supreme Calamitas pet");
+Effects of Profaned Soul Crystal");
             DisplayName.AddTranslation(GameCulture.Chinese, "魔影魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'你身上散发着恶魔之力...'
@@ -97,11 +96,6 @@ Summons a Levi and Supreme Calamitas pet");
             {
                 calamity.GetItem("ProfanedSoulCrystal").UpdateAccessory(player, hideVisual);
             }
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.DemonShadeEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.LeviPet, hideVisual, ModContent.BuffType<LeviBuff>(), ModContent.ProjectileType<LeviPet>());
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.ScalPet, hideVisual, ModContent.BuffType<SCalPetBuff>(), ModContent.ProjectileType<SCalPet>());
         }
 
         public override void AddRecipes()
@@ -113,16 +107,8 @@ Summons a Levi and Supreme Calamitas pet");
             recipe.AddIngredient(ModContent.ItemType<DemonshadeBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<DemonshadeGreaves>());
             recipe.AddIngredient(ModContent.ItemType<ProfanedSoulCrystal>());
-            recipe.AddIngredient(ModContent.ItemType<Animus>());
-            recipe.AddIngredient(ModContent.ItemType<Contagion>());
-            recipe.AddIngredient(ModContent.ItemType<Megafleet>());
-            recipe.AddIngredient(ModContent.ItemType<SomaPrime>());
-            recipe.AddIngredient(ModContent.ItemType<Judgement>());
             recipe.AddIngredient(ModContent.ItemType<Apotheosis>());
             recipe.AddIngredient(ModContent.ItemType<Eternity>());
-            recipe.AddIngredient(ModContent.ItemType<NanoblackReaperRogue>());
-            recipe.AddIngredient(ModContent.ItemType<BrimstoneJewel>());
-            recipe.AddIngredient(ModContent.ItemType<Levi>());
 
             recipe.AddTile(calamity, "DraedonsForge");
             recipe.SetResult(this);

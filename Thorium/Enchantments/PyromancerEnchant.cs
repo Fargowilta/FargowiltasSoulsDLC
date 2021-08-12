@@ -75,15 +75,12 @@ Pressing the 'Special Ability' key will unleash an echo of Slag Fury's power");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<PyroSummonHat>());
-            recipe.AddIngredient(ModContent.ItemType<PyromancerCowl>());
+            recipe.AddIngredient(ModContent.ItemType<PyroSummonHat>()); //any..
+            //recipe.AddIngredient(ModContent.ItemType<PyromancerCowl>());
             recipe.AddIngredient(ModContent.ItemType<PyromancerTabard>());
             recipe.AddIngredient(ModContent.ItemType<PyromancerLeggings>());
             recipe.AddIngredient(ModContent.ItemType<StalagmiteBook>());
-            recipe.AddIngredient(ModContent.ItemType<DevilDagger>());
-            recipe.AddIngredient(ModContent.ItemType<MortarStaff>());
             recipe.AddIngredient(ModContent.ItemType<AncientFlame>());
-            //recipe.AddIngredient(ModContent.ItemType<MoltenBanner>());
             recipe.AddIngredient(ModContent.ItemType<AlmanacofDespair>());
 
             recipe.AddTile(TileID.LunarCraftingStation);

@@ -63,12 +63,9 @@ Summons a living wood sapling and its attacks will home in on enemies");
             recipe.AddIngredient(ModContent.ItemType<LivingWoodChestguard>());
             recipe.AddIngredient(ModContent.ItemType<LivingWoodBoots>());
             recipe.AddIngredient(ModContent.ItemType<LivingWoodSprout>());
-            recipe.AddIngredient(ItemID.SlimeStaff);
             recipe.AddIngredient(ModContent.ItemType<AntlionStaff>());
-            recipe.AddIngredient(ItemID.LeafWand);
             recipe.AddIngredient(ModContent.ItemType<ChiTea>(), 5);
-            recipe.AddIngredient(ItemID.JuliaButterfly);
-            recipe.AddIngredient(ItemID.Grasshopper);
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

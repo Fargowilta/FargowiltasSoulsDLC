@@ -25,8 +25,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Healing spells will shortly increase the healed player's maximum life by 50
 Your radiant damage has a 15% chance to release a blinding flash of light
 The flash heals nearby allies equal to your bonus healing and confuses enemies
-Effects of Aloe Leaf and Equalizer
-Summons a pet Holy Goat");
+Effects of Aloe Leaf and Equalizer");
             DisplayName.AddTranslation(GameCulture.Chinese, "生命束缚者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'植物从你的之间生长'
@@ -79,11 +78,8 @@ Summons a pet Holy Goat");
             recipe.AddIngredient(ModContent.ItemType<DewBinderGreaves>());
             recipe.AddIngredient(ModContent.ItemType<IridescentEnchant>());
             recipe.AddIngredient(ModContent.ItemType<AloeLeaf>());
-            recipe.AddIngredient(ModContent.ItemType<BloomGuard>());
             recipe.AddIngredient(ModContent.ItemType<SunrayStaff>());
-            recipe.AddIngredient(ModContent.ItemType<MorningDew>());
-            recipe.AddIngredient(ModContent.ItemType<HolyFire>());
-            recipe.AddIngredient(ModContent.ItemType<BudBomb>(), 300);
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

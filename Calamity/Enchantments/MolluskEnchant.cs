@@ -32,10 +32,8 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 Two shellfishes aid you in combat
 When using any weapon you have a 10% chance to throw a returning seashell projectile
 Summons a sea urchin to protect you
-Effects of Giant Pearl and Amidias' Pendant
-Effects of Aquatic Emblem and Enchanted Pearl
-Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift
-Summons a Baby Ghost Bell pet");
+Effects of Giant Pearl and Aquatic Emblem 
+Effects of Ocean's Crest and Luxor's Gift");
             DisplayName.AddTranslation(GameCulture.Chinese, "软壳魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'世界任你驰骋'
@@ -96,18 +94,15 @@ Summons a Baby Ghost Bell pet");
                 calamity.GetItem("GiantPearl").UpdateAccessory(player, hideVisual);
             }
 
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.AmidiasPendant))
-            {
-                calamity.GetItem("AmidiasPendant").UpdateAccessory(player, hideVisual);
-            }
+            //if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.AmidiasPendant))
+            //{
+            //    calamity.GetItem("AmidiasPendant").UpdateAccessory(player, hideVisual);
+            //}
 
             calamity.GetItem("AquaticEmblem").UpdateAccessory(player, hideVisual);
-            calamity.GetItem("EnchantedPearl").UpdateAccessory(player, hideVisual);
+           // calamity.GetItem("EnchantedPearl").UpdateAccessory(player, hideVisual);
             mod.GetItem("VictideEnchant").UpdateAccessory(player, hideVisual);
 
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.MolluskEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.GhostBellPet, hideVisual, ModContent.BuffType<BabyGhostBellBuff>(), ModContent.ProjectileType<BabyGhostBell>());
         }
 
         public override void AddRecipes()
@@ -121,15 +116,8 @@ Summons a Baby Ghost Bell pet");
             recipe.AddIngredient(ModContent.ItemType<MolluskShelleggings>());
             recipe.AddIngredient(ModContent.ItemType<VictideEnchant>());
             recipe.AddIngredient(ModContent.ItemType<GiantPearl>());
-            recipe.AddIngredient(ModContent.ItemType<AmidiasPendant>());
             recipe.AddIngredient(ModContent.ItemType<AquaticEmblem>());
-            recipe.AddIngredient(ModContent.ItemType<EnchantedPearl>());
-            recipe.AddIngredient(ModContent.ItemType<AbyssShocker>());
-            recipe.AddIngredient(ModContent.ItemType<PolarisParrotfish>());
-            recipe.AddIngredient(ModContent.ItemType<AmidiasTrident>());
-            recipe.AddIngredient(ModContent.ItemType<EutrophicShank>());
-            recipe.AddIngredient(ModContent.ItemType<Serpentine>());
-            recipe.AddIngredient(ModContent.ItemType<RustedJingleBell>()); 
+            //recipe.AddIngredient(ModContent.ItemType<EnchantedPearl>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

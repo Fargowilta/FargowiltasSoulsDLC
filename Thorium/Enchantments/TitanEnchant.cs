@@ -57,11 +57,7 @@ Effects of Mask of the Crystal Eye, Abyssal Shell, and Rock Music Player");
             //abyssal shell
             thoriumPlayer.AbyssalShell = true;
             //music player
-            thoriumPlayer.accMusicPlayer = true;
-            thoriumPlayer.accMP3String = true;
-
-           // spiritband
-
+            thorium.GetItem("TunePlayerDamageReduction").UpdateAccessory(player, true);
         }
 
         public override void AddRecipes()
@@ -75,11 +71,7 @@ Effects of Mask of the Crystal Eye, Abyssal Shell, and Rock Music Player");
             recipe.AddIngredient(ModContent.ItemType<TitanGreaves>());
             recipe.AddIngredient(ModContent.ItemType<CrystalEyeMask>());
             recipe.AddIngredient(ModContent.ItemType<AbyssalShell>());
-            recipe.AddIngredient(ModContent.ItemType<SpiritBand>());
             recipe.AddIngredient(ModContent.ItemType<TunePlayerDamageReduction>());
-            recipe.AddIngredient(ModContent.ItemType<TitanBoomerang>());
-            recipe.AddIngredient(ModContent.ItemType<TranquilizerGun>());
-            recipe.AddIngredient(ModContent.ItemType<TetherDart>(), 300);
             
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

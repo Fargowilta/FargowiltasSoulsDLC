@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using FargowiltasSoulsDLC.Calamity.Enchantments;
 
 namespace FargowiltasSoulsDLC.Calamity.Forces
 {
@@ -23,14 +24,13 @@ All armor bonuses from Daedalus, Snow Ruffian, Umbraphile, and Astral
 All armor bonuses from Omega Blue, Mollusk, Victide, Fathom Swarmer, and Sulphurous
 Effects of Scuttler's Jewel, Permafrost's Concoction, and Regenator
 Effects of Thief's Dime, Vampiric Talisman, and Momentum Capacitor
-Effects of the Astral Arcanum, Hide of Astrum Deus, and Gravistar Sabaton
-Effects of the Abyssal Diving Suit, Mutated Truffle, and Old Duke's Scales
+Effects of the Astral Arcanum and Gravistar Sabaton
+Effects of the Abyssal Diving Suit and Mutated Truffle
 Effects of Giant Pearl and Amidias' Pendant
 Effects of Aquatic Emblem and Enchanted Pearl
-Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift
+Effects of Ocean's Crest and Luxor's Gift
 Effects of Corrosive Spine and Lumenous Amulet
-Effects of Sand Cloak and Alluring Bait
-Summons several pets");
+Effects of Sand Cloak and Alluring Bait");
             DisplayName.AddTranslation(GameCulture.Chinese, "荒芜之力");
             Tooltip.AddTranslation(GameCulture.Chinese,
 @"'你将成为这个荒芜寒冷世界的最后幸存者'
@@ -62,6 +62,8 @@ Summons several pets");
         {
             if (!FargowiltasSoulsDLC.Instance.CalamityLoaded) return;
 
+            mod.GetItem("MolluskEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("FathomSwarmerEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("DaedalusEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("UmbraphileEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("AstralEnchant").UpdateAccessory(player, hideVisual);
@@ -74,6 +76,8 @@ Summons several pets");
 
             ModRecipe recipe = new ModRecipe(mod);
 
+            recipe.AddIngredient(ModContent.ItemType<MolluskEnchant>());
+            recipe.AddIngredient(ModContent.ItemType<FathomSwarmerEnchant>());
             recipe.AddIngredient(null, "DaedalusEnchant");
             recipe.AddIngredient(null, "UmbraphileEnchant");
             recipe.AddIngredient(null, "AstralEnchant");

@@ -63,8 +63,6 @@ Summons a Stellar Guardian behind you that attacks enemies");
             {
                 Projectile.NewProjectile(player.Center, Vector2.Zero, soa.ProjectileType("StellarGuardian"), (int)(1000f * player.minionDamage), 0f, player.whoAmI, 0f, 0f);
             }
-
-            //pet soon tm
         }
 
         private readonly string[] items =
@@ -75,9 +73,9 @@ Summons a Stellar Guardian behind you that attacks enemies");
             "StarScourge",
             "GalaxyScepter",
             "LunarCrystalStaff",
-            "OblivionRod",
-            "FlariumSceptre",
-            "AsthralDroneStaff",
+            //"OblivionRod",
+            //"FlariumSceptre",
+            //"AsthralDroneStaff",
         };
 
         public override void AddRecipes()

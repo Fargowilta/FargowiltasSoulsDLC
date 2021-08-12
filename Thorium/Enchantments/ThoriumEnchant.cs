@@ -76,13 +76,6 @@ Effects of Crietz, Band of Replenishment, and Fan Letter");
             recipe.AddIngredient(ModContent.ItemType<Crietz>());
             recipe.AddIngredient(ModContent.ItemType<BandofReplenishment>());
 
-           // thoriumdaggers
-            //    thorium paxe
-            //    purify
-
-
-            recipe.AddIngredient(ModContent.ItemType<LastSupperPaint>());
-
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();

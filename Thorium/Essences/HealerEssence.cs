@@ -74,7 +74,6 @@ namespace FargowiltasSoulsDLC.Thorium.Essences
             "ClericEmblem",
             "GoodBook",
             "HeartWand",
-            "FeatherBarrierRod",
             "TulipStaff",
             "LargePopcorn",
             "DarkMageStaff",
@@ -94,6 +93,8 @@ namespace FargowiltasSoulsDLC.Thorium.Essences
             ModRecipe recipe = new ModRecipe(mod);
             
             foreach (string i in items) recipe.AddIngredient(thorium.ItemType(i));
+
+            recipe.AddIngredient(ItemID.HallowedBar, 5);
 
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);

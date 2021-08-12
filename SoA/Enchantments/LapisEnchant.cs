@@ -66,8 +66,6 @@ Effects of Lapis Pendant");
             //lapis pendant
             modPlayer.LapisPendant = true;
 
-            //pets soon tm
-
         }
 
         private readonly string[] items =
@@ -76,11 +74,12 @@ Effects of Lapis Pendant");
             "LapisChest",
             "LapisLegs",
             "LapisPendant",
+
             "LapisStaff",
-            "LapisBow",
-            "LapisJavelin",
+            //"LapisBow",
+            //"LapisJavelin",
             "Haven",
-            "LapisPick"
+            //"LapisPick"
         };
 
         public override void AddRecipes()

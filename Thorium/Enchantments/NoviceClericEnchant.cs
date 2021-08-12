@@ -66,17 +66,6 @@ When casting healing spells, a cross is used instead of mana");
                 timer = 0;
             }
         }
-        
-        private readonly string[] items =
-        {
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        };
 
         public override void AddRecipes()
         {
@@ -87,13 +76,9 @@ When casting healing spells, a cross is used instead of mana");
             recipe.AddIngredient(ModContent.ItemType<NoviceClericCowl>());
             recipe.AddIngredient(ModContent.ItemType<NoviceClericTabard>());
             recipe.AddIngredient(ModContent.ItemType<NoviceClericPants>());
-            recipe.AddIngredient(ModContent.ItemType<WoodenBaton>());
-            recipe.AddIngredient(ModContent.ItemType<FortifyingWand>());
             recipe.AddIngredient(ModContent.ItemType<PalmCross>());
             recipe.AddIngredient(ModContent.ItemType<Renew>());
-            recipe.AddIngredient(ModContent.ItemType<ThePill>(), 300);
             recipe.AddIngredient(ModContent.ItemType<PurifiedWater>(), 300);
-            recipe.AddIngredient(ItemID.MonarchButterfly);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

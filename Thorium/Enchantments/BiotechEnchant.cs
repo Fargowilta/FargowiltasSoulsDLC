@@ -64,13 +64,10 @@ Heals ally life equal to your bonus healing");
             recipe.AddIngredient(ModContent.ItemType<LifeWeaverHood>());
             recipe.AddIngredient(ModContent.ItemType<LifeWeaverGarment>());
             recipe.AddIngredient(ModContent.ItemType<LifeWeaverLeggings>());
-            recipe.AddIngredient(ModContent.ItemType<LustrousBaton>());
-            recipe.AddIngredient(ModContent.ItemType<NullZoneStaff>());
             recipe.AddIngredient(ModContent.ItemType<LifeEssenceApparatus>());
-            recipe.AddIngredient(ModContent.ItemType<PocketGaurdian>());
-            recipe.AddIngredient(ModContent.ItemType<LifePulseStaff>());
+            recipe.AddIngredient(ModContent.ItemType<NullZoneStaff>());
             recipe.AddIngredient(ModContent.ItemType<BarrierGenerator>());
-            recipe.AddIngredient(ModContent.ItemType<LifeSurgeStaff>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

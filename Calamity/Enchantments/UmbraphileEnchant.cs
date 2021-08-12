@@ -80,14 +80,6 @@ Effects of Thief's Dime, Vampiric Talisman, and Momentum Capacitor");
             recipe.AddIngredient(ModContent.ItemType<ThiefsDime>());
             recipe.AddIngredient(ModContent.ItemType<VampiricTalisman>());
             recipe.AddIngredient(ModContent.ItemType<MomentumCapacitor>());
-            recipe.AddIngredient(ModContent.ItemType<AcidicRainBarrel>());
-            recipe.AddIngredient(ModContent.ItemType<Brimblade>());
-            recipe.AddIngredient(ModContent.ItemType<DeepWounder>());
-            recipe.AddIngredient(ModContent.ItemType<MonkeyDarts>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<DefectiveSphere>(), 5);
-            recipe.AddIngredient(ModContent.ItemType<StellarKnife>());
-            recipe.AddIngredient(ModContent.ItemType<CorpusAvertor>());
-            recipe.AddIngredient(calamity.ItemType("OnyxExcavatorKey")); //e
             
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

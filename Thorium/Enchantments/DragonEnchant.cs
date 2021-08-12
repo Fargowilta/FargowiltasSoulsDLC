@@ -25,8 +25,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Made from mythical scales'
 Your attacks have a chance to unleash an explosion of Dragon's Flame
-Effects of Dragon Talon Necklace
-Summons a pet Wyvern");
+Effects of Dragon Talon Necklace and Disco Music Player");
             DisplayName.AddTranslation(GameCulture.Chinese, "绿龙魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'由神秘鳞片制成'
@@ -55,11 +54,10 @@ Summons a pet Wyvern");
             thoriumPlayer.dragonSet = true;
             //dragon tooth necklace
             player.armorPenetration += 15;
-            //wyvern pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.WyvernPet, hideVisual, thorium.BuffType("WyvernPetBuff"), thorium.ProjectileType("WyvernPet"));
+            
             modPlayer.DragonEnchant = true;
 
-           // discomusicplayer
+            thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -73,12 +71,8 @@ Summons a pet Wyvern");
             recipe.AddIngredient(ModContent.ItemType<DragonGreaves>());
             recipe.AddIngredient(ModContent.ItemType<DragonTalonNecklace>());
             recipe.AddIngredient(ModContent.ItemType<TunePlayerMovementSpeed>());
-            recipe.AddIngredient(ModContent.ItemType<DragonsBreath>());
             recipe.AddIngredient(ModContent.ItemType<EbonyTail>());
-            recipe.AddIngredient(ModContent.ItemType<CorrupterBalloon>(), 300);
-            //recipe.AddIngredient(ItemID.ClingerStaff);
-           // Absinthe Fury
-            recipe.AddIngredient(ModContent.ItemType<CloudyChewToy>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

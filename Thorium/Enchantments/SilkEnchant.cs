@@ -6,6 +6,7 @@ using ThoriumMod.Items.EarlyMagic;
 using ThoriumMod.Items.Icy;
 using ThoriumMod.Items.Sandstone;
 using ThoriumMod.Items.HealerItems;
+using ThoriumMod.Items.ZRemoved;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -53,16 +54,14 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<SilkCap>());
+            //recipe.AddIngredient(ModContent.ItemType<SilkCap>()); //any..
             recipe.AddIngredient(ModContent.ItemType<SilkHat>());
             recipe.AddIngredient(ModContent.ItemType<SilkTabard>());
             recipe.AddIngredient(ModContent.ItemType<SilkLeggings>());
-            recipe.AddIngredient(ItemID.WandofSparking);
             recipe.AddIngredient(ModContent.ItemType<IceCube>());
             recipe.AddIngredient(ModContent.ItemType<WindGust>());
             recipe.AddIngredient(ModContent.ItemType<Cure>());
-            recipe.AddIngredient(ItemID.UlyssesButterfly);
-            recipe.AddIngredient(ItemID.SilkRopeCoil);
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

@@ -25,8 +25,7 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 All armor bonuses from Granite, Bronze, and Darksteel
 All armor bonuses from Durasteel, Titan, and Conduit
 Effects of Eye of the Storm, Champion's Rebuttal, and Spiked Bracers
-Effects of Ogre Sandals, Crystal Spear Tip, Mask of the Crystal Eye, and Abyssal Shell
-Summons a pet Omega and Coin Bag");
+Effects of Ogre Sandals, Crystal Spear Tip, Mask of the Crystal Eye, and Abyssal Shell");
             DisplayName.AddTranslation(GameCulture.Chinese, "瓦特阿尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'黑暗精灵的精湛技艺'
@@ -71,9 +70,7 @@ Summons a pet Omega and Coin Bag");
             modPlayer.BronzeEnchant = true;
             //rebuttal
             thoriumPlayer.championShield = true;
-            //spawn pet
-            player.GetModPlayer<FargoDLCPlayer>().AddPet(SoulConfig.Instance.thoriumToggles.CoinPet, hideVisual, thorium.BuffType("DrachmaBuff"), thorium.ProjectileType("DrachmaBag"));
-
+            
             //durasteel
             mod.GetItem("DurasteelEnchant").UpdateAccessory(player, hideVisual);
             

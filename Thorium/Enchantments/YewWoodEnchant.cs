@@ -61,12 +61,9 @@ Effects of Goblin War Shield");
             recipe.AddIngredient(ModContent.ItemType<YewWoodBreastgaurd>());
             recipe.AddIngredient(ModContent.ItemType<YewWoodLeggings>());
             recipe.AddIngredient(ModContent.ItemType<GoblinWarshield>());
-            recipe.AddIngredient(ModContent.ItemType<FeatherFoe>());
-            recipe.AddIngredient(ModContent.ItemType<YewWoodBow>());
             recipe.AddIngredient(ModContent.ItemType<YewWoodBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<YewGun>());
-            recipe.AddIngredient(ModContent.ItemType<ShadowflameWand>());
-            recipe.AddIngredient(ModContent.ItemType<SpikeBomb>(), 300);
+
             
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

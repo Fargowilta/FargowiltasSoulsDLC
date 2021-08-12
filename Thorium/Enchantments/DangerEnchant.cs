@@ -6,7 +6,6 @@ using Terraria.Localization;
 using ThoriumMod.Items.ArcaneArmor;
 using ThoriumMod.Items.Tracker;
 using ThoriumMod.Items.NPCItems;
-using ThoriumMod.Buffs.Pet;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -25,8 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Let's get dangerous...'
 You are immune to most damage-inflicting debuffs
-Effects of Night Shade Petal
-Summons a pet Glitter");
+Effects of Night Shade Petal");
             DisplayName.AddTranslation(GameCulture.Chinese, "致危魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'Let's get dangerous...'
@@ -58,9 +56,6 @@ Summons a pet Glitter");
 
             //night shade petal
             thoriumPlayer.nightshadeBoost = true;
-
-            //pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.GlitterPet, hideVisual, thorium.BuffType("ShineDust"), thorium.ProjectileType("ShinyPet"));
         }
 
         public override void AddRecipes()
@@ -74,11 +69,7 @@ Summons a pet Glitter");
             recipe.AddIngredient(ModContent.ItemType<DangerGreaves>());
             recipe.AddIngredient(ModContent.ItemType<NightShadePetal>());
             recipe.AddIngredient(ModContent.ItemType<TrackerBlade>());
-            recipe.AddIngredient(ModContent.ItemType<DangerDoomerang>());
-            recipe.AddIngredient(ModContent.ItemType<DangerDuelShot>());
-            recipe.AddIngredient(ModContent.ItemType<DangerDagger>(), 300);
             recipe.AddIngredient(ItemID.Rally);
-            recipe.AddIngredient(ModContent.ItemType<ShinyObject>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

@@ -71,12 +71,8 @@ Effects of Eye of the Storm");
             recipe.AddIngredient(ModContent.ItemType<GraniteChestGuard>());
             recipe.AddIngredient(ModContent.ItemType<GraniteGreaves>());
             recipe.AddIngredient(ModContent.ItemType<ThoriumMod.Items.EnergyStorm.EyeoftheStorm>()); //calamity same name REEEEEEEEE
-            recipe.AddIngredient(ModContent.ItemType<GraniteSaber>());
-            recipe.AddIngredient(ModContent.ItemType<EnergyProjector>());
-            recipe.AddIngredient(ModContent.ItemType<BoulderProbe>());
             recipe.AddIngredient(ModContent.ItemType<ShockAbsorber>());
             recipe.AddIngredient(ModContent.ItemType<ObsidianStriker>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<EarthenEnergyPaint>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

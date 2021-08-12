@@ -63,11 +63,8 @@ Effects of Fan Letter");
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyJesterLeggings");
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyLetter");
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyTambourine");
-            recipe.AddIngredient(ModContent.ItemType<Oboe>());
             recipe.AddIngredient(ModContent.ItemType<SkywareLute>());
-            recipe.AddIngredient(ModContent.ItemType<Panflute>());
-            recipe.AddIngredient(ModContent.ItemType<ConchShell>());
-            recipe.AddIngredient(ModContent.ItemType<Alphorn>());
+ 
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

@@ -107,10 +107,6 @@ Effects of Terrarium Surround Sound and Fan Letter");
             recipe.AddIngredient(ModContent.ItemType<TerrariumGreaves>());
             recipe.AddIngredient(ModContent.ItemType<ThoriumEnchant>());
             recipe.AddIngredient(ModContent.ItemType<TerrariumSubwoofer>());
-            recipe.AddIngredient(ModContent.ItemType<TerrariumSaber>());
-            recipe.AddIngredient(ModContent.ItemType<TerrariumAutoharp>());
-            recipe.AddIngredient(ModContent.ItemType<TerrariumBomber>());
-            recipe.AddIngredient(ModContent.ItemType<TerrariumKnife>());
             recipe.AddIngredient(ModContent.ItemType<ThoriumCube>());
 
             recipe.AddTile(TileID.LunarCraftingStation);

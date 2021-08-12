@@ -28,8 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Dealing damage will grant you a 'Blood Charge'
 At maximum charges, your next attack will deal 2x damage and heal you for 20% of the damage dealt
 Consecutive attacks against enemies might drop flesh, which grants bonus life and damage
-Effects of Vampire Gland, Demon Blood Badge, and Vile Flail-Core
-Summons a pet Flying Blister");
+Effects of Vampire Gland, Demon Blood Badge, and Vile Flail-Core");
             DisplayName.AddTranslation(GameCulture.Chinese, "魔血魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'注满了腐化之血'
@@ -67,8 +66,6 @@ Summons a pet Flying Blister");
             thoriumPlayer.Symbiotic = true;
             //vampire gland
             thoriumPlayer.vampireGland = true;
-            //blister pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.BlisterPet, hideVisual, thorium.BuffType("BlisterBuff"), thorium.ProjectileType("BlisterPet"));
             modPlayer.FleshEnchant = true;
         }
 
@@ -84,10 +81,6 @@ Summons a pet Flying Blister");
             recipe.AddIngredient(ModContent.ItemType<FleshEnchant>());
             recipe.AddIngredient(ModContent.ItemType<DemonRageBadge>());
             recipe.AddIngredient(ModContent.ItemType<VileCore>());
-            recipe.AddIngredient(ModContent.ItemType<DemonBloodRipper>());
-            recipe.AddIngredient(ModContent.ItemType<DarkContagionBook>());
-            recipe.AddIngredient(ModContent.ItemType<FesteringBalloon>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<BloodRootGoop>(), 5);
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -36,8 +36,7 @@ If you absorb an attack you are healed for 1/2 of that attack's damage
 A daedalus crystal floats above you to protect you
 Rogue projectiles throw out crystal shards as they travel
 You can glide to negate fall damage
-Effects of Scuttler's Jewel, Permafrost's Concoction, and Regenator
-Summons a Bear, Kendra, and Third Sage pet");
+Effects of Scuttler's Jewel and Permafrost's Concoction");
             DisplayName.AddTranslation(GameCulture.Chinese, "代达罗斯魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'冰霜魔法保护着你...'
@@ -104,17 +103,7 @@ Summons a Bear, Kendra, and Third Sage pet");
                 }
             }
 
-            //regenerator
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.Regenerator))
-                calamity.GetItem("Regenator").UpdateAccessory(player, hideVisual);
-
-            mod.GetItem("SnowRuffianEnchant").UpdateAccessory(player, hideVisual);
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.DaedalusEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.ThirdSagePet, hideVisual, calamity.BuffType("ThirdSageBuff"), calamity.ProjectileType("ThirdSage"));
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.BearPet, hideVisual, calamity.BuffType("BearBuff"), calamity.ProjectileType("Bear"));
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.KendraPet, hideVisual, calamity.BuffType("Kendra"), calamity.ProjectileType("KendraPet"));
+            mod.GetItem("SnowRuffianEnchant").UpdateAccessory(player, hideVisual);            
         }
 
         public override void AddRecipes()
@@ -128,15 +117,7 @@ Summons a Bear, Kendra, and Third Sage pet");
             recipe.AddIngredient(ModContent.ItemType<DaedalusLeggings>());
             recipe.AddIngredient(ModContent.ItemType<SnowRuffianEnchant>());
             recipe.AddIngredient(ModContent.ItemType<PermafrostsConcoction>());
-            recipe.AddIngredient(ModContent.ItemType<Regenator>());
             recipe.AddIngredient(ModContent.ItemType<CrystalBlade>());
-            recipe.AddIngredient(ModContent.ItemType<KelvinCatalyst>());
-            recipe.AddIngredient(ModContent.ItemType<SlagMagnum>());
-            recipe.AddIngredient(ModContent.ItemType<Arbalest>());
-            recipe.AddIngredient(ModContent.ItemType<SHPC>());
-            recipe.AddIngredient(calamity.ItemType("ColdDivinity"));//e
-            recipe.AddIngredient(ModContent.ItemType<IbarakiBox>());
-            recipe.AddIngredient(ModContent.ItemType<PrimroseKeepsake>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

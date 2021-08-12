@@ -96,17 +96,7 @@ namespace FargowiltasSoulsDLC
         //[DefaultValue(true)]
         //public bool AirWalkers;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumGlitterPetConfig")]
-        [DefaultValue(true)]
-        public bool GlitterPet;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumCoinPetConfig")]
-        [DefaultValue(true)]
-        public bool CoinPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumBoxPetConfig")]
-        [DefaultValue(true)]
-        public bool BoxPet;
 
         [Header("$Mods.FargowiltasSoulsDLC.MuspelheimForce")]
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumBeeBootiesConfig")]
@@ -118,9 +108,6 @@ namespace FargowiltasSoulsDLC
         public bool SaplingMinion;
 
         [Header("$Mods.FargowiltasSoulsDLC.JotunheimForce")]
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumJellyfishPetConfig")]
-        [DefaultValue(true)]
-        public bool JellyfishPet;
 
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumTideFoamConfig")]
         [DefaultValue(true)]
@@ -134,9 +121,7 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool CryoDamage;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumOwlPetConfig")]
-        [DefaultValue(true)]
-        public bool OwlPet;
+
 
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumIcyBarrierConfig")]
         [DefaultValue(true)]
@@ -146,9 +131,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool WhisperingTentacles;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumSpiritPetConfig")]
-        [DefaultValue(true)]
-        public bool SpiritPet;
 
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumWarlockWispsConfig")]
         [DefaultValue(true)]
@@ -190,13 +172,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool ConduitShield;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumOmegaPetConfig")]
-        [DefaultValue(true)]
-        public bool OmegaPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumIFOPetConfig")]
-        [DefaultValue(true)]
-        public bool IFOPet;
 
         [Header("$Mods.FargowiltasSoulsDLC.MidgardForce")]
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumLodestoneConfig")]
@@ -256,9 +231,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool DragonFlames;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumWyvernPetConfig")]
-        [DefaultValue(true)]
-        public bool WyvernPet;
 
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumDemonBloodConfig")]
         [DefaultValue(true)]
@@ -272,9 +244,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool VampireGland;
 
-        [Label("$Mods.FargowiltasSoulsDLC.ThoriumBlisterPetConfig")]
-        [DefaultValue(true)]
-        public bool BlisterPet;
 
         [Label("$Mods.FargowiltasSoulsDLC.ThoriumBerserkerConfig")]
         [DefaultValue(true)]
@@ -331,10 +300,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool UnstablePrism;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityRotomConfig")]
-        [DefaultValue(true)]
-        public bool RotomPet;
-
         //statigel
         [Label("$Mods.FargowiltasSoulsDLC.CalamityFungalSymbiote")]
         [DefaultValue(true)]
@@ -363,9 +328,6 @@ namespace FargowiltasSoulsDLC
         public bool XerocEffects;
 
         //fearmonger
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityTheEvolutionConfig")]
-        [DefaultValue(true)]
-        public bool TheEvolution;
 
         [Label("$Mods.FargowiltasSoulsDLC.CalamityStatisBeltOfCursesConfig")]
         [DefaultValue(true)]
@@ -381,14 +343,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool ReaverMinion;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityFabledTurtleConfig")]
-        [DefaultValue(false)]
-        public bool FabledTurtleShell;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamitySparksConfig")]
-        [DefaultValue(true)]
-        public bool SparksPet;
-
         //plague reaper
         [Label("$Mods.FargowiltasSoulsDLC.CalamityPlagueHiveConfig")]
         [DefaultValue(true)]
@@ -397,10 +351,6 @@ namespace FargowiltasSoulsDLC
         [Label("$Mods.FargowiltasSoulsDLC.CalamityPlaguedFuelPackConfig")]
         [DefaultValue(true)]
         public bool PlaguedFuelPack;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityTheBeeConfig")]
-        [DefaultValue(true)]
-        public bool TheBee;
 
         [Label("$Mods.FargowiltasSoulsDLC.CalamityTheCamperConfig")]
         [DefaultValue(false)]
@@ -414,14 +364,6 @@ namespace FargowiltasSoulsDLC
         [Label("$Mods.FargowiltasSoulsDLC.CalamityProfanedSoulConfig")]
         [DefaultValue(true)]
         public bool ProfanedSoulCrystal;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityLeviConfig")]
-        [DefaultValue(true)]
-        public bool LeviPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityScalConfig")]
-        [DefaultValue(true)]
-        public bool ScalPet;
 
         //daedalus
         [Header("$Mods.FargowiltasSoulsDLC.DesolationForce")]
@@ -437,38 +379,15 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool PermafrostPotion;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityRegeneratorConfig")]
-        [DefaultValue(false)]
-        public bool Regenerator;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityKendraConfig")]
-        [DefaultValue(true)]
-        public bool KendraPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityBearConfig")]
-        [DefaultValue(true)]
-        public bool BearPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityThirdSageConfig")]
-        [DefaultValue(true)]
-        public bool ThirdSagePet;
 
         //astral
         [Label("$Mods.FargowiltasSoulsDLC.CalamityAstralStarsConfig")]
         [DefaultValue(true)]
         public bool AstralStars;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityHideofAstrumDeusConfig")]
-        [DefaultValue(true)]
-        public bool HideofAstrumDeus;
-
         [Label("$Mods.FargowiltasSoulsDLC.CalamityGravistarSabatonConfig")]
         [DefaultValue(true)]
         public bool GravistarSabaton;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityAstrophageConfig")]
-        [DefaultValue(true)]
-        public bool AstrophagePet;
 
         //omega blue
         [Label("$Mods.FargowiltasSoulsDLC.CalamityOmegaTentaclesConfig")]
@@ -495,11 +414,6 @@ namespace FargowiltasSoulsDLC
         [Label("$Mods.FargowiltasSoulsDLC.CalamityLuxorGiftConfig")]
         [DefaultValue(true)]
         public bool LuxorGift;
-
-
-
-
-
 
 
 
@@ -540,9 +454,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool PoisonSeawater;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityAkatoConfig")]
-        [DefaultValue(true)]
-        public bool AkatoPet;
 
         [Label("$Mods.FargowiltasSoulsDLC.CalamityGodSlayerEffectsConfig")]
         [DefaultValue(true)]
@@ -556,9 +467,6 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool NebulousCore;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityChibiiConfig")]
-        [DefaultValue(true)]
-        public bool ChibiiPet;
 
         [Label("$Mods.FargowiltasSoulsDLC.CalamityAuricEffectsConfig")]
         [DefaultValue(true)]
@@ -580,36 +488,8 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool GiantPearl;
 
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityDannyConfig")]
-        [DefaultValue(true)]
-        public bool DannyPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityBrimlingConfig")]
-        [DefaultValue(true)]
-        public bool BrimlingPet;
-
         [Label("$Mods.FargowiltasSoulsDLC.CalamityTarragonEffectsConfig")]
         [DefaultValue(true)]
         public bool TarragonEffects;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityRadiatorConfig")]
-        [DefaultValue(true)]
-        public bool RadiatorPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityGhostBellConfig")]
-        [DefaultValue(true)]
-        public bool GhostBellPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityFlakConfig")]
-        [DefaultValue(true)]
-        public bool FlakPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamityFoxConfig")]
-        [DefaultValue(true)]
-        public bool FoxPet;
-
-        [Label("$Mods.FargowiltasSoulsDLC.CalamitySirenConfig")]
-        [DefaultValue(true)]
-        public bool SirenPet;
     }
 }

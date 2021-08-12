@@ -475,7 +475,7 @@ namespace FargowiltasSoulsDLC
             if (DemonBloodEnchant && target.type != NPCID.TargetDummy && !thoriumPlayer.bloodChargeExhaust)
             {
                 thoriumPlayer.bloodCharge++;
-                thoriumPlayer.bloodChargeTimer = 120;
+                //thoriumPlayer.bloodc bloodChargeTimer = 120;
                 if (player.ownedProjectileCounts[thorium.ProjectileType("DemonBloodVisual")] < 1)
                 {
                     Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("DemonBloodVisual"), 0, 0f, player.whoAmI, 0f, 0f);
@@ -590,7 +590,7 @@ namespace FargowiltasSoulsDLC
             if (DemonBloodEnchant && target.type != NPCID.TargetDummy && !thoriumPlayer.bloodChargeExhaust)
             {
                 thoriumPlayer.bloodCharge++;
-                thoriumPlayer.bloodChargeTimer = 120;
+                //thoriumPlayer.timer bloodChargeTimer = 120;
                 if (player.ownedProjectileCounts[thorium.ProjectileType("DemonBloodVisual")] < 1)
                 {
                     Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("DemonBloodVisual"), 0, 0f, player.whoAmI, 0f, 0f);

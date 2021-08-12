@@ -89,10 +89,7 @@ Effects of Demon Tongue and Dark Effigy");
             recipe.AddIngredient(ModContent.ItemType<EbonEnchant>());
             recipe.AddIngredient(ModContent.ItemType<DemonTongue>());
             recipe.AddIngredient(ModContent.ItemType<Effigy>());
-            recipe.AddIngredient(ModContent.ItemType<Omen>());
-            recipe.AddIngredient(ModContent.ItemType<ShadowStaff>());
-            recipe.AddIngredient(ModContent.ItemType<NecroticStaff>());
-            recipe.AddIngredient(ModContent.ItemType<CursedHammer>());
+       
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

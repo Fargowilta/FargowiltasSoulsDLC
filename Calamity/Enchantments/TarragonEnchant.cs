@@ -107,15 +107,7 @@ Effects of Blazing Core and Dark Sun Ring");
             recipe.AddIngredient(ModContent.ItemType<TarragonLeggings>());
             recipe.AddIngredient(ModContent.ItemType<BlazingCore>());
             recipe.AddIngredient(ModContent.ItemType<DarkSunRing>());
-            recipe.AddIngredient(ModContent.ItemType<AquaticDissolution>());
-            recipe.AddIngredient(ModContent.ItemType<AngelicShotgun>());
             recipe.AddIngredient(ModContent.ItemType<TrueTyrantYharimsUltisword>());
-            recipe.AddIngredient(ModContent.ItemType<PlasmaRifle>());
-            recipe.AddIngredient(ModContent.ItemType<PristineFury>());
-            recipe.AddIngredient(ModContent.ItemType<DivineRetribution>());
-            recipe.AddIngredient(ModContent.ItemType<HandheldTank>());
-            recipe.AddIngredient(ModContent.ItemType<Mistlestorm>());
-            recipe.AddIngredient(ModContent.ItemType<Thunderstorm>());
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

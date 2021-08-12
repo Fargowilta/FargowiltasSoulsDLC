@@ -71,13 +71,10 @@ You can have up to six tentacles and their damage saps 1 life & mana from the hi
             recipe.AddIngredient(ModContent.ItemType<WhisperingHood>());
             recipe.AddIngredient(ModContent.ItemType<WhisperingTabard>());
             recipe.AddIngredient(ModContent.ItemType<WhisperingLeggings>());
-            recipe.AddIngredient(ModContent.ItemType<RottenCod>());
-            recipe.AddIngredient(ModContent.ItemType<TheStalker>());
-            recipe.AddIngredient(ModContent.ItemType<SamsaraLotus>());
+
             recipe.AddIngredient(ModContent.ItemType<WildUmbra>());
             recipe.AddIngredient(ModContent.ItemType<MindMelter>());
             recipe.AddIngredient(ModContent.ItemType<WhisperingDagger>());
-            recipe.AddIngredient(ModContent.ItemType<CuriousSeaLifePaint>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

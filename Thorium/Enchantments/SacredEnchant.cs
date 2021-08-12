@@ -26,8 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Healing potions heal 50% more life
 Every 5 seconds you generate up to 3 holy crosses
 When casting healing spells, a cross is used instead of mana
-Effects of Karmic Holder
-Summons a pet Life Spirit");
+Effects of Karmic Holder");
             DisplayName.AddTranslation(GameCulture.Chinese, "圣骑士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'闪耀抚慰人心的力量'
@@ -56,8 +55,6 @@ Summons a pet Life Spirit");
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //sacred effect
             modPlayer.SacredEnchant = true;
-            //twinkle pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.SpiritPet, hideVisual, thorium.BuffType("LifeSpiritBuff"), thorium.ProjectileType("LifeSpirit"));
 
             if (modPlayer.ThoriumSoul) return;
 
@@ -99,11 +96,8 @@ Summons a pet Life Spirit");
             recipe.AddIngredient(ModContent.ItemType<HallowedPaladinLeggings>());
             recipe.AddIngredient(ModContent.ItemType<NoviceClericEnchant>());
             recipe.AddIngredient(ModContent.ItemType<KarmicHolder>());
-            recipe.AddIngredient(ModContent.ItemType<HallowedBludgeon>());
-            recipe.AddIngredient(ModContent.ItemType<LightBurstWand>());
             recipe.AddIngredient(ModContent.ItemType<Liberation>());
-            recipe.AddIngredient(ModContent.ItemType<BoneBaton>());
-            recipe.AddIngredient(ModContent.ItemType<Twinkle>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

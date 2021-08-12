@@ -25,8 +25,7 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 All armor bonuses from Depth Diver, Yew Wood, and Tide Hunter
 All armor bonuses from Naga Skin, Icy, Cryomancer, and Whispering
 Effects of Sea Breeze Pendant and Bubble Magnet
-Effects of Goblin War Shield, Agnor's Bowl, and Ice Bound Strider Hide
-Summons several pets");
+Effects of Goblin War Shield, Agnor's Bowl, and Ice Bound Strider Hide");
             DisplayName.AddTranslation(GameCulture.Chinese, "约顿海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'彻骨严寒, 巨人的力量...'
@@ -65,7 +64,6 @@ Summons several pets");
             //bubble magnet
             thoriumPlayer.bubbleMagnet = true;
             modPlayer.DepthEnchant = true;
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.JellyfishPet, hideVisual, thorium.BuffType("JellyPet"), thorium.ProjectileType("JellyfishPet"));
 
             //tide hunter
             modPlayer.TideHunterEnchant = true;
@@ -76,8 +74,6 @@ Summons several pets");
             
             //strider hide
             thoriumPlayer.frostBonusDamage = true;
-            //pets
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.OwlPet, hideVisual, thorium.BuffType("SnowyOwlBuff"), thorium.ProjectileType("SnowyOwlPet"));
 
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.IcyBarrier))
             {

@@ -65,10 +65,7 @@ Your plague gas will linger in the air twice as long and your plague reactions w
             recipe.AddIngredient(ModContent.ItemType<GasContainer>(), 300);
             recipe.AddIngredient(ModContent.ItemType<CombustionFlask>(), 300);
             recipe.AddIngredient(ModContent.ItemType<NitrogenVial>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<CorrosionBeaker>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<AphrodisiacVial>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<RocketFist>());
-            recipe.AddIngredient(ModContent.ItemType<FrostPlagueStaff>());
+
 
 
             recipe.AddTile(TileID.CrystalBall);

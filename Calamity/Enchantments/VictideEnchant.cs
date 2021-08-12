@@ -29,7 +29,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 When using any weapon you have a 10% chance to throw a returning seashell projectile
 This seashell does true damage and does not benefit from any damage class
 Summons a sea urchin to protect you
-Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift");
+Effects of Ocean's Crest and Luxor's Gift");
             DisplayName.AddTranslation(GameCulture.Chinese, "胜潮魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'彼时之海给予你力量...'
@@ -85,8 +85,8 @@ Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift");
             }
 
             calamity.GetItem("OceanCrest").UpdateAccessory(player, hideVisual);
-            calamity.GetItem("DeepDiver").UpdateAccessory(player, hideVisual);
-            calamity.GetItem("TheTransformer").UpdateAccessory(player, hideVisual);
+            //calamity.GetItem("DeepDiver").UpdateAccessory(player, hideVisual);
+            //calamity.GetItem("TheTransformer").UpdateAccessory(player, hideVisual);
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.LuxorGift))
                 calamity.GetItem("LuxorsGift").UpdateAccessory(player, hideVisual);
         }
@@ -101,12 +101,8 @@ Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift");
             recipe.AddIngredient(ModContent.ItemType<VictideBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<VictideLeggings>());
             recipe.AddIngredient(ModContent.ItemType<OceanCrest>());
-            recipe.AddIngredient(ModContent.ItemType<DeepDiver>());
-            recipe.AddIngredient(ModContent.ItemType<TheTransformer>());
             recipe.AddIngredient(ModContent.ItemType<LuxorsGift>());
-            recipe.AddIngredient(ModContent.ItemType<SparklingEmpress>());
             recipe.AddIngredient(ModContent.ItemType<TeardropCleaver>());
-            recipe.AddIngredient(ModContent.ItemType<MycelialClaws>());
             
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

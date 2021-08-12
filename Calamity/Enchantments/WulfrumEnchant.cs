@@ -80,10 +80,6 @@ Effects of Trinket of Chi");
             recipe.AddIngredient(ModContent.ItemType<WulfrumArmor>());
             recipe.AddIngredient(ModContent.ItemType<WulfrumLeggings>());
             recipe.AddIngredient(ModContent.ItemType<TrinketofChi>());
-            recipe.AddIngredient(ModContent.ItemType<Spadefish>());
-            recipe.AddIngredient(ModContent.ItemType<MandibleBow>());
-            recipe.AddIngredient(ModContent.ItemType<BurntSienna>());
-            recipe.AddIngredient(ModContent.ItemType<MarniteSpear>());
             recipe.AddIngredient(ModContent.ItemType<SparkSpreader>());
             recipe.AddIngredient(ModContent.ItemType<Pumpler>());
 

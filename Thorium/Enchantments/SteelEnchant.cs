@@ -70,11 +70,8 @@ Effects of Spiked Bracers");
             recipe.AddIngredient(ModContent.ItemType<SteelGreaves>());
             recipe.AddIngredient(ModContent.ItemType<ThoriumShield>());
             recipe.AddIngredient(ModContent.ItemType<SpikedBracer>());
-            recipe.AddIngredient(ItemID.Katana);
-            recipe.AddIngredient(ModContent.ItemType<SteelAxe>());
-            recipe.AddIngredient(ModContent.ItemType<SteelMallet>());
             recipe.AddIngredient(ModContent.ItemType<SteelBlade>());
-            recipe.AddIngredient(ModContent.ItemType<WarForger>());
+
            
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

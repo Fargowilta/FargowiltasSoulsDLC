@@ -62,7 +62,7 @@ Effects of Dart Pouch");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             modPlayer.AssassinEnchant = true;
 
-            //dart pouch effect
+            thorium.GetItem("DartPouch").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -71,16 +71,14 @@ Effects of Dart Pouch");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<OmniMarkHead>());
-            recipe.AddIngredient(ModContent.ItemType<OmniArablastHood>());
+            recipe.AddIngredient(ModContent.ItemType<OmniMarkHead>()); //any..
+            //recipe.AddIngredient(ModContent.ItemType<OmniArablastHood>());
             recipe.AddIngredient(ModContent.ItemType<OmniBody>());
             recipe.AddIngredient(ModContent.ItemType<OmniGreaves>());
             recipe.AddIngredient(ModContent.ItemType<DartPouch>());
-            recipe.AddIngredient(ModContent.ItemType<RejectsBlowpipe>());
             recipe.AddIngredient(ModContent.ItemType<BlackBow>());
-            recipe.AddIngredient(ModContent.ItemType<OmniBow>());
             recipe.AddIngredient(ModContent.ItemType<WyrmDecimator>());
-            recipe.AddIngredient(ModContent.ItemType<TheJavelin>());
+
             
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

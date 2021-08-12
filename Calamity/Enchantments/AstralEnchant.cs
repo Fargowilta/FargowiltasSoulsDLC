@@ -32,8 +32,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 @"'The Astral Infection has consumed you...'
 Whenever you crit an enemy fallen, hallowed, and astral stars will rain down
 This effect has a 1 second cooldown before it can trigger again
-Effects of the Astral Arcanum, Hide of Astrum Deus, and Gravistar Sabaton
-Summons a pet Astrophage");
+Effects of the Astral Arcanum and Gravistar Sabaton");
             DisplayName.AddTranslation(GameCulture.Chinese, "星幻魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'星体感染侵蚀了你...'
@@ -75,19 +74,10 @@ Summons a pet Astrophage");
 
             calamity.GetItem("AstralArcanum").UpdateAccessory(player, hideVisual);
 
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.HideofAstrumDeus))
-            {
-                calamity.GetItem("HideofAstrumDeus").UpdateAccessory(player, hideVisual);
-            }
-
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.GravistarSabaton))
             {
                 calamity.GetItem("GravistarSabaton").UpdateAccessory(player, hideVisual);
             }
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.AstralEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.AstrophagePet, hideVisual, ModContent.BuffType<AstrophageBuff>(), ModContent.ProjectileType<Astrophage>());
         }
 
         public override void AddRecipes()
@@ -100,16 +90,8 @@ Summons a pet Astrophage");
             recipe.AddIngredient(ModContent.ItemType<AstralBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<AstralLeggings>());
             recipe.AddIngredient(ModContent.ItemType<AstralArcanum>());
-            recipe.AddIngredient(ModContent.ItemType<HideofAstrumDeus>());
             recipe.AddIngredient(ModContent.ItemType<GravistarSabaton>());
             recipe.AddIngredient(ModContent.ItemType<UrsaSergeant>());
-            recipe.AddIngredient(ModContent.ItemType<EyeofMagnus>());
-            recipe.AddIngredient(ModContent.ItemType<AbandonedSlimeStaff>());
-            recipe.AddIngredient(ModContent.ItemType<Quasar>());
-            recipe.AddIngredient(ModContent.ItemType<HivePod>());
-            recipe.AddIngredient(ModContent.ItemType<HeavenfallenStardisk>());
-            recipe.AddIngredient(ModContent.ItemType<AegisBlade>());
-            recipe.AddIngredient(ModContent.ItemType<AstrophageItem>());
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

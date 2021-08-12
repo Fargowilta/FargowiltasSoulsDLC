@@ -71,10 +71,6 @@ Effects of Concert Tickets");
             recipe.AddIngredient(ModContent.ItemType<ConcertTickets>());
             recipe.AddIngredient(ModContent.ItemType<OrichalcumSlideWhistle>());
             recipe.AddIngredient(ModContent.ItemType<GreenTambourine>());
-            recipe.AddIngredient(ModContent.ItemType<VuvuzelaBlue>());
-            recipe.AddIngredient(ModContent.ItemType<VuvuzelaGreen>());
-            recipe.AddIngredient(ModContent.ItemType<VuvuzelaRed>());
-            recipe.AddIngredient(ModContent.ItemType<VuvuzelaYellow>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -24,8 +24,7 @@ All armor bonuses from Xeroc and Fearmonger
 Effects of Gladiator's Locket and Unstable Prism
 Effects of Counter Scarf and Fungal Symbiote
 Effects of Hallowed Rune, Ethereal Extorter, and The Community
-Effects of The Evolution, Spectral Veil, and Statis' Void Sash
-Summons several pets");
+Effects of Spectral Veil and Statis' Void Sash");
             DisplayName.AddTranslation(GameCulture.Chinese, "湮灭之力");
             Tooltip.AddTranslation(GameCulture.Chinese,
 @"'此地曾充满生命与光明, 现在只余废墟'

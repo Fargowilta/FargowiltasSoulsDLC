@@ -64,7 +64,6 @@ State is toggled upon button press and has a cooldown of 5 seconds after switchi
             //set bonus
             modPlayer.VoxaArmor = true;
 
-            //pet soon tm
         }
 
         private readonly string[] items =
@@ -75,9 +74,9 @@ State is toggled upon button press and has a cooldown of 5 seconds after switchi
             "DolphinGun",
             "LightningRifle",
             "PGMUltimaRatioHecateII",
-            "FlariumRifle",
-            "AsthralBow",
-            "AsthralGun"
+            //"FlariumRifle",
+            //"AsthralBow",
+            //"AsthralGun"
         };
 
         public override void AddRecipes()

@@ -28,8 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Your boots vibrate at an unreal frequency, increasing movement speed significantly
 While moving, your damage and critical strike chance are increased
 Your attacks have a chance to unleash an explosion of Dragon's Flame
-Effects of Crash Boots, Dragon Talon Necklace, and Cursed Flail-Core
-Summons a pet Wyvern");
+Effects of Crash Boots, Dragon Talon Necklace, and Cursed Flail-Core");
             DisplayName.AddTranslation(GameCulture.Chinese, "恐惧魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'充满被诅咒的灵魂'
@@ -90,8 +89,6 @@ Summons a pet Wyvern");
             thoriumPlayer.dragonSet = true;
             //dragon tooth necklace
             player.armorPenetration += 15;
-            //wyvern pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.WyvernPet, hideVisual, thorium.BuffType("WyvernPetBuff"), thorium.ProjectileType("WyvernPet"));
             modPlayer.DragonEnchant = true;
         }
 
@@ -107,10 +104,6 @@ Summons a pet Wyvern");
             recipe.AddIngredient(ModContent.ItemType<DragonEnchant>());
             recipe.AddIngredient(ModContent.ItemType<CrashBoots>());
             recipe.AddIngredient(ModContent.ItemType<CursedCore>());
-            recipe.AddIngredient(ModContent.ItemType<DreadFork>());
-            recipe.AddIngredient(ItemID.ChainGuillotines);
-            recipe.AddIngredient(ModContent.ItemType<VoidLance>());
-            recipe.AddIngredient(ModContent.ItemType<ImpactDrill>());
             
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

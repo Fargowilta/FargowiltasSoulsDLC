@@ -56,13 +56,9 @@ Your symphonic empowerments will last an additional 3 seconds");
             recipe.AddIngredient(ModContent.ItemType<BardCap>());
             recipe.AddIngredient(ModContent.ItemType<BardChest>());
             recipe.AddIngredient(ModContent.ItemType<BardLeggings>());
-            recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyBugleHorn");
             recipe.AddIngredient(ModContent.ItemType<WoodenWhistle>());
+            recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyBugleHorn");
             recipe.AddIngredient(ModContent.ItemType<Ukulele>());
-            recipe.AddIngredient(ModContent.ItemType<DrumMallet>());
-            recipe.AddIngredient(ModContent.ItemType<Harmonica>());
-            recipe.AddIngredient(ModContent.ItemType<DynastyGuzheng>());
-            recipe.AddIngredient(ModContent.ItemType<Piano>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

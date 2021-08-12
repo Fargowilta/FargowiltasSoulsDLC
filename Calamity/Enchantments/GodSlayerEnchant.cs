@@ -41,8 +41,7 @@ Hitting enemies will summon god slayer phantoms
 Summons a god-eating mechworm to fight for you
 While at full HP all of your rogue stats are boosted by 10%
 If you take over 80 damage in one hit you will be given extra immunity frames
-Effects of the Nebulous Core and Draedon's Heart
-Summons a Chibii Doggo pet");
+Effects of the Nebulous Core and Draedon's Heart");
             DisplayName.AddTranslation(GameCulture.Chinese, "弑神者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'足以屠神的力量存于你的体内...'
@@ -222,11 +221,6 @@ Summons a Chibii Doggo pet");
 
             //draedons heart
             calamity.GetItem("DraedonsHeart").UpdateAccessory(player, hideVisual);
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.GodSlayerEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.ChibiiPet, hideVisual, calamity.BuffType("ChibiiBuff"), calamity.ProjectileType("ChibiiDoggo"));
-
         }
 
         public override void AddRecipes()
@@ -238,17 +232,10 @@ Summons a Chibii Doggo pet");
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyGodslayerHelmet");
             recipe.AddIngredient(ModContent.ItemType<GodSlayerChestplate>());
             recipe.AddIngredient(ModContent.ItemType<GodSlayerLeggings>());
-            recipe.AddIngredient(ModContent.ItemType<AncientGodSlayerHelm>());
             recipe.AddIngredient(ModContent.ItemType<NebulousCore>());
             recipe.AddIngredient(ModContent.ItemType<DimensionalSoulArtifact>());
             recipe.AddIngredient(ModContent.ItemType<DraedonsHeart>());
-            recipe.AddIngredient(ModContent.ItemType<DevilsDevastation>());
-            recipe.AddIngredient(ModContent.ItemType<StarfleetMK2>());
-            recipe.AddIngredient(ModContent.ItemType<Norfleet>());
-            recipe.AddIngredient(ModContent.ItemType<Skullmasher>());
-            recipe.AddIngredient(ModContent.ItemType<Nadir>());
-            recipe.AddIngredient(ModContent.ItemType<CosmicViperEngine>());
-            recipe.AddIngredient(ModContent.ItemType<CosmicPlushie>());
+
 
             recipe.AddTile(calamity, "DraedonsForge");
             recipe.SetResult(this);

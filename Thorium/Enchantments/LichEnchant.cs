@@ -72,10 +72,6 @@ Effects of Lich's Gaze");
             recipe.AddIngredient(ModContent.ItemType<PlagueDoctorEnchant>());
             recipe.AddIngredient(ModContent.ItemType<LichGaze>());
             recipe.AddIngredient(ModContent.ItemType<SoulCleaver>());
-            recipe.AddIngredient(ModContent.ItemType<SoulBomb>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<CadaverCornet>());
-            recipe.AddIngredient(ModContent.ItemType<LethalInjection>());
-            recipe.AddIngredient(ModContent.ItemType<PumpkinPaint>());
 
             
             recipe.AddTile(TileID.CrystalBall);

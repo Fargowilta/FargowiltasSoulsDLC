@@ -32,20 +32,7 @@ Short-ranged tentacles heal you by sucking enemy life
 Press Y to activate abyssal madness for 5 seconds
 Abyssal madness increases damage, critical strike chance, and tentacle aggression/range
 This effect has a 30 second cooldown
-Two shellfishes aid you in combat
-When using any weapon you have a 10% chance to throw a returning seashell projectile
-Summons a sea urchin to protect you
-10% increased minion damage while submerged in liquid
-Provides a moderate amount of light and moderately reduces breath loss in the abyss
-Attacking and being attacked by enemies inflicts poison
-Grants a sulphurous bubble jump that applies venom on hit
-Effects of the Abyssal Diving Suit, Mutated Truffle, and Old Duke's Scales
-Effects of Giant Pearl and Amidias' Pendant
-Effects of Aquatic Emblem and Enchanted Pearl
-Effects of Ocean's Crest, Deep Diver, The Transformer, and Luxor's Gift
-Effects of Corrosive Spine and Lumenous Amulet
-Effects of Sand Cloak and Alluring Bait
-Summons several pets");
+Effects of the Abyssal Diving Suit and Mutated Truffle");
             DisplayName.AddTranslation(GameCulture.Chinese, "欧米伽蓝魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'深渊的黑暗压垮了你...'
@@ -141,10 +128,7 @@ Summons several pets");
                 calamity.GetItem("MutatedTruffle").UpdateAccessory(player, hideVisual);
             }
 
-            calamity.GetItem("DukeScales").UpdateAccessory(player, hideVisual);
-
-            mod.GetItem("MolluskEnchant").UpdateAccessory(player, hideVisual);
-            mod.GetItem("FathomSwarmerEnchant").UpdateAccessory(player, hideVisual);
+            //calamity.GetItem("DukeScales").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -156,17 +140,10 @@ Summons several pets");
             recipe.AddIngredient(ModContent.ItemType<OmegaBlueHelmet>());
             recipe.AddIngredient(ModContent.ItemType<OmegaBlueChestplate>());
             recipe.AddIngredient(ModContent.ItemType<OmegaBlueLeggings>());
-            recipe.AddIngredient(ModContent.ItemType<MolluskEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<FathomSwarmerEnchant>());
+
             recipe.AddIngredient(ModContent.ItemType<AbyssalDivingSuit>());
             recipe.AddIngredient(ModContent.ItemType<ReaperToothNecklace>());
             recipe.AddIngredient(ModContent.ItemType<MutatedTruffle>());
-            recipe.AddIngredient(ModContent.ItemType<DukeScales>());
-            recipe.AddIngredient(ModContent.ItemType<HalibutCannon>());
-            recipe.AddIngredient(ModContent.ItemType<CalamarisLament>());
-            recipe.AddIngredient(ModContent.ItemType<TheReaper>());
-            recipe.AddIngredient(ModContent.ItemType<SulphuricAcidCannon>());
-            recipe.AddIngredient(ModContent.ItemType<SDFMG>());
             
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

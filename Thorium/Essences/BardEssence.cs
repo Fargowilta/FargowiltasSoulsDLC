@@ -80,7 +80,6 @@ namespace FargowiltasSoulsDLC.Thorium.Essences
             "AquamarineWineGlass",
             "SonarCannon",
             "Calaveras",
-            "GraniteBoomBox",
             "TuningFork",
             "HotHorn",
             "SongFireAndIce"
@@ -93,6 +92,8 @@ namespace FargowiltasSoulsDLC.Thorium.Essences
             ModRecipe recipe = new ModRecipe(mod);
             
             foreach (string i in items) recipe.AddIngredient(thorium.ItemType(i));
+
+            recipe.AddIngredient(ItemID.HallowedBar, 5);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

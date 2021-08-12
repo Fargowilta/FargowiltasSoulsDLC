@@ -24,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'I'll be Bach'
 Pressing the Special Ability key will summon a chorus of music playing ghosts
 While in combat, a rainbow of damaging symphonic symbols will follow your movement and stun enemies
-Effects of Metronome and Purple Music Player");
+Effects of Metronome and Conductor's Baton");
             DisplayName.AddTranslation(GameCulture.Chinese, "指挥魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'我就是现代巴赫'
@@ -57,6 +57,8 @@ Effects of Metronome and Purple Music Player");
                 thorium.GetItem("Metronome").UpdateAccessory(player, hideVisual);
             }
 
+            thorium.GetItem("ConductorsBaton").UpdateAccessory(player, hideVisual);
+
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.MarchingBand))
             {
                 thoriumPlayer.setMarchingBand = true;
@@ -75,12 +77,6 @@ Effects of Metronome and Purple Music Player");
             recipe.AddIngredient(ModContent.ItemType<MarchingBandEnchant>());
             recipe.AddIngredient(ModContent.ItemType<Metronome>());
             recipe.AddIngredient(ModContent.ItemType<ConductorsBaton>());
-            recipe.AddIngredient(ModContent.ItemType<Organ>());
-            recipe.AddIngredient(ModContent.ItemType<Clarinet>());
-            recipe.AddIngredient(ModContent.ItemType<FrenchHorn>());
-            recipe.AddIngredient(ModContent.ItemType<SpectralSymphonyPaint>());
-
-           // purple music player e
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

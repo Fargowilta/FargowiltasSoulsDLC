@@ -67,11 +67,11 @@ Damaging enemies will occasionally call upon a meteor to fall from the sky");
             "SpaceJunkHelm",
             "SpaceJunkBody",
             "SpaceJunkLegs",
-            "SatelliteStaff",
+           // "SatelliteStaff",
             "OrbFlayer",
             "HornetNeedle",
-            "VenomiteDagger",
-            "RazorfangDagger",
+            //"VenomiteDagger",
+            //"RazorfangDagger",
             "GoldDoorHandle",
         };
 
@@ -83,7 +83,7 @@ Damaging enemies will occasionally call upon a meteor to fall from the sky");
 
             foreach (string i in items) recipe.AddIngredient(soa.ItemType(i));
 
-            recipe.AddIngredient(soa.ItemType("OrbTitanium"), 300);
+            //recipe.AddIngredient(soa.ItemType("OrbTitanium"), 300);
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

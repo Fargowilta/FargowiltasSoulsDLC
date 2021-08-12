@@ -20,9 +20,8 @@ namespace FargowiltasSoulsDLC.Calamity.Forces
             Tooltip.SetDefault(
 @"'Rain hell down on those who resist your power'
 All armor bonuses from Wulfrum, Reaver, Plague Reaper, and Demonshade
-Effects of Trinket of Chi, Fabled Tortoise Shell, and Plague Hive
-Effects of Plagued Fuel Pack, The Bee, The Camper, and Profaned Soul Crystal
-Summons several pets");
+Effects of Trinket of Chi and Plague Hive
+Effects of Plagued Fuel Pack, The Camper, and Profaned Soul Crystal");
             DisplayName.AddTranslation(GameCulture.Chinese, "毁灭之力");
             Tooltip.AddTranslation(GameCulture.Chinese,
 @"'让那些反抗你的人下地狱吧'

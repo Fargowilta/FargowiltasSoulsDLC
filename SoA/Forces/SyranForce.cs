@@ -71,7 +71,6 @@ Effects of Ring of the Fallen, Memento Mori, and Arcanum of the Caster");
             //arcanum of the caster
             ModLoader.GetMod("SacredTools").GetItem("CasterArcanum").UpdateAccessory(player, hideVisual);
 
-            //pets soon tm
         }
 
 

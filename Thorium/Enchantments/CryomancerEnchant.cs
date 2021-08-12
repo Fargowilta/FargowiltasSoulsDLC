@@ -26,8 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'What killed the dinosaurs? The ice age!'
 Your damage will freeze enemies for two seconds
 An icy aura surrounds you, which freezes nearby enemies after a short delay
-Effects of Ice Bound Strider Hide
-Summons a pet Owl");
+Effects of Ice Bound Strider Hide");
             DisplayName.AddTranslation(GameCulture.Chinese, "冰法魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'是什么灭绝了恐龙? 冰河时代!'
@@ -57,8 +56,6 @@ Summons a pet Owl");
             modPlayer.CryoEnchant = true;
             //strider hide
             thoriumPlayer.frostBonusDamage = true;
-            //pets
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.OwlPet, hideVisual, thorium.BuffType("SnowyOwlBuff"), thorium.ProjectileType("SnowyOwlPet"));
             //icy set bonus
             thoriumPlayer.setIcy = true;
             if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
@@ -79,10 +76,7 @@ Summons a pet Owl");
             recipe.AddIngredient(ModContent.ItemType<IcyEnchant>());
             recipe.AddIngredient(ModContent.ItemType<IceBoundStriderHide>());
             recipe.AddIngredient(ModContent.ItemType<IceFairyStaff>());
-            recipe.AddIngredient(ItemID.FrostStaff);
-            recipe.AddIngredient(ModContent.ItemType<Cryotherapy>());
-            recipe.AddIngredient(ModContent.ItemType<LostMail>());
-            recipe.AddIngredient(ModContent.ItemType<ShroudedbytheStormPaint>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

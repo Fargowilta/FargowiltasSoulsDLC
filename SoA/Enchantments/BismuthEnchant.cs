@@ -65,9 +65,9 @@ Hitting enemies has a chance to summon a bismuth hammer for extra damage");
             "BismuthHelm",
             "BismuthChest",
             "BismuthLegs",
-            "BismuthChakram",
-            "RainbowHandgun",
-            "TheCluster",
+            //"BismuthChakram",
+           // "RainbowHandgun",
+           // "TheCluster",
             "DeathsGarden",
             "VenomiteStaff",
             "GospelOfDismay"
@@ -81,7 +81,7 @@ Hitting enemies has a chance to summon a bismuth hammer for extra damage");
 
             foreach (string i in items) recipe.AddIngredient(soa.ItemType(i));
 
-            recipe.AddIngredient(ItemID.RainbowRod);
+            //recipe.AddIngredient(ItemID.RainbowRod);
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -54,8 +54,7 @@ Effects of Jazz Music Player");
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             modPlayer.IllumiteEnchant = true;
             //music player
-            thoriumPlayer.accMusicPlayer = true;
-            thoriumPlayer.accMP3Wind = true;
+            thorium.GetItem("TunePlayerLifeRegen").UpdateAccessory(player, true);
         }
 
         public override void AddRecipes()
@@ -68,12 +67,8 @@ Effects of Jazz Music Player");
             recipe.AddIngredient(ModContent.ItemType<IllumiteChestplate>());
             recipe.AddIngredient(ModContent.ItemType<IllumiteGreaves>());
             recipe.AddIngredient(ModContent.ItemType<TunePlayerLifeRegen>());
-            recipe.AddIngredient(ModContent.ItemType<PinkPhasesaber>());
             recipe.AddIngredient(ModContent.ItemType<HandCannon>());
             recipe.AddIngredient(ModContent.ItemType<IllumiteBlaster>());
-            recipe.AddIngredient(ModContent.ItemType<IllumiteBarrage>());
-            recipe.AddIngredient(ModContent.ItemType<BlobhornCoralStaff>());
-            recipe.AddIngredient(ModContent.ItemType<LargeOpal>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

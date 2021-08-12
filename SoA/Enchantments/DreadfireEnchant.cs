@@ -75,12 +75,13 @@ Effects of Pumpkin Amulet");
             "PumpkinArmor",
             "PumpkinBoots",
             "PumpkinAmulet",
-            "VineSpear",
+
+           // "VineSpear",
             "PumpkinCarver",
             "PumpkinFlare",
-            "HarvestStaff",
-            "MoodPainting",
-            "TheFlamingBeanbag"
+            //"HarvestStaff",
+            //"MoodPainting",
+            //"TheFlamingBeanbag"
         };
 
         public override void AddRecipes()

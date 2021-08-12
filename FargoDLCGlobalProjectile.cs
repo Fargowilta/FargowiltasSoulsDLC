@@ -34,20 +34,6 @@ namespace FargowiltasSoulsDLC
             FargowiltasSoulsDLC.ModProjDict.TryGetValue(projectile.type, out ModProjID);
         }
 
-        public override void AI(Projectile projectile)
-        {
-            if (FargowiltasSoulsDLC.Instance.ThoriumLoaded)
-            {
-                ThoriumPets(projectile);
-            }
-
-            if (FargowiltasSoulsDLC.Instance.CalamityLoaded)
-            {
-                CalamityPets(projectile);
-            }
-
-        }
-
         private void ThoriumPets(Projectile projectile)
         {
             Player player = Main.player[projectile.owner];
@@ -56,133 +42,12 @@ namespace FargowiltasSoulsDLC
             switch (ModProjID)
             {
 
-                #region thorium pets
-
-                case 2:
-                    //KillPet(projectile, player, ModContent.BuffType<BioFeederBuff>(), modPlayer.MeteorEnchant, SoulConfig.Instance.thoriumToggles.BioFeederPet);
-                    break;
-
-                case 3:
-                    KillPet(projectile, player, ModContent.BuffType<BlisterBuff>(), modPlayer.FleshEnchant, SoulConfig.Instance.thoriumToggles.BlisterPet);
-                    break;
-
-                case 4:
-                    KillPet(projectile, player, ModContent.BuffType<WyvernPetBuff>(), modPlayer.DragonEnchant, SoulConfig.Instance.thoriumToggles.WyvernPet);
-                    break;
-
-                /*case 6:
-                    KillPet(projectile, player, ModContent.BuffType<LockBoxBuff>(), modPlayer.MinerEnchant, SoulConfig.Instance.thoriumToggles.BoxPet);
-                    break;*/
-
-                case 9:
-                    KillPet(projectile, player, ModContent.BuffType<LifeSpiritBuff>(), modPlayer.SacredEnchant, SoulConfig.Instance.thoriumToggles.SpiritPet);
-                    break;
-
                 case 11:
                     KillPet(projectile, player, ModContent.BuffType<SaplingBuff>(), modPlayer.LivingWoodEnchant, SoulConfig.Instance.thoriumToggles.SaplingMinion, true);
                     break;
 
-                case 12:
-                    KillPet(projectile, player, ModContent.BuffType<SnowyOwlBuff>(), modPlayer.CryoEnchant, SoulConfig.Instance.thoriumToggles.OwlPet);
-                    break;
-
-                case 13:
-                    KillPet(projectile, player, ModContent.BuffType<JellyPet>(), modPlayer.DepthEnchant, SoulConfig.Instance.thoriumToggles.JellyfishPet);
-                    break;
-
-                /*case 17:
-                    KillPet(projectile, player, ModContent.BuffType<ShineDust>(), modPlayer.PlatinumEnchant, SoulConfig.Instance.thoriumToggles.GlitterPet);
-                    break;
-
-                case 18:
-                    KillPet(projectile, player, ModContent.BuffType<DrachmaBuff>(), modPlayer.GoldEnchant, SoulConfig.Instance.thoriumToggles.CoinPet);
-                    break;*/
-
-                    #endregion
             }
         }
-
-        private void CalamityPets(Projectile projectile)
-        {
-            Player player = Main.player[projectile.owner];
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-
-            switch (ModProjID)
-            {
-                case 101:
-                    KillPet(projectile, player, ModContent.BuffType<Kendra>(), modPlayer.DaedalusEnchant, SoulConfig.Instance.calamityToggles.KendraPet);
-                    break;
-
-
-                case 103:
-                    KillPet(projectile, player, ModContent.BuffType<ThirdSageBuff>(), modPlayer.DaedalusEnchant, SoulConfig.Instance.calamityToggles.ThirdSagePet);
-                    break;
-
-                case 104:
-                    KillPet(projectile, player, ModContent.BuffType<BearBuff>(), modPlayer.DaedalusEnchant, SoulConfig.Instance.calamityToggles.BearPet);
-                    break;
-
-                case 105:
-                    KillPet(projectile, player, ModContent.BuffType<BrimlingBuff>(), modPlayer.BrimflameEnchant, SoulConfig.Instance.calamityToggles.BrimlingPet);
-                    break;
-
-                case 106:
-                    KillPet(projectile, player, ModContent.BuffType<DannyDevito>(), modPlayer.SulphurEnchant, SoulConfig.Instance.calamityToggles.DannyPet);
-                    break;
-
-                case 107:
-                    KillPet(projectile, player, ModContent.BuffType<SirenLightPetBuff>(), modPlayer.FathomEnchant, SoulConfig.Instance.calamityToggles.SirenPet);
-                    break;
-
-                case 108:
-                case 109:
-                    KillPet(projectile, player, ModContent.BuffType<ChibiiBuff>(), modPlayer.GodSlayerEnchant, SoulConfig.Instance.calamityToggles.ChibiiPet);
-                    break;
-
-                case 110:
-                    KillPet(projectile, player, ModContent.BuffType<AkatoYharonBuff>(), modPlayer.SilvaEnchant, SoulConfig.Instance.calamityToggles.AkatoPet);
-                    break;
-
-                case 111:
-                    KillPet(projectile, player, ModContent.BuffType<Fox>(), modPlayer.SilvaEnchant, SoulConfig.Instance.calamityToggles.FoxPet);
-                    break;
-
-                case 112:
-                    KillPet(projectile, player, ModContent.BuffType<LeviBuff>(), modPlayer.DemonShadeEnchant, SoulConfig.Instance.calamityToggles.LeviPet);
-                    break;
-
-                case 113:
-                    KillPet(projectile, player, ModContent.BuffType<RotomBuff>(), modPlayer.AerospecEnchant, SoulConfig.Instance.calamityToggles.RotomPet);
-                    break;
-
-                case 114:
-                    KillPet(projectile, player, ModContent.BuffType<AstrophageBuff>(), modPlayer.AstralEnchant, SoulConfig.Instance.calamityToggles.AstrophagePet);
-                    break;
-
-                case 115:
-                    KillPet(projectile, player, ModContent.BuffType<SparksBuff>(), modPlayer.ReaverEnchant, SoulConfig.Instance.calamityToggles.SparksPet);
-                    break;
-
-                case 116:
-                    KillPet(projectile, player, ModContent.BuffType<RadiatorBuff>(), modPlayer.SulphurEnchant, SoulConfig.Instance.calamityToggles.RadiatorPet);
-                    break;
-
-                case 117:
-                    KillPet(projectile, player, ModContent.BuffType<BabyGhostBellBuff>(), modPlayer.MolluskEnchant, SoulConfig.Instance.calamityToggles.GhostBellPet);
-                    break;
-
-                case 118:
-                    KillPet(projectile, player, ModContent.BuffType<FlakPetBuff>(), modPlayer.FathomEnchant, SoulConfig.Instance.calamityToggles.FlakPet);
-                    break;
-
-                case 119:
-                    KillPet(projectile, player, ModContent.BuffType<SCalPetBuff>(), modPlayer.DemonShadeEnchant, SoulConfig.Instance.calamityToggles.ScalPet);
-                    break;
-
-            }
-        }
-
-
 
         private void KillPet(Projectile projectile, Player player, int buff, bool enchant, bool toggle, bool minion = false)
         {

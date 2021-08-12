@@ -64,12 +64,8 @@ An icy aura surrounds you, which freezes nearby enemies after a short delay");
             recipe.AddIngredient(ModContent.ItemType<IcyBandana>());
             recipe.AddIngredient(ModContent.ItemType<IcyMail>());
             recipe.AddIngredient(ModContent.ItemType<IcyGreaves>());
-            recipe.AddIngredient(ModContent.ItemType<FrostFireKatana>());
             recipe.AddIngredient(ModContent.ItemType<IceShard>());
-            recipe.AddIngredient(ModContent.ItemType<FrostFury>());
             recipe.AddIngredient(ModContent.ItemType<Blizzard>());
-            recipe.AddIngredient(ModContent.ItemType<IcyCaltrop>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<IceShaver>());
             recipe.AddIngredient(ItemID.IceBoomerang);
 
             recipe.AddTile(TileID.DemonAltar);

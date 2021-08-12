@@ -31,7 +31,7 @@ All minion attacks grant colossal life regeneration
 15% increased damage reduction during the Pumpkin and Frost Moons
 This extra damage reduction ignores the soft cap
 Provides cold protection in Death Mode
-Effects of The Evolution, Spectral Veil, and Statis' Void Sash");
+Effects of Spectral Veil and Statis' Void Sash");
             DisplayName.AddTranslation(GameCulture.Chinese, "神惧者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
@@ -69,7 +69,7 @@ Effects of The Evolution, Spectral Veil, and Statis' Void Sash");
             if (!FargowiltasSoulsDLC.Instance.CalamityLoaded) return;
 
             calamity.Call("SetSetBonus", player, "fearmonger", true);
-            calamity.GetItem("TheEvolution").UpdateAccessory(player, hideVisual);
+            //calamity.GetItem("TheEvolution").UpdateAccessory(player, hideVisual);
             calamity.GetItem("SpectralVeil").UpdateAccessory(player, hideVisual);
             calamity.GetItem("StatisBeltOfCurses").UpdateAccessory(player, hideVisual);
         }
@@ -83,17 +83,10 @@ Effects of The Evolution, Spectral Veil, and Statis' Void Sash");
             recipe.AddIngredient(ModContent.ItemType<FearmongerGreathelm>());
             recipe.AddIngredient(ModContent.ItemType<FearmongerPlateMail>());
             recipe.AddIngredient(ModContent.ItemType<FearmongerGreaves>());
-            recipe.AddIngredient(ModContent.ItemType<TheEvolution>());
             recipe.AddIngredient(ModContent.ItemType<SpectralVeil>());
             recipe.AddIngredient(ModContent.ItemType<StatisBeltOfCurses>());
-            recipe.AddIngredient(ModContent.ItemType<RecitationoftheBeast>());
-            recipe.AddIngredient(ModContent.ItemType<Karasawa>());
             recipe.AddIngredient(ModContent.ItemType<FaceMelter>());
-            recipe.AddIngredient(ModContent.ItemType<SoulPiercer>());
-            recipe.AddIngredient(ModContent.ItemType<GodsParanoia>(), 10);
-            recipe.AddIngredient(ModContent.ItemType<Penumbra>());
-            recipe.AddIngredient(ModContent.ItemType<Hypothermia>());
-            recipe.AddIngredient(ModContent.ItemType<IceBarrage>());
+
 
             recipe.AddTile(calamity, "DraedonsForge");
             recipe.SetResult(this);

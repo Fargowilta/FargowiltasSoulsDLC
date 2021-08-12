@@ -105,7 +105,6 @@ Attacks have a 20% chance to unleash aquatic homing daggers all around you");
             //set bonus damage to healing hot key
             thoriumPlayer.setTideTurner = true;
 
-           // fishegg pet
         }
 
         public override void AddRecipes()
@@ -114,16 +113,14 @@ Attacks have a 20% chance to unleash aquatic homing daggers all around you");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<TideTurnerHelmet>());
-            recipe.AddIngredient(ModContent.ItemType<TideTurnersGaze>());
+            recipe.AddIngredient(ModContent.ItemType<TideTurnerHelmet>()); //any..
+            //recipe.AddIngredient(ModContent.ItemType<TideTurnersGaze>());
             recipe.AddIngredient(ModContent.ItemType<TideTurnerBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<TideTurnerGreaves>());
             recipe.AddIngredient(ModContent.ItemType<PoseidonCharge>());
             recipe.AddIngredient(ModContent.ItemType<MantisPunch>());
-            recipe.AddIngredient(ModContent.ItemType<OceansJudgment>());
-            recipe.AddIngredient(ModContent.ItemType<Trefork>());
             recipe.AddIngredient(ModContent.ItemType<TidalWave>());
-            recipe.AddIngredient(ModContent.ItemType<FishEgg>());
+
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

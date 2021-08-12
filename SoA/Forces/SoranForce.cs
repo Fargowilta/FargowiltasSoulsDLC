@@ -72,7 +72,6 @@ Effects of Nuba's Blessing, Novaniel's Resolve, and Celestial Ring");
             //celestial ring
             ModLoader.GetMod("SacredTools").GetItem("LunarRing").UpdateAccessory(player, hideVisual);
 
-            //pets soon tm
         }
 
 

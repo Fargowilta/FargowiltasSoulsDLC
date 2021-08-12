@@ -26,8 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Symbiotically attached to your body'
 Consecutive attacks against enemies might drop flesh, which grants bonus life and damage
-Effects of Vampire Gland
-Summons a pet Flying Blister");
+Effects of Vampire Gland");
             DisplayName.AddTranslation(GameCulture.Chinese, "血肉魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'与你共生'
@@ -56,8 +55,7 @@ Summons a pet Flying Blister");
             thoriumPlayer.Symbiotic = true;
             //vampire gland
             thoriumPlayer.vampireGland = true;
-            //blister pet
-            modPlayer.AddPet(SoulConfig.Instance.thoriumToggles.BlisterPet, hideVisual, thorium.BuffType("BlisterBuff"), thorium.ProjectileType("BlisterPet"));
+
             modPlayer.FleshEnchant = true;
         }
 
@@ -71,12 +69,9 @@ Summons a pet Flying Blister");
             recipe.AddIngredient(ModContent.ItemType<FleshBody>());
             recipe.AddIngredient(ModContent.ItemType<FleshLegs>());
             recipe.AddIngredient(ModContent.ItemType<VampireGland>());
-            recipe.AddIngredient(ModContent.ItemType<ToothOfTheConsumer>());
             recipe.AddIngredient(ModContent.ItemType<FleshMace>());
-            recipe.AddIngredient(ModContent.ItemType<BloodBelcher>());
-            recipe.AddIngredient(ModContent.ItemType<StalkersSnippers>());
             recipe.AddIngredient(ModContent.ItemType<BloodRage>());
-            recipe.AddIngredient(ModContent.ItemType<BlisterSack>());
+
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

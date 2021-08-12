@@ -68,11 +68,11 @@ namespace FargowiltasSoulsDLC.SoA.Enchantments
             recipe.AddIngredient(soa.ItemType("PrairieLegs"));
             recipe.AddIngredient(soa.ItemType("AncientCharm"));
             recipe.AddIngredient(soa.ItemType("WoodJavelin"), 300);
-            recipe.AddIngredient(ItemID.RottenEgg, 300);
+            //recipe.AddIngredient(ItemID.RottenEgg, 300);
             recipe.AddIngredient(soa.ItemType("GoldJavelin"), 300);
-            recipe.AddIngredient(ItemID.EnchantedBoomerang);
-            recipe.AddIngredient(ItemID.PoisonedKnife, 300);
-            recipe.AddIngredient(ItemID.BallOHurt);
+            //recipe.AddIngredient(ItemID.EnchantedBoomerang);
+            //recipe.AddIngredient(ItemID.PoisonedKnife, 300);
+            //recipe.AddIngredient(ItemID.BallOHurt);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

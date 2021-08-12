@@ -41,8 +41,7 @@ Increases your rate of fire with all ranged weapons
 Magic projectiles have a 10% chance to cause a massive explosion on enemy hits
 Summons an ancient leaf prism to blast your enemies with life energy
 Rogue weapons have a faster throwing rate while you are above 90% life
-Effects of the The Amalgam, Dynamo Stem Cells, Godly Soul Artifact, and Yharim's Gift
-Summons an Akato and Fox pet");
+Effects of the The Amalgam, Godly Soul Artifact, and Yharim's Gift");
             DisplayName.AddTranslation(GameCulture.Chinese, "始源林海魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'你身上流淌出无尽的生命能量'
@@ -130,11 +129,6 @@ Summons an Akato and Fox pet");
             }
 
             calamity.GetItem("DynamoStemCells").UpdateAccessory(player, hideVisual);
-
-            FargoDLCPlayer fargoPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            fargoPlayer.SilvaEnchant = true;
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.AkatoPet, hideVisual, calamity.BuffType("AkatoYharonBuff"), calamity.ProjectileType("Akato"));
-            fargoPlayer.AddPet(SoulConfig.Instance.calamityToggles.FoxPet, hideVisual, calamity.BuffType("Fox"), calamity.ProjectileType("Fox"));
         }
 
         public override void AddRecipes()
@@ -149,14 +143,6 @@ Summons an Akato and Fox pet");
             recipe.AddIngredient(ModContent.ItemType<TheAmalgam>());
             recipe.AddIngredient(ModContent.ItemType<GodlySoulArtifact>());
             recipe.AddIngredient(ModContent.ItemType<YharimsGift>());
-            recipe.AddIngredient(ModContent.ItemType<DynamoStemCells>());
-            recipe.AddIngredient(ModContent.ItemType<AlphaRay>());
-            recipe.AddIngredient(ModContent.ItemType<ScourgeoftheCosmos>());
-            recipe.AddIngredient(ModContent.ItemType<Swordsplosion>());
-            recipe.AddIngredient(ModContent.ItemType<VoidVortex>());
-            recipe.AddIngredient(ModContent.ItemType<YharimsCrystal>());
-            recipe.AddIngredient(ModContent.ItemType<ForgottenDragonEgg>());
-            recipe.AddIngredient(ModContent.ItemType<FoxDrive>());
 
             recipe.AddTile(calamity, "DraedonsForge");
             recipe.SetResult(this);

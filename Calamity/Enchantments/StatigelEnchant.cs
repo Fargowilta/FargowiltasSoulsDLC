@@ -28,7 +28,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 @"'Statis’ mystical power surrounds you…'
 When you take over 100 damage in one hit you become immune to damage for an extended period of time
 Grants an extra jump and increased jump height
-Effects of Counter Scarf and Fungal Symbiote");
+Effects of Counter Scarf, Mana Overloader, and Fungal Symbiote");
             DisplayName.AddTranslation(GameCulture.Chinese, "斯塔提斯魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'斯塔提斯的神秘力量环绕着你...'
@@ -72,6 +72,7 @@ Effects of Counter Scarf and Fungal Symbiote");
                 calamity.GetItem("FungalSymbiote").UpdateAccessory(player, hideVisual);
             }
 
+            calamity.GetItem("ManaOverloader").UpdateAccessory(player, hideVisual);
             calamity.GetItem("CounterScarf").UpdateAccessory(player, hideVisual);
         }
 
@@ -87,10 +88,6 @@ Effects of Counter Scarf and Fungal Symbiote");
             recipe.AddIngredient(ModContent.ItemType<CounterScarf>());
             recipe.AddIngredient(ModContent.ItemType<ManaOverloader>());
             recipe.AddIngredient(ModContent.ItemType<FungalSymbiote>());
-            recipe.AddIngredient(ModContent.ItemType<Carnage>());
-            recipe.AddIngredient(ModContent.ItemType<ClothiersWrath>());
-            recipe.AddIngredient(ModContent.ItemType<CinderBlossomStaff>());
-            recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyEvilEffigy");
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

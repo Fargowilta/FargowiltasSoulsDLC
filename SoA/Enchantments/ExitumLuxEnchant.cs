@@ -73,11 +73,12 @@ Effects of Stone of Resonance");
             "ExodusChest",
             "ExodusLegs",
             "StoneOfResonance",
+
             "Claymarine",
-            "LuxShardMelee",
-            "LuxShardRanged",
-            "LuxShardMagic",
-            "LuxShardSummon",
+            //"LuxShardMelee",
+            //"LuxShardRanged",
+            //"LuxShardMagic",
+            //"LuxShardSummon",
             "LuxDustThrown"
         };
 

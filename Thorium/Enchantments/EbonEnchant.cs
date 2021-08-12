@@ -48,7 +48,7 @@ Effects if Dark Heart");
             //set bonus
             thoriumPlayer.darkAura = true;
 
-            //darkheart
+            thorium.GetItem("DarkHeart").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -60,13 +60,9 @@ Effects if Dark Heart");
             recipe.AddIngredient(ModContent.ItemType<EbonHood>());
             recipe.AddIngredient(ModContent.ItemType<EbonCloak>());
             recipe.AddIngredient(ModContent.ItemType<EbonLeggings>());
+            recipe.AddIngredient(ModContent.ItemType<DarkHeart>());
             recipe.AddIngredient(ModContent.ItemType<LeechBolt>());
             recipe.AddIngredient(ModContent.ItemType<ShadowWand>());
-            recipe.AddIngredient(ModContent.ItemType<DarkHeart>());
-            recipe.AddIngredient(ModContent.ItemType<EaterOfPain>());
-            recipe.AddIngredient(ModContent.ItemType<BrainCoral>());
-            recipe.AddIngredient(ModContent.ItemType<AToastPaint>());
-            recipe.AddIngredient(ItemID.RedAdmiralButterfly);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

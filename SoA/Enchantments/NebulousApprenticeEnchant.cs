@@ -72,11 +72,11 @@ Effects of Nuba's Blessing");
             "NubaRobe",
             "NubasBlessing",
             "LunaticBurstStaff",
-            "CosmicCloudBracelet",
-            "Armageddon",
-            "FlariumTome",
+            //"CosmicCloudBracelet",
+            //"Armageddon",
+            //"FlariumTome",
             "AsthralStaff",
-            "AsthralTome"
+            //"AsthralTome"
         };
 
         public override void AddRecipes()

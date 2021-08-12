@@ -31,7 +31,7 @@ namespace FargowiltasSoulsDLC.Calamity.Enchantments
 @"''
 Enemies receive 10% more damage from ranged projectiles when afflicted by the Plague
 Getting hit causes the plague cinders to rain from above
-Effects of Plague Hive, Plagued Fuel Pack, The Bee, and The Camper");
+Effects of Plague Hive, Plagued Fuel Pack, and The Camper");
             DisplayName.AddTranslation(GameCulture.Chinese, "瘟疫死神魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"''
@@ -95,10 +95,6 @@ Effects of Plague Hive, Plagued Fuel Pack, The Bee, and The Camper");
             {
                 calamity.GetItem("PlaguedFuelPack").UpdateAccessory(player, hideVisual);
             }
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.TheBee))
-            {
-                calamity.GetItem("TheBee").UpdateAccessory(player, hideVisual);
-            }
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.TheCamper))
             {
                 calamity.GetItem("TheCamper").UpdateAccessory(player, hideVisual);
@@ -116,15 +112,7 @@ Effects of Plague Hive, Plagued Fuel Pack, The Bee, and The Camper");
             recipe.AddIngredient(ModContent.ItemType<PlagueReaperStriders>());
             recipe.AddIngredient(ModContent.ItemType<PlagueHive>());
             recipe.AddIngredient(ModContent.ItemType<PlaguedFuelPack>());
-            recipe.AddIngredient(ModContent.ItemType<TheBee>());
             recipe.AddIngredient(calamity.ItemType("TheCamper"));
-            recipe.AddIngredient(ModContent.ItemType<SamuraiBadge>());
-            recipe.AddIngredient(ModContent.ItemType<Malachite>());
-            recipe.AddIngredient(ModContent.ItemType<Plaguenade>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<PlagueKeeper>());
-            recipe.AddIngredient(ModContent.ItemType<TheSwarmer>());
-            recipe.AddIngredient(ModContent.ItemType<CelestialReaper>());
-            recipe.AddIngredient(ModContent.ItemType<MadAlchemistsCocktailGlove>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

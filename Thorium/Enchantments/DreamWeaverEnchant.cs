@@ -78,16 +78,14 @@ Allies will receive greatly increased movement and attack speed");
             
             ModRecipe recipe = new ModRecipe(mod);
 
-            recipe.AddIngredient(ModContent.ItemType<DreamWeaversHelmet>());
-            recipe.AddIngredient(ModContent.ItemType<DreamWeaversHood>());
+            recipe.AddIngredient(ModContent.ItemType<DreamWeaversHelmet>()); //any..
+            //recipe.AddIngredient(ModContent.ItemType<DreamWeaversHood>());
             recipe.AddIngredient(ModContent.ItemType<DreamWeaversTabard>());
             recipe.AddIngredient(ModContent.ItemType<DreamWeaversTreads>());
             recipe.AddIngredient(ModContent.ItemType<DragonHeartWand>());
             recipe.AddIngredient(ModContent.ItemType<SnackLantern>());
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>());
-            recipe.AddIngredient(ModContent.ItemType<MoleculeStabilizer>());
-            recipe.AddIngredient(ModContent.ItemType<DreamCatcher>());
-            recipe.AddIngredient(ModContent.ItemType<TitanicTrioPaint>());
+
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

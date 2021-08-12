@@ -60,7 +60,6 @@ Minion damage grants increased life regeneration");
             //set bonus
             modPlayer.EerieEffect = true;
 
-            //pets soon tm
         }
 
         private readonly string[] items =
@@ -80,11 +79,10 @@ Minion damage grants increased life regeneration");
             foreach (string i in items) recipe.AddIngredient(soa.ItemType(i));
 
             recipe.AddIngredient(ItemID.FleshGrinder);
-            recipe.AddIngredient(ItemID.DeathbringerPickaxe);
+            //recipe.AddIngredient(ItemID.DeathbringerPickaxe);
             recipe.AddIngredient(ItemID.TheRottedFork);
-            recipe.AddIngredient(ItemID.Fleshcatcher);
-            recipe.AddIngredient(ItemID.CrimsonCloak);
-            recipe.AddIngredient(soa.ItemType("CrimsonSigil"));
+            //recipe.AddIngredient(ItemID.Fleshcatcher);
+            //recipe.AddIngredient(ItemID.CrimsonCloak);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

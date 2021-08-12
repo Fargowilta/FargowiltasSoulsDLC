@@ -66,11 +66,7 @@ Effects of Shade Band");
             recipe.AddIngredient(ModContent.ItemType<WhiteKnightLeggings>());
             recipe.AddIngredient(ModContent.ItemType<ShadeBand>());
             recipe.AddIngredient(ModContent.ItemType<PrismiteStaff>());
-            recipe.AddIngredient(ModContent.ItemType<VileSpitter>());
             recipe.AddIngredient(ModContent.ItemType<FrostFang>());
-            recipe.AddIngredient(ModContent.ItemType<TitaniumStaff>());
-            recipe.AddIngredient(ModContent.ItemType<DynastyWarFan>());
-            recipe.AddIngredient(ItemID.SkyFracture);
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

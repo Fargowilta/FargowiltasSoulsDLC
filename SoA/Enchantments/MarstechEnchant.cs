@@ -73,8 +73,8 @@ Damaging enemies will occasionally call upon a meteor to fall from the sky");
         {
             "PhaseSlasher",
             "PlasmaDischarge",
-            "ZappersInsanity",
-            "Trispear"
+            //"ZappersInsanity",
+            //"Trispear"
         };
 
         public override void AddRecipes()
@@ -90,7 +90,7 @@ Damaging enemies will occasionally call upon a meteor to fall from the sky");
 
             foreach (string i in items) recipe.AddIngredient(soa.ItemType(i));
 
-            recipe.AddIngredient(ItemID.PaintingTheTruthIsUpThere);
+            //recipe.AddIngredient(ItemID.PaintingTheTruthIsUpThere);
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -72,10 +72,6 @@ Effects of Inner Flame");
             recipe.AddIngredient(ModContent.ItemType<SpiritFlame>());
             recipe.AddIngredient(ModContent.ItemType<TabooWand>());
             recipe.AddIngredient(ModContent.ItemType<SpiritBlastWand>());
-            recipe.AddIngredient(ModContent.ItemType<CalmingSpirit>());
-            recipe.AddIngredient(ModContent.ItemType<AntagonizingSpirit>());
-            recipe.AddIngredient(ModContent.ItemType<HagTotemCaller>());
-            recipe.AddIngredient(ModContent.ItemType<LoudFootstepsPaint>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

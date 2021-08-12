@@ -26,7 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'How evil is too evil?'
 Critical strikes engulf enemies in a long lasting void flame
-Effects of Mana-Charged Rocketeers");
+Effects of Mana-Charged Rocketeers and Enchanted Shield");
             DisplayName.AddTranslation(GameCulture.Chinese, "妖术魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'要多邪恶才能算得上太邪恶呢?'
@@ -54,6 +54,7 @@ Effects of Mana-Charged Rocketeers");
             thorium.GetItem("ManaChargedRocketeers").UpdateAccessory(player, hideVisual);
 
             //enchantedshield
+            thorium.GetItem("EnchantedShield").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -67,11 +68,8 @@ Effects of Mana-Charged Rocketeers");
             recipe.AddIngredient(ModContent.ItemType<SilkEnchant>());
             recipe.AddIngredient(ModContent.ItemType<ManaChargedRocketeers>());
             recipe.AddIngredient(ModContent.ItemType<EnchantedShield>());
-            recipe.AddIngredient(ModContent.ItemType<JellyPondWand>());
             recipe.AddIngredient(ModContent.ItemType<DarkTome>());
-            recipe.AddIngredient(ModContent.ItemType<ChampionBomberStaff>());
-            recipe.AddIngredient(ModContent.ItemType<GaussSpark>());
-            recipe.AddIngredient(ItemID.PurpleEmperorButterfly);
+
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

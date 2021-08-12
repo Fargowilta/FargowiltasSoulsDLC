@@ -88,10 +88,6 @@ Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
             recipe.AddIngredient(ModContent.ItemType<SpringSteps>());
             recipe.AddIngredient(ModContent.ItemType<SlagStompers>());
             recipe.AddIngredient(ModContent.ItemType<MoltenSpearTip>());
-            recipe.AddIngredient(ModContent.ItemType<MagmaPolearm>());
-            recipe.AddIngredient(ModContent.ItemType<MagmaticRicochet>());
-            recipe.AddIngredient(ModContent.ItemType<MagmaShiv>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<HotChocolate>(), 5);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

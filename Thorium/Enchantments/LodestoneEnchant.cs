@@ -90,11 +90,7 @@ Effects of Astro-Beetle Husk and Obsidian Scale");
             recipe.AddIngredient(ModContent.ItemType<LodeStoneShinGaurds>());
             recipe.AddIngredient(ModContent.ItemType<AstroBeetleHusk>());
             recipe.AddIngredient(ModContent.ItemType<ObsidianScale>());
-            //recipe.AddIngredient(ModContent.ItemType<StoneSledge>());
             recipe.AddIngredient(ModContent.ItemType<TheJuggernaut>());
-            recipe.AddIngredient(ModContent.ItemType<LodeStoneClaymore>());
-            recipe.AddIngredient(ModContent.ItemType<LodeStoneMace>());
-            recipe.AddIngredient(ModContent.ItemType<LodeStoneStaff>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);
