@@ -365,8 +365,13 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool ProfanedSoulCrystal;
 
-        //daedalus
+        //snow ruffian
         [Header("$Mods.FargowiltasSoulsDLC.DesolationForce")]
+        [Label("$Mods.FargowiltasSoulsDLC.CalamitySnowRuffianWingsConfig")]
+        [DefaultValue(true)]
+        public bool SnowRuffianWings;
+
+        //daedalus
         [Label("$Mods.FargowiltasSoulsDLC.CalamityDaedalusEffectsConfig")]
         [DefaultValue(true)]
         public bool DaedalusEffects;

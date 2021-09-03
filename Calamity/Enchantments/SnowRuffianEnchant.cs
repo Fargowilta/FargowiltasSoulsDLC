@@ -67,8 +67,10 @@ Effects of Scuttler's Jewel");
             if (!FargowiltasSoulsDLC.Instance.CalamityLoaded) return;
 
             //set bonus
-            calamity.Call("SetSetBonus", player, "snowruffian", true);
-            if (player.controlJump)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.calamityToggles.SnowRuffianWings))
+            {
+                calamity.Call("SetSetBonus", player, "snowruffian", true);
+                if (player.controlJump)
             {
                 player.noFallDmg = true;
                 player.UpdateJumpHeight();
@@ -82,6 +84,7 @@ Effects of Scuttler's Jewel");
             else if (!this.shouldBoost && player.velocity.Y == 0f)
             {
                 this.shouldBoost = true;
+            }
             }
 
             calamity.GetItem("ScuttlersJewel").UpdateAccessory(player, hideVisual);
