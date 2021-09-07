@@ -24,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Silently, they walk the dungeon halls'
 Taking damage heals nearby allies equal to 15% of the damage taken
 If an ally is below half health, you will gain increased healing abilities
-Effects of Wynebgwrthucher and Rebirth Statuette");
+Effects of Prydwen and Rebirth Statuette");
             DisplayName.AddTranslation(GameCulture.Chinese, "堕落圣骑士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'静静地在地牢游荡'

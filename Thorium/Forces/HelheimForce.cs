@@ -25,8 +25,9 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 All armor bonuses from Spirit Trapper, Malignant, Dragon, Dread, Flesh, and Demon Blood
 All armor bonuses from Magma, Berserker, White Knight, and Harbinger
 Effects of Inner Flame, Crash Boots, and Dragon Talon Necklace
-Effects of Vampire Gland, Demon Blood Badge, Spring Steps, and Slag Stompers
-Effects of Shade Band and Mana-Charged Rocketeers");
+Effects of Vile Flail-Core, Cursed Flail-Core, and Molten Spear Tip
+Effects of Vampire Gland, Spring Steps, and Slag Stompers
+Effects of Shade Band, Enchanted Shield, and Mana-Charged Rocketeers");
             DisplayName.AddTranslation(GameCulture.Chinese, "海姆冥界之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'从海姆冥界的大厅起始, 一派终末的景象...'
@@ -79,6 +80,8 @@ Effects of Shade Band and Mana-Charged Rocketeers");
                 //mana charge rockets
                 thorium.GetItem("ManaChargedRocketeers").UpdateAccessory(player, hideVisual);
             }
+            //enchanted shield
+            thorium.GetItem("EnchantedShield").UpdateAccessory(player, hideVisual);
 
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DreadSpeed))
             {
@@ -112,11 +115,13 @@ Effects of Shade Band and Mana-Charged Rocketeers");
                 thoriumPlayer.dragonSet = true;
             }
             modPlayer.DragonEnchant = true;
-
+            //flail-cores
+            thoriumPlayer.accVileCore = true;
+            thoriumPlayer.accCursedCore = true;
+            //molten spear tip
+            thoriumPlayer.spearFlame = true;
             //demon blood effect
             modPlayer.DemonBloodEnchant = true;
-            //demon blood badge
-            thoriumPlayer.CrimsonBadge = true;
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.FleshDrops))
             {
                 //flesh set bonus
@@ -132,8 +137,6 @@ Effects of Shade Band and Mana-Charged Rocketeers");
             
             //berserker
             mod.GetItem("BerserkerEnchant").UpdateAccessory(player, hideVisual);
-
-            if (modPlayer.ThoriumSoul) return;
 
             //dragon tooth necklace
             player.armorPenetration += 15;

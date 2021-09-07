@@ -23,8 +23,9 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
             Tooltip.SetDefault(
 @"'A blazing heat, the mark of Surtr...'
 All armor bonuses from Sandstone, Danger, Flight, and Fungus
-All armor bonuses Living Wood, Bulb, and Life Bloom
-Effects of Night Shade Petal, Flawless Chrysalis, and Bee Booties");
+All armor bonuses Living Wood, Blooming, and Life Bloom
+Effects of Faberge Egg, Kick Petal, and Petal Shield
+Effects of Nightshade Flower, Flawless Chrysalis, and Bee Booties");
             DisplayName.AddTranslation(GameCulture.Chinese, "穆斯贝尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'炽热之火, 史尔特尔的标志...'
@@ -59,6 +60,12 @@ Effects of Night Shade Petal, Flawless Chrysalis, and Bee Booties");
             modPlayer.LifeBloomEnchant = true;
             //chrysalis
             thoriumPlayer.cocoonAcc = true;
+            //egg
+            thorium.GetItem("FabergeEgg").UpdateAccessory(player, hideVisual);
+            //petal shield
+            thorium.GetItem("PetalShield").UpdateAccessory(player, hideVisual);
+            //kick petal
+            thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
             //living wood set bonus
             thoriumPlayer.setLivingWood = true;
             //free boi

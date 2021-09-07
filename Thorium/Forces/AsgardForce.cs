@@ -22,7 +22,8 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
             Tooltip.SetDefault(
 @"'What's this about Ragnarok?'
 All armor bonuses from Tide Turner, Assassin, and Pyromancer
-All armor bonuses from Dream Weaver and Rhapsodist");
+All armor bonuses from Dream Weaver and Rhapsodist
+Effects of Dart Pouch");
             DisplayName.AddTranslation(GameCulture.Chinese, "阿斯加德之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'诸神黄昏是怎么回事?'
@@ -62,14 +63,14 @@ All armor bonuses from Dream Weaver and Rhapsodist");
             mod.GetItem("TideTurnerEnchant").UpdateAccessory(player, hideVisual);
             //assassin
             modPlayer.AssassinEnchant = true;
+            //dart pouch
+            thorium.GetItem("DartPouch").UpdateAccessory(player, hideVisual);
             //pyro
             modPlayer.PyroEnchant = true;
             thoriumPlayer.napalmSet = true;
             //dream weaver
             thoriumPlayer.dreamHoodSet = true;
             thoriumPlayer.dreamSet = true;
-
-            if (modPlayer.ThoriumSoul) return;
 
             //rhapsodist
             //hotkey buff allies 

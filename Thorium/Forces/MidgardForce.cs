@@ -24,8 +24,8 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 @"'Behold the power of Mankind...'
 All armor bonuses from Lodestone, Valadium, Illumite, and Shade Master
 All armor bonuses from Jester, Thorium, and Terrarium
-Effects of Astro-Beetle Husk and Eye of the Beholder
-Effects of Crietz and Terrarium Surround Sound");
+Effects of Astro-Beetle Husk, Obsidian Scale, Mirror of the Beholder, and Jazz Music Player
+Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sound");
             DisplayName.AddTranslation(GameCulture.Chinese, "米德加德之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'人类的力量'
@@ -62,9 +62,12 @@ Effects of Crietz and Terrarium Surround Sound");
             //lodestone
             mod.GetItem("LodestoneEnchant").UpdateAccessory(player, hideVisual);
 
+            //obsidianscale
+            thorium.GetItem("ObsidianScale").UpdateAccessory(player, true);
+
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeholderEye))
             {
-                //eye of beholder
+                //mirror of beholder
                 thorium.GetItem("EyeofBeholder").UpdateAccessory(player, hideVisual);
             }
 
@@ -94,8 +97,12 @@ Effects of Crietz and Terrarium Surround Sound");
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.Crietz))
             {
                 //crietz
-                //thoriumPlayer.crietzAcc = true;
+                thorium.GetItem("Crietz").UpdateAccessory(player, hideVisual);
             }
+            //band of replenishment
+            thoriumPlayer.accReplenishment = true;
+            //fan letter
+            thoriumPlayer.bardResourceMax2 += 2;
 
             if (modPlayer.ThoriumSoul) return;
 
@@ -108,7 +115,8 @@ Effects of Crietz and Terrarium Surround Sound");
                     modPlayer.AllDamageUp(.12f);
                 }
             //}
-
+            //music player
+            thorium.GetItem("TunePlayerLifeRegen").UpdateAccessory(player, true);
             //terrarium woofer
             thoriumPlayer.accSubwooferTerrarium = true;
 
