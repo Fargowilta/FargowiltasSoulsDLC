@@ -21,38 +21,24 @@ namespace FargowiltasSoulsDLC.Thorium.Souls
             DisplayName.SetDefault("Soul of Yggdrasil");
 
             Tooltip.SetDefault(@"'The true might of the 9 realms is yours!'
-All armor bonuses from Sandstone, Danger, Flight, and Fungus
-All armor bonuses from Living Wood, Bulb, and Life Bloom
-All armor bonuses from Depth Diver, Yew Wood, and Tide Hunter
-All armor bonuses from Naga-Skin, Icy, Cryomancer, and Whispering
-All armor bonuses from Sacred, Warlock, and Biotech
-All armor bonuses from Life Binder and Fallen Paladin
-All armor bonuses from Crier, Noble, and Ornate
-All armor bonuses from Cyber Punk, Marching Band, and Maestro
-All armor bonuses from Granite, Bronze, Titan, and Conduit
-All armor bonuses from Steel, Darksteel, and Durasteel
-All armor bonuses from Lodestone, Valadium, Illumite, and Shade Master
-All armor bonuses from Jester, Thorium, and Terrarium
+All armor bonuses from Sandstone, Danger, Flight, Fungus, Living Wood, Bulb, and Life Bloom
+All armor bonuses from Depth Diver, Yew Wood, Tide Hunter, Naga-Skin, Icy, Cryomancer, and Whispering
+All armor bonuses from Sacred, Warlock, Biotech, Life Binder and Fallen Paladin
+All armor bonuses from Crier, Noble, Ornate, Cyber Punk, Marching Band, and Maestro
+All armor bonuses from Granite, Bronze, Titan, Conduit, Steel, Darksteel, and Durasteel
+All armor bonuses from Lodestone, Valadium, Illumite, Shade Master, Jester, Thorium, and Terrarium
 All armor bonuses from Plague Doctor, Lich, White Dwarf, Celestial, and Shooting Star
-All armor bonuses from Spirit Trapper, Malignant, Dragon, and Dread
-All armor bonuses from Flesh, Demon Blood, Magma, Berserker, and Harbinger
+All armor bonuses from Spirit Trapper, Malignant, Dragon, Dread, Flesh, Demon Blood, Magma, Berserker, and Harbinger
 All armor bonuses from Tide Turner, Assassin, Pyromancer, Dream Weaver, and Rhapsodist
 Effects of Nightshade Flower, Flawless Chrysalis, and Bee Booties
 Effects of Goblin War Shield, Bubble Magnet, Agnor's Bowl, and Ice Bound Strider Hide
-Effects of Demon Tongue, Dark Effigy, Aloe Leaf, and Equalizer
-Effects of Karmic Holder, Prydwen, and Rebirth Statuette
-Effects of Ring of Unity, Brass Cap, and Waxy Rosin
-Effects of Auto Tuner, Metal Music Player, and Diss Track
-Effects of Concert Tickets, Conductor's Baton, Full Score, and Metronome
-Effects of Eye of the Storm, Champion's Rebuttal, Olympic Torch, and Spartan Sandals
-Effects of Spiked Bracers and Rock Music Player
-Effects of Ogre Sandals, Crystal Spear Tip, and Mask of the Crystal Eye
-Effects of the Abyssal Shell, Astro-Beetle Husk, Obsidian Scale, and Mirror of the Beholder
-Effects of Jazz Music Player, Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sound
+Effects of Demon Tongue, Dark Effigy, Aloe Leaf, Equalizer, Karmic Holder, Prydwen, and Rebirth Statuette
+Effects of Ring of Unity, Brass Cap, Waxy Rosin, Auto Tuner, Metal Music Player, Diss Track, Concert Tickets, Conductor's Baton, Full Score, and Metronome
+Effects of Eye of the Storm, Champion's Rebuttal, Olympic Torch, Spartan Sandals, Spiked Bracers, Rock Music Player, Ogre Sandals, and Mask of the Crystal Eye
+Effects of the Abyssal Shell, Astro-Beetle Husk, Obsidian Scale, Mirror of the Beholder, Jazz Music Player, Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sound
 Effects of Lich's Gaze and Ascension Statuette
-Effects of the Enchanted Shield and Mana-Charged Rocketeers
-Effects of Inner Flame, Crash Boots, Vampire Gland, and Spring Steps
-Effects of Slag Stompers, Shade Band, and Dart Pouch");
+Effects of the Enchanted Shield, Mana-Charged Rocketeers, Inner Flame, Crash Boots, Vampire Gland, Spring Steps, Slag Stompers, and Shade Band
+Effects of Dart Pouch");
             DisplayName.AddTranslation(GameCulture.Chinese, "世界树之魂");
             Tooltip.AddTranslation(GameCulture.Chinese, @"'九界的真正力量归于汝身!'
 冰霜光环围绕着你, 在短暂的延迟后冻结附近的敌人

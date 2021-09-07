@@ -136,8 +136,6 @@ Effects of Auto Tuner, Metal Music Player, and Diss Track");
                 }
             }
 
-            if (player.GetModPlayer<FargoDLCPlayer>().ThoriumSoul) return;
-
 
             thorium.GetItem("AutoTuner").UpdateAccessory(player, hideVisual);
             thorium.GetItem("TunePlayerDamage").UpdateAccessory(player, hideVisual);

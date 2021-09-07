@@ -105,6 +105,8 @@ Effects of Shade Band, Enchanted Shield, and Mana-Charged Rocketeers");
                     }
                 }
             }
+            //music player
+            thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
             //crash boots
             thorium.GetItem("CrashBoots").UpdateAccessory(player, hideVisual);
             player.moveSpeed -= 0.15f;

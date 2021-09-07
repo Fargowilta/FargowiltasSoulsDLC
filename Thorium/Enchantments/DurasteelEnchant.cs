@@ -64,8 +64,6 @@ Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
             //ball n chain
             thoriumPlayer.ballnChain = true;
 
-            if (player.GetModPlayer<FargoDLCPlayer>().ThoriumSoul) return;
-
             //spiked bracers
             player.thorns += 0.25f;
 

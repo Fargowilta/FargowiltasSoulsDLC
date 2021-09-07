@@ -49,8 +49,6 @@ Effects of Full Score, Metronome, and Conductor's Baton");
             //maestro
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             thoriumPlayer.setMaestro = true;
-
-            if (player.GetModPlayer<FargoDLCPlayer>().ThoriumSoul) return;
             //metronome
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.Metronome))
             {

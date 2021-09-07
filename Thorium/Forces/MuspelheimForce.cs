@@ -82,8 +82,6 @@ Effects of Nightshade Flower, Flawless Chrysalis, and Bee Booties");
                 player.maxRunSpeed -= 1f;
             }
 
-            if (modPlayer.ThoriumSoul) return;
-
             //sandstone
             player.doubleJumpSandstorm = true;
             //danger

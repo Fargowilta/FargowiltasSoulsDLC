@@ -53,8 +53,6 @@ Effects of Ring of Unity, Brass Cap, and Waxy Rosin");
             thorium.GetItem("BrassCap").UpdateAccessory(player, hideVisual);
             thorium.GetItem("WaxyRosin").UpdateAccessory(player, hideVisual);
 
-            if (modPlayer.ThoriumSoul) return;
-
             //noble set bonus
             thoriumPlayer.setNoble = true;
         }

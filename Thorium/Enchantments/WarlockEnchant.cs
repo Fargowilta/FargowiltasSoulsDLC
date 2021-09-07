@@ -54,8 +54,6 @@ Effects of Demon Tongue and Dark Effigy");
             //set bonus
             thoriumPlayer.warlockSet = true;
 
-            if (modPlayer.ThoriumSoul) return;
-
             //demon tongue
             thoriumPlayer.darkAura = true;
             thoriumPlayer.radiantLifeCost = 2;

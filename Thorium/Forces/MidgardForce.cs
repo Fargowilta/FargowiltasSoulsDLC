@@ -62,9 +62,6 @@ Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sou
             //lodestone
             mod.GetItem("LodestoneEnchant").UpdateAccessory(player, hideVisual);
 
-            //obsidianscale
-            thorium.GetItem("ObsidianScale").UpdateAccessory(player, true);
-
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeholderEye))
             {
                 //mirror of beholder
@@ -74,37 +71,8 @@ Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sou
             //shade
             thoriumPlayer.setShade = true;
 
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.TerrariumSpirits))
-            {
-                //terrarium set bonus
-                timer++;
-                if (timer > 60)
-                {
-                    Projectile.NewProjectile(player.Center.X + 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraRed"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X + 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraOrange"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X + 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraYellow"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraGreen"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X - 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraBlue"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X - 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraIndigo"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X - 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraPurple"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    timer = 0;
-                }
-            }
-            //diverman meme
-            modPlayer.ThoriumEnchant = true;
-            //jester
-            modPlayer.JesterEnchant = true;
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.Crietz))
-            {
-                //crietz
-                thorium.GetItem("Crietz").UpdateAccessory(player, hideVisual);
-            }
-            //band of replenishment
-            thoriumPlayer.accReplenishment = true;
-            //fan letter
-            thoriumPlayer.bardResourceMax2 += 2;
-
-            if (modPlayer.ThoriumSoul) return;
+            //terrarium
+            mod.GetItem("TerrariumEnchant").UpdateAccessory(player, hideVisual);
 
             //valadium
             //if (SoulConfig.Instance.GetValue(SoulConfig.Instance.GravityControl))

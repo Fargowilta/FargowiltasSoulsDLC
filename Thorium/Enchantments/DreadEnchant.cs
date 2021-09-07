@@ -90,7 +90,7 @@ Effects of Crash Boots, Dragon Talon Necklace, Disco Music Player, and Cursed Fl
             //dragon tooth necklace
             player.armorPenetration += 15;
             modPlayer.DragonEnchant = true;
-            //disco music player
+            //music player
             thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
         }
 
