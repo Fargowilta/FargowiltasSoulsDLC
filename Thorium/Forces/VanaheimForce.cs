@@ -71,8 +71,6 @@ Effects of Lich's Gaze and Ascension Statuette");
                 thoriumPlayer.celestialSet = true;
             }
 
-            if (modPlayer.ThoriumSoul) return;
-
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.AscensionStatue))
             {
                 //ascension statue

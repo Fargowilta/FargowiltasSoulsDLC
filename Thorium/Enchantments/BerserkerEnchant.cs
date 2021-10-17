@@ -28,9 +28,9 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Attack speed is increased by 5% at every 25% segment of life
 Fire surrounds your armour and melee weapons
 Enemies that you set on fire or singe will take additional damage over time
-Effects of Spring Steps and Slag Stompers");
+Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
             DisplayName.AddTranslation(GameCulture.Chinese, "狂战士魔石");
-            Tooltip.AddTranslation(GameCulture.Chinese, 
+            Tooltip.AddTranslation(GameCulture.Chinese,
 @"'我更愿意为自己的生命而战斗, 而不只是为活而活'
 生命值每下降25%, 增加15%伤害
 随着时间的推移,被你点燃或烧伤的敌人会受到额外的伤害

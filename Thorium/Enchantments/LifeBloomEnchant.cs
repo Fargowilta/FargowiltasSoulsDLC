@@ -27,7 +27,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Attacks have a 33% chance to heal you lightly
 Summons a living wood sapling and its attacks will home in on enemies
 Your damage has a chance to poison hit enemies with a spore cloud
-Effects of Bee Booties, Petal Shield, and Flawless Chrysalis");
+Effects of Bee Booties, Petal Shield, Kick Petal, and Flawless Chrysalis");
             DisplayName.AddTranslation(GameCulture.Chinese, "树人魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'大自然的一员'
@@ -74,6 +74,8 @@ Effects of Bee Booties, Petal Shield, and Flawless Chrysalis");
                 player.moveSpeed -= 0.15f;
                 player.maxRunSpeed -= 1f;
             }
+            //kick petal
+            thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

@@ -24,7 +24,8 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 @"'Behold the craftsmanship of the Dark Elves...'
 All armor bonuses from Granite, Bronze, and Darksteel
 All armor bonuses from Durasteel, Titan, and Conduit
-Effects of Eye of the Storm, Champion's Rebuttal, and Spiked Bracers
+Effects of Eye of the Storm, Champion's Rebuttal, Olympic Torch, and Spartan Sandals
+Effects of Spiked Bracers and Rock Music Player
 Effects of Ogre Sandals, Crystal Spear Tip, Mask of the Crystal Eye, and Abyssal Shell");
             DisplayName.AddTranslation(GameCulture.Chinese, "瓦特阿尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
@@ -70,7 +71,13 @@ Effects of Ogre Sandals, Crystal Spear Tip, Mask of the Crystal Eye, and Abyssal
             modPlayer.BronzeEnchant = true;
             //rebuttal
             thoriumPlayer.championShield = true;
-            
+            //sandles
+            thorium.GetItem("SpartanSandles").UpdateAccessory(player, hideVisual);
+            player.moveSpeed -= 0.15f;
+            player.maxRunSpeed -= 1f;
+            //olympic torch
+            thoriumPlayer.olympicTorch = true;
+
             //durasteel
             mod.GetItem("DurasteelEnchant").UpdateAccessory(player, hideVisual);
             
@@ -80,14 +87,14 @@ Effects of Ogre Sandals, Crystal Spear Tip, Mask of the Crystal Eye, and Abyssal
             //conduit
             mod.GetItem("ConduitEnchant").UpdateAccessory(player, hideVisual);
 
-            if (modPlayer.ThoriumSoul) return;
-
             //granite
             player.fireWalk = true;
             player.lavaImmune = true;
             player.buffImmune[24] = true;
             //titan
             modPlayer.AllDamageUp(.1f);
+            //music player
+            thorium.GetItem("TunePlayerDamageReduction").UpdateAccessory(player, true);
             //crystal eye mask
             thoriumPlayer.critDamage += 0.1f;
         }

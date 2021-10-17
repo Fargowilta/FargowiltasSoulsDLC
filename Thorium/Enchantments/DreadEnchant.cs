@@ -28,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Your boots vibrate at an unreal frequency, increasing movement speed significantly
 While moving, your damage and critical strike chance are increased
 Your attacks have a chance to unleash an explosion of Dragon's Flame
-Effects of Crash Boots, Dragon Talon Necklace, and Cursed Flail-Core");
+Effects of Crash Boots, Dragon Talon Necklace, Disco Music Player, and Cursed Flail-Core");
             DisplayName.AddTranslation(GameCulture.Chinese, "恐惧魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'充满被诅咒的灵魂'
@@ -90,6 +90,8 @@ Effects of Crash Boots, Dragon Talon Necklace, and Cursed Flail-Core");
             //dragon tooth necklace
             player.armorPenetration += 15;
             modPlayer.DragonEnchant = true;
+            //music player
+            thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

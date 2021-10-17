@@ -92,8 +92,6 @@ Effects of Goblin War Shield, Agnor's Bowl, and Ice Bound Strider Hide");
                 mod.GetItem("WhisperingEnchant").UpdateAccessory(player, hideVisual);
             }
 
-            if (modPlayer.ThoriumSoul) return;
-
             //water bonuses
             if (player.breath <= player.breathMax + 2)
             {

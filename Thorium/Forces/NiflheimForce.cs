@@ -21,8 +21,9 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
             Tooltip.SetDefault(
 @"'A world of mist, a sign of the dead...'
 All armor bonuses from Crier, Noble, Cyber Punk, Ornate, and Maestro
-Effects of Ring of Unity and Mix Tape
-Effects of Auto Tuner, Concert Tickets, and Metronome");
+Effects of Ring of Unity, Brass Cap, and Waxy Rosin
+Effects of Auto Tuner, Metal Music Player, and Diss Track
+Effects of Concert Tickets, Conductor's Baton, Full Score, and Metronome");
             DisplayName.AddTranslation(GameCulture.Chinese, "尼福尔海姆之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'迷雾之界, 死亡的象征...'
@@ -60,8 +61,6 @@ Effects of Auto Tuner, Concert Tickets, and Metronome");
             mod.GetItem("CyberPunkEnchant").UpdateAccessory(player, hideVisual);
             //Maestro
             mod.GetItem("MaestroEnchant").UpdateAccessory(player, hideVisual);
-
-            if (modPlayer.ThoriumSoul) return;
 
             //crier
             thoriumPlayer.bardBuffDuration += 180;
