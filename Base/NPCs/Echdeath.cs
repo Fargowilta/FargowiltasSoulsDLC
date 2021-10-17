@@ -107,11 +107,10 @@ namespace FargowiltasSoulsDLC.Base.NPCs
             }
 
             npc.scale = 1f + npc.ai[0] / 4f;
+            int fullSize = (int)(40 * npc.scale);
             
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                int fullSize = (int)(40 * npc.scale);
-
                 if (npc.ai[1] == 1)
                 {
                     for (int i = -fullSize / 2; i <= fullSize / 2; i += 8)
@@ -154,14 +153,14 @@ namespace FargowiltasSoulsDLC.Base.NPCs
             }
 
             if (Main.LocalPlayer.active && !Main.LocalPlayer.dead && !Main.LocalPlayer.ghost
-                && npc.Hitbox.Intersects(Main.LocalPlayer.Hitbox))
+                && (npc.Hitbox.Intersects(Main.LocalPlayer.Hitbox)) || (npc.ai[1] == 1 && npc.Distance(Main.LocalPlayer.Center) < fullSize / 2))
             {
                 Main.NewText(":echdeath:", Color.Red);
                 Main.LocalPlayer.ResetEffects();
                 Main.LocalPlayer.ghost = true;
                 Main.LocalPlayer.KillMe(PlayerDeathReason.ByNPC(npc.whoAmI), npc.damage, 0);
                 for (int i = 0; i < 100; i++)
-                    CombatText.NewText(Main.LocalPlayer.Hitbox, Color.Red, Main.rand.Next(npc.damage), true);
+                    CombatText.NewText(Main.LocalPlayer.Hitbox, Color.Red, (int)(npc.damage * Main.rand.NextFloat(0.75f, 1f)), true);
             }
 
             if (npc.ai[1] == 1)
@@ -226,7 +225,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs
                 target.ghost = true;
                 target.KillMe(PlayerDeathReason.ByNPC(npc.whoAmI), npc.damage, 0);
                 for (int i = 0; i < 100; i++)
-                    CombatText.NewText(target.Hitbox, Color.Red, Main.rand.Next(npc.damage), true);
+                    CombatText.NewText(target.Hitbox, Color.Red, (int)(npc.damage * Main.rand.NextFloat(0.75f, 1f)), true);
             }
         }
 
