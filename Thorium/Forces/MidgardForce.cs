@@ -24,8 +24,8 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 @"'Behold the power of Mankind...'
 All armor bonuses from Lodestone, Valadium, Illumite, and Shade Master
 All armor bonuses from Jester, Thorium, and Terrarium
-Effects of Astro-Beetle Husk and Eye of the Beholder
-Effects of Crietz and Terrarium Surround Sound");
+Effects of Astro-Beetle Husk, Obsidian Scale, Mirror of the Beholder, and Jazz Music Player
+Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sound");
             DisplayName.AddTranslation(GameCulture.Chinese, "米德加德之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'人类的力量'
@@ -64,40 +64,15 @@ Effects of Crietz and Terrarium Surround Sound");
 
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeholderEye))
             {
-                //eye of beholder
+                //mirror of beholder
                 thorium.GetItem("EyeofBeholder").UpdateAccessory(player, hideVisual);
             }
 
             //shade
             thoriumPlayer.setShade = true;
 
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.TerrariumSpirits))
-            {
-                //terrarium set bonus
-                timer++;
-                if (timer > 60)
-                {
-                    Projectile.NewProjectile(player.Center.X + 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraRed"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X + 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraOrange"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X + 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraYellow"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraGreen"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X - 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraBlue"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X - 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraIndigo"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    Projectile.NewProjectile(player.Center.X - 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraPurple"), 50, 0f, Main.myPlayer, 0f, 0f);
-                    timer = 0;
-                }
-            }
-            //diverman meme
-            modPlayer.ThoriumEnchant = true;
-            //jester
-            modPlayer.JesterEnchant = true;
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.Crietz))
-            {
-                //crietz
-                //thoriumPlayer.crietzAcc = true;
-            }
-
-            if (modPlayer.ThoriumSoul) return;
+            //terrarium
+            mod.GetItem("TerrariumEnchant").UpdateAccessory(player, hideVisual);
 
             //valadium
             //if (SoulConfig.Instance.GetValue(SoulConfig.Instance.GravityControl))
@@ -108,7 +83,8 @@ Effects of Crietz and Terrarium Surround Sound");
                     modPlayer.AllDamageUp(.12f);
                 }
             //}
-
+            //music player
+            thorium.GetItem("TunePlayerLifeRegen").UpdateAccessory(player, true);
             //terrarium woofer
             thoriumPlayer.accSubwooferTerrarium = true;
 

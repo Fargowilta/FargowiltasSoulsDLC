@@ -56,8 +56,6 @@ Effects of Karmic Holder");
             //sacred effect
             modPlayer.SacredEnchant = true;
 
-            if (modPlayer.ThoriumSoul) return;
-
             //novice cleric set bonus
             thoriumPlayer.clericSet = true;
             thoriumPlayer.orbital = true;

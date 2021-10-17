@@ -28,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Dealing damage will grant you a 'Blood Charge'
 At maximum charges, your next attack will deal 2x damage and heal you for 20% of the damage dealt
 Consecutive attacks against enemies might drop flesh, which grants bonus life and damage
-Effects of Vampire Gland, Demon Blood Badge, and Vile Flail-Core");
+Effects of Vampire Gland and Vile Flail-Core");
             DisplayName.AddTranslation(GameCulture.Chinese, "魔血魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'注满了腐化之血'

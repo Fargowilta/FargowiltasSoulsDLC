@@ -53,8 +53,6 @@ Effects of Aloe Leaf and Equalizer");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
 
-            if (modPlayer.ThoriumSoul) return;
-
             //life binder set bonus
             thoriumPlayer.mistSet = true;
             //aloe leaf

@@ -77,6 +77,7 @@ Effects of Astro-Beetle Husk and Obsidian Scale");
             thoriumPlayer.metalShieldMax = 25;
 
             //obsidianscale
+            thorium.GetItem("ObsidianScale").UpdateAccessory(player, true);
         }
 
         public override void AddRecipes()

@@ -24,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Let's get dangerous...'
 You are immune to most damage-inflicting debuffs
-Effects of Night Shade Petal");
+Effects of Nightshade Flower");
             DisplayName.AddTranslation(GameCulture.Chinese, "致危魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'Let's get dangerous...'
@@ -54,7 +54,7 @@ Effects of Night Shade Petal");
             player.buffImmune[BuffID.Bleeding] = true;
             player.buffImmune[BuffID.Venom] = true;
 
-            //night shade petal
+            //nightshade flower
             thoriumPlayer.nightshadeBoost = true;
         }
 

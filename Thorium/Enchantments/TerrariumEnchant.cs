@@ -72,13 +72,13 @@ Effects of Terrarium Surround Sound and Fan Letter");
             timer++;
             if (timer > 60)
             {
-                Projectile.NewProjectile(player.Center.X + 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraRed"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X + 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraOrange"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X + 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraYellow"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraGreen"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X - 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraBlue"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X - 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraIndigo"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X - 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerraPurple"), 50, 0f, Main.myPlayer, 0f, 0f);
+                Projectile.NewProjectile(player.Center.X + 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 0f);
+                Projectile.NewProjectile(player.Center.X + 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 1f);
+                Projectile.NewProjectile(player.Center.X + 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 2f);
+                Projectile.NewProjectile(player.Center.X, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 3f);
+                Projectile.NewProjectile(player.Center.X - 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 4f);
+                Projectile.NewProjectile(player.Center.X - 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 5f);
+                Projectile.NewProjectile(player.Center.X - 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 6f);
                 timer = 0;
             }
             //subwoofer
@@ -87,7 +87,7 @@ Effects of Terrarium Surround Sound and Fan Letter");
             //diverman meme
             modPlayer.ThoriumEnchant = true;
             //crietz
-            //thoriumPlayer.crietzAcc = true;
+            thorium.GetItem("Crietz").UpdateAccessory(player, hideVisual);
             //band of replenishment
             thoriumPlayer.accReplenishment = true;
             //jester bonus
