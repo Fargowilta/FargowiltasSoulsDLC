@@ -138,6 +138,7 @@ namespace FargowiltasSoulsDLC
 
 
                 AddToggle("DesolationForce", "Force of Desolation", "DesolationForce", "ffffff");
+                AddToggle("CalamitySnowRuffianWingsConfig", "Snow Ruffian Wings", "SnowRuffianEnchant", "ffffff");
                 AddToggle("CalamityDaedalusEffectsConfig", "Daedalus Effects", "DaedalusEnchant", "ffffff");
                 AddToggle("CalamityDaedalusMinionConfig", "Daedalus Crystal Minion", "DaedalusEnchant", "ffffff");
                 AddToggle("CalamityPermafrostPotionConfig", "Permafrost's Concoction", "DaedalusEnchant", "ffffff");
