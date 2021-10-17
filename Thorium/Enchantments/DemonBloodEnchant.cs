@@ -58,8 +58,6 @@ Effects of Vampire Gland, Demon Blood Badge, and Vile Flail-Core");
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //demon blood effect
             modPlayer.DemonBloodEnchant = true;
-            //demon blood badge
-            thoriumPlayer.CrimsonBadge = true;
             //vile core
             thoriumPlayer.accVileCore = true;
             //flesh set bonus
@@ -79,7 +77,6 @@ Effects of Vampire Gland, Demon Blood Badge, and Vile Flail-Core");
             recipe.AddIngredient(ModContent.ItemType<DemonBloodBreastPlate>());
             recipe.AddIngredient(ModContent.ItemType<DemonBloodGreaves>());
             recipe.AddIngredient(ModContent.ItemType<FleshEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<DemonRageBadge>());
             recipe.AddIngredient(ModContent.ItemType<VileCore>());
 
             recipe.AddTile(TileID.CrystalBall);
