@@ -82,6 +82,9 @@ namespace FargowiltasSoulsDLC.Base.NPCs
             npc.defense = npc.defDefense;
 
             npc.ai[0] += 0.05f;
+            
+            if (npc.velocity == Vector2.Zero)
+                npc.velocity = -Vector2.UnitY * npc.ai[0];
 
             if (npc.HasValidTarget)
             {
@@ -98,6 +101,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs
             }
             else
             {
+                npc.velocity = Vector2.Normalize(npc.velocity) * npc.ai[0];
                 if (npc.timeLeft > 60)
                     npc.timeLeft = 60;
             }
