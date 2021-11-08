@@ -7,6 +7,7 @@ using ThoriumMod.Items.SummonItems;
 using ThoriumMod.Items.Tracker;
 using ThoriumMod.Items.HealerItems;
 using ThoriumMod.Items.NPCItems;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -26,8 +27,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'You are one with nature'
 Attacks have a 33% chance to heal you lightly
 Summons a living wood sapling and its attacks will home in on enemies
-Your damage has a chance to poison hit enemies with a spore cloud
-Effects of Bee Booties, Petal Shield, Kick Petal, and Flawless Chrysalis");
+Your healing spells increase the life recovery and life recovery rate of the healed target
+Effects of Petal Shield, Kick Petal, Fragrant Corsage, and Heart of the Jungle");
             DisplayName.AddTranslation(GameCulture.Chinese, "树人魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'大自然的一员'
@@ -51,31 +52,15 @@ Effects of Bee Booties, Petal Shield, Kick Petal, and Flawless Chrysalis");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //life bloom effect
             modPlayer.LifeBloomEnchant = true;
-            //chrysalis
-            thoriumPlayer.cocoonAcc = true;
-            //living wood set bonus
-            thoriumPlayer.setLivingWood = true;
-            //free boi
-            modPlayer.LivingWoodEnchant = true;
-            modPlayer.AddMinion(SoulConfig.Instance.thoriumToggles.SaplingMinion, thorium.ProjectileType("MinionSapling"), 10, 2f);
 
-            //bulb set bonus
-            modPlayer.BulbEnchant = true;
-            //petal shield
-            thorium.GetItem("PetalShield").UpdateAccessory(player, hideVisual);
-            player.statDefense -= 2;
-            //bee booties
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeeBooties))
+            mod.GetItem("LivingWoodEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("BulbEnchant").UpdateAccessory(player, hideVisual);
+
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.JungleHeart))
             {
-                thorium.GetItem("BeeBoots").UpdateAccessory(player, hideVisual);
-                player.moveSpeed -= 0.15f;
-                player.maxRunSpeed -= 1f;
+                thorium.GetItem("HeartOfTheJungle").UpdateAccessory(player, hideVisual);
             }
-            //kick petal
-            thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -89,7 +74,7 @@ Effects of Bee Booties, Petal Shield, Kick Petal, and Flawless Chrysalis");
             recipe.AddIngredient(ModContent.ItemType<LifeBloomLeggings>());
             recipe.AddIngredient(ModContent.ItemType<LivingWoodEnchant>());
             recipe.AddIngredient(ModContent.ItemType<BulbEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<Chrysalis>());
+            recipe.AddIngredient(ModContent.ItemType<HeartOfTheJungle>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

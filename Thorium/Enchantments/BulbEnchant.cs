@@ -9,6 +9,7 @@ using ThoriumMod.Items.BasicAccessories;
 using ThoriumMod.Items.SummonItems;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.HealerItems;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -26,8 +27,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Blooming Enchantment");
             Tooltip.SetDefault(
 @"'Has a surprisingly sweet aroma'
-Your damage has a chance to poison hit enemies with a spore cloud
-Effects of Bee Booties, Petal Shield, and Kick Petal");
+Your healing spells increase the life recovery and life recovery rate of the healed target
+Effects of Petal Shield, Kick Petal, and Fragrant Corsage");
             DisplayName.AddTranslation(GameCulture.Chinese, "花瓣魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'香气逼人'
@@ -49,22 +50,18 @@ Effects of Bee Booties, Petal Shield, and Kick Petal");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //bulb set bonus
-            modPlayer.BulbEnchant = true;
-            //petal shield
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("BloomingCrown").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
+
             thorium.GetItem("PetalShield").UpdateAccessory(player, hideVisual);
-            player.statDefense -= 2;
-            //bee booties
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeeBooties))
+
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.KickPetal))
             {
-                thorium.GetItem("BeeBoots").UpdateAccessory(player, hideVisual);
-                player.moveSpeed -= 0.15f;
-                player.maxRunSpeed -= 1f;
+                thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
             }
 
-            thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("FragrantCorsage").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -77,9 +74,8 @@ Effects of Bee Booties, Petal Shield, and Kick Petal");
             recipe.AddIngredient(ModContent.ItemType<BloomingTabard>());
             recipe.AddIngredient(ModContent.ItemType<BloomingLeggings>());
             recipe.AddIngredient(ModContent.ItemType<PetalShield>());
+            recipe.AddIngredient(ModContent.ItemType<FragrantCorsage>());
             recipe.AddIngredient(ModContent.ItemType<KickPetal>());
-            recipe.AddIngredient(ModContent.ItemType<BeeBoots>());
-
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

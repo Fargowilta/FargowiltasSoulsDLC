@@ -8,6 +8,7 @@ using ThoriumMod.Items.FallenBeholder;
 using ThoriumMod.Items.Blizzard;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.ThrownItems;
+using ThoriumMod.Items.Lich;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -27,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Which way is up?'
 Reverse gravity by pressing UP
 While reversed, damage is increased by 12%
-Effects of Mirror of the Beholder");
+Effects of Mirror of the Beholder and Beholder's Gaze");
             DisplayName.AddTranslation(GameCulture.Chinese, "虚金魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'哪儿是上?'
@@ -51,7 +52,7 @@ Effects of Mirror of the Beholder");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
+
             //set bonus
             //if (SoulConfig.Instance.GetValue(SoulConfig.Instance.GravityControl))
             //{
@@ -79,9 +80,8 @@ Effects of Mirror of the Beholder");
             recipe.AddIngredient(ModContent.ItemType<ValadiumBreastPlate>());
             recipe.AddIngredient(ModContent.ItemType<ValadiumGreaves>());
             recipe.AddIngredient(ModContent.ItemType<EyeofBeholder>());
-            recipe.AddIngredient(ModContent.ItemType<ValadiumBow>());
+            recipe.AddIngredient(ModContent.ItemType<LichGaze>());
             recipe.AddIngredient(ModContent.ItemType<TommyGun>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

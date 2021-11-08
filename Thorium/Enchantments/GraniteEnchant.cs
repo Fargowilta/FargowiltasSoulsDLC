@@ -4,10 +4,10 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.Granite;
-using CalamityMod.Items.Accessories;
 using ThoriumMod.Items.EnergyStorm;
 using ThoriumMod.Items.ThrownItems;
 using ThoriumMod.Items.Painting;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -26,7 +26,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Defensively energized'
 Immune to intense heat and enemy knockback, but your movement speed is slowed down greatly
-Effects of Eye of the Storm");
+Effects of Heart of Stone");
             DisplayName.AddTranslation(GameCulture.Chinese, "花岗岩魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'防御激增'
@@ -48,17 +48,22 @@ Effects of Eye of the Storm");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
             player.fireWalk = true;
             player.lavaImmune = true;
             player.buffImmune[24] = true;
             player.noKnockback = true;
-            player.moveSpeed -= 0.5f;
-            player.maxRunSpeed = 4f;
 
-            //eye of the storm
-            thorium.GetItem("EyeoftheStorm").UpdateAccessory(player, hideVisual);
+            if (!player.GetModPlayer<FargoDLCPlayer>().ThoriumSoul)
+            {
+                player.moveSpeed -= 0.5f;
+                player.maxRunSpeed = 4f;
+            }
+           
+            //if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.EyeoftheStorm))
+            //{
+                thorium.GetItem("HeartOfStone").UpdateAccessory(player, hideVisual);
+            //}
         }
 
         public override void AddRecipes()
@@ -70,7 +75,7 @@ Effects of Eye of the Storm");
             recipe.AddIngredient(ModContent.ItemType<GraniteHelmet>());
             recipe.AddIngredient(ModContent.ItemType<GraniteChestGuard>());
             recipe.AddIngredient(ModContent.ItemType<GraniteGreaves>());
-            recipe.AddIngredient(ModContent.ItemType<ThoriumMod.Items.EnergyStorm.EyeoftheStorm>()); //calamity same name REEEEEEEEE
+            recipe.AddIngredient(ModContent.ItemType<HeartOfStone>());
             recipe.AddIngredient(ModContent.ItemType<ShockAbsorber>());
             recipe.AddIngredient(ModContent.ItemType<ObsidianStriker>(), 300);
 

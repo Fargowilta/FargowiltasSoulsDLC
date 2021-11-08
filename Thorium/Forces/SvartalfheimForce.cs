@@ -9,9 +9,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class SvartalfheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int timer;
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -58,45 +55,11 @@ Effects of Ogre Sandals, Crystal Spear Tip, Mask of the Crystal Eye, and Abyssal
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.EyeoftheStorm))
-            {
-                //eye of the storm
-                thorium.GetItem("EyeoftheStorm").UpdateAccessory(player, hideVisual);
-            }
-            
-            //bronze
-            modPlayer.BronzeEnchant = true;
-            //rebuttal
-            thoriumPlayer.championShield = true;
-            //sandles
-            thorium.GetItem("SpartanSandles").UpdateAccessory(player, hideVisual);
-            player.moveSpeed -= 0.15f;
-            player.maxRunSpeed -= 1f;
-            //olympic torch
-            thoriumPlayer.olympicTorch = true;
-
-            //durasteel
+            mod.GetItem("GraniteEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("BronzeEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("DurasteelEnchant").UpdateAccessory(player, hideVisual);
-            
-            //abyssal shell
-            thoriumPlayer.AbyssalShell = true;
-
-            //conduit
             mod.GetItem("ConduitEnchant").UpdateAccessory(player, hideVisual);
-
-            //granite
-            player.fireWalk = true;
-            player.lavaImmune = true;
-            player.buffImmune[24] = true;
-            //titan
-            modPlayer.AllDamageUp(.1f);
-            //music player
-            thorium.GetItem("TunePlayerDamageReduction").UpdateAccessory(player, true);
-            //crystal eye mask
-            thoriumPlayer.critDamage += 0.1f;
+            mod.GetItem("TitanEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

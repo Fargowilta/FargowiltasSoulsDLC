@@ -7,6 +7,7 @@ using ThoriumMod.Items.Lich;
 using ThoriumMod.Items.ThrownItems;
 using ThoriumMod.Items.Painting;
 using ThoriumMod.Items.HealerItems;
+using ThoriumMod.Items.SummonItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -27,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Killing an enemy will release a soul fragment
 Touching a soul fragment greatly increases your movement and throwing speed briefly
 Your plague gas will linger in the air twice as long and your plague reactions will deal 20% more damage
-Effects of Lich's Gaze");
+Effects of Phylactery");
             DisplayName.AddTranslation(GameCulture.Chinese, "巫妖魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'拥抱死亡...'
@@ -56,8 +57,8 @@ Effects of Lich's Gaze");
             thoriumPlayer.setPlague = true;
             //lich effect
             modPlayer.LichEnchant = true;
-            //lich gaze
-            thoriumPlayer.lichGaze = true;
+
+            thorium.GetItem("Phylactery").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -70,9 +71,8 @@ Effects of Lich's Gaze");
             recipe.AddIngredient(ModContent.ItemType<LichCarapace>());
             recipe.AddIngredient(ModContent.ItemType<LichTalon>());
             recipe.AddIngredient(ModContent.ItemType<PlagueDoctorEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<LichGaze>());
+            recipe.AddIngredient(ModContent.ItemType<Phylactery>()); 
             recipe.AddIngredient(ModContent.ItemType<SoulCleaver>());
-
             
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -8,6 +8,7 @@ using ThoriumMod.Items.Lodestone;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.MiniBoss;
 using ThoriumMod.Items.BasicAccessories;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -27,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Sturdy'
 Damage reduction is increased by 10% at every 25% segment of life
 Maximum damage reduction is reached at 30% while below 50% life
-Effects of Astro-Beetle Husk and Obsidian Scale");
+Effects of Astro-Beetle Husk, Obsidian Scale, and Sandweaver's Tiara");
             DisplayName.AddTranslation(GameCulture.Chinese, "地脉魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'坚实'
@@ -50,34 +51,20 @@ Effects of Astro-Beetle Husk and Obsidian Scale");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.LodestoneResist))
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.ManaBoots))
             {
-                //set bonus
-                thoriumPlayer.orbital = true;
-                thoriumPlayer.orbitalRotation3 = Utils.RotatedBy(thoriumPlayer.orbitalRotation3, -0.05000000074505806, default(Vector2));
-                if (player.statLife > player.statLifeMax * 0.75)
-                {
-                    thoriumPlayer.thoriumEndurance += 0.1f;
-                    thoriumPlayer.lodestoneStage = 1;
-                }
-                if (player.statLife <= player.statLifeMax * 0.75 && player.statLife > player.statLifeMax * 0.5)
-                {
-                    thoriumPlayer.thoriumEndurance += 0.2f;
-                    thoriumPlayer.lodestoneStage = 2;
-                }
-                if (player.statLife <= player.statLifeMax * 0.5)
-                {
-                    thoriumPlayer.thoriumEndurance += 0.3f;
-                    thoriumPlayer.lodestoneStage = 3;
-                }
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("LodeStoneFaceGuard").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
 
-            //astro beetle husk
-            thoriumPlayer.metalShieldMax = 25;
-
-            //obsidianscale
+            thorium.GetItem("AstroBeetleHusk").UpdateAccessory(player, true);
             thorium.GetItem("ObsidianScale").UpdateAccessory(player, true);
+
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.SandweaversTiara))
+            {
+                thorium.GetItem("SandweaversTiara").UpdateAccessory(player, true);
+            }
         }
 
         public override void AddRecipes()
@@ -91,7 +78,7 @@ Effects of Astro-Beetle Husk and Obsidian Scale");
             recipe.AddIngredient(ModContent.ItemType<LodeStoneShinGaurds>());
             recipe.AddIngredient(ModContent.ItemType<AstroBeetleHusk>());
             recipe.AddIngredient(ModContent.ItemType<ObsidianScale>());
-            recipe.AddIngredient(ModContent.ItemType<TheJuggernaut>());
+            recipe.AddIngredient(ModContent.ItemType<SandweaversTiara>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -9,6 +9,7 @@ using ThoriumMod.Items.EndofDays.Aqua;
 using ThoriumMod.Items.MiniBoss;
 using ThoriumMod.Items.Abyssion;
 using ThoriumMod.Items.Misc;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -31,7 +32,8 @@ Pressing the 'Special Ability' key will envelop you within an impervious bubble
 While the bubble is active, all damage taken is converted into healing
 Produces a floating globule every half second
 Every globule increases defense and makes your next attack a mini-crit
-Attacks have a 20% chance to unleash aquatic homing daggers all around you");
+Attacks have a 20% chance to unleash aquatic homing daggers all around you
+Effects of Plague Lord's Flask");
             DisplayName.AddTranslation(GameCulture.Chinese, "洪流逆潮者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'像潮水一样势不可挡, 向敌人释放波涛的愤怒'
@@ -105,6 +107,8 @@ Attacks have a 20% chance to unleash aquatic homing daggers all around you");
             //set bonus damage to healing hot key
             thoriumPlayer.setTideTurner = true;
 
+            
+            thorium.GetItem("PlagueLordFlask").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -117,10 +121,9 @@ Attacks have a 20% chance to unleash aquatic homing daggers all around you");
             //recipe.AddIngredient(ModContent.ItemType<TideTurnersGaze>());
             recipe.AddIngredient(ModContent.ItemType<TideTurnerBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<TideTurnerGreaves>());
+            recipe.AddIngredient(ModContent.ItemType<PlagueLordFlask>());
             recipe.AddIngredient(ModContent.ItemType<PoseidonCharge>());
-            recipe.AddIngredient(ModContent.ItemType<MantisPunch>());
             recipe.AddIngredient(ModContent.ItemType<TidalWave>());
-
 
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);

@@ -1,8 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThoriumMod;
-using Microsoft.Xna.Framework;
 using Terraria.Localization;
 using ThoriumMod.Items.HealerItems;
 
@@ -11,7 +9,6 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
     public class NoviceClericEnchant : ModItem
     {
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int timer;
 
         public override bool Autoload(ref string name)
         {
@@ -24,7 +21,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Cleansed of all evil'
 Every 5 seconds you generate up to 3 holy crosses
-When casting healing spells, a cross is used instead of mana");
+When casting healing spells, a cross is used instead of mana
+Effects of Nurse Purse");
             DisplayName.AddTranslation(GameCulture.Chinese, "牧师学徒魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'扫除一切恶'
@@ -46,25 +44,14 @@ When casting healing spells, a cross is used instead of mana");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            thoriumPlayer.clericSet = true;
-            thoriumPlayer.orbital = true;
-            thoriumPlayer.orbitalRotation3 = Utils.RotatedBy(thoriumPlayer.orbitalRotation3, -0.05000000074505806, default(Vector2));
-            timer++;
-            if (thoriumPlayer.clericSetCrosses < 3)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.NoviceClericEffect))
             {
-                if (timer > 300)
-                {
-                    thoriumPlayer.clericSetCrosses++;
-                    timer = 0;
-                    return;
-                }
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("NoviceClericCowl").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
-            else
-            {
-                timer = 0;
-            }
+
+            thorium.GetItem("NursePurse").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -76,9 +63,9 @@ When casting healing spells, a cross is used instead of mana");
             recipe.AddIngredient(ModContent.ItemType<NoviceClericCowl>());
             recipe.AddIngredient(ModContent.ItemType<NoviceClericTabard>());
             recipe.AddIngredient(ModContent.ItemType<NoviceClericPants>());
+            recipe.AddIngredient(ModContent.ItemType<NursePurse>());
             recipe.AddIngredient(ModContent.ItemType<PalmCross>());
             recipe.AddIngredient(ModContent.ItemType<Renew>());
-            recipe.AddIngredient(ModContent.ItemType<PurifiedWater>(), 300);
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

@@ -24,8 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Harmonious energy embraces you'
 Pressing the 'Special Ability' key will summon an incredibly powerful aura around your cursor
-Creating this aura costs 150 mana
-Effects of Ascension Statuette");
+Creating this aura costs 150 mana");
             DisplayName.AddTranslation(GameCulture.Chinese, "天界魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'谐能环绕着你'
@@ -48,10 +47,12 @@ Effects of Ascension Statuette");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            thoriumPlayer.celestialSet = true;
-            //ascension statue
-            thoriumPlayer.ascension = true;
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.CelestialAura))
+            {
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("CelestialCrown").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
+            }
         }
 
         public override void AddRecipes()
@@ -63,9 +64,7 @@ Effects of Ascension Statuette");
             recipe.AddIngredient(ModContent.ItemType<CelestialCrown>()); 
             recipe.AddIngredient(ModContent.ItemType<CelestialVestment>());
             recipe.AddIngredient(ModContent.ItemType<CelestialLeggings>());
-            //recipe.AddIngredient(ModContent.ItemType<CelestialTrinity>());
-            recipe.AddIngredient(ModContent.ItemType<AscensionStatuette>());
-
+            recipe.AddIngredient(ModContent.ItemType<CelestialTrinity>());
             recipe.AddIngredient(ModContent.ItemType<HealingRain>());
             recipe.AddIngredient(ModContent.ItemType<AncientTome>());
 

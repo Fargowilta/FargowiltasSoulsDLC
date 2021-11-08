@@ -7,6 +7,7 @@ using ThoriumMod.Items.Geode;
 using ThoriumMod.Items.Misc;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.Tracker;
+using ThoriumMod.Items.BasicAccessories;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -27,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 50% increased mining speed
 Shows the location of enemies, traps, and treasures
 Light is emitted from the player
-Effects of Crystaline Charm");
+Effects of Crystaline Charm and Crystal Spear Tip");
             DisplayName.AddTranslation(GameCulture.Chinese, "晶体魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'用极尽奢华的材料制成'
@@ -51,13 +52,12 @@ Effects of Crystaline Charm");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("GeodeHelmet").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
 
             thorium.GetItem("CrystalineCharm").UpdateAccessory(player, hideVisual);
-
-            thoriumPlayer.geodeShine = true;
-            Lighting.AddLight(player.position, 1.2f, 0.8f, 1.2f);
+            thorium.GetItem("CrystalSpearTip").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -70,7 +70,7 @@ Effects of Crystaline Charm");
             recipe.AddIngredient(ModContent.ItemType<GeodeChestplate>());
             recipe.AddIngredient(ModContent.ItemType<GeodeGreaves>());
             recipe.AddIngredient(ModContent.ItemType<CrystalineCharm>());
-            recipe.AddIngredient(ModContent.ItemType<EnchantedPickaxe>());
+            recipe.AddIngredient(ModContent.ItemType<CrystalSpearTip>());
             recipe.AddIngredient(ModContent.ItemType<GnomePick>());
 
             recipe.AddTile(TileID.CrystalBall);

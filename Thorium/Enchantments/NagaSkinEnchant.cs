@@ -28,7 +28,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Extreme danger noodle'
 20% increased attack speed while in water
-Allows quicker movement in water");
+Allows quicker movement in water
+Effects of Ocean's Retaliation");
             DisplayName.AddTranslation(GameCulture.Chinese, "娜迦魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'极端危险'
@@ -51,8 +52,7 @@ Allows quicker movement in water");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoPlayer fargoPlayer = player.GetModPlayer<FargoPlayer>();
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
+
             //naga effect
             if (player.wet)
             {
@@ -65,6 +65,8 @@ Allows quicker movement in water");
             {
                 player.moveSpeed += 0.15f;
             }
+
+            thorium.GetItem("OceanRetaliation").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -76,10 +78,9 @@ Allows quicker movement in water");
             recipe.AddIngredient(ModContent.ItemType<NagaSkinMask>());
             recipe.AddIngredient(ModContent.ItemType<NagaSkinSuit>());
             recipe.AddIngredient(ModContent.ItemType<NagaSkinTail>());
+            recipe.AddIngredient(ModContent.ItemType<OceanRetaliation>());
             recipe.AddIngredient(ModContent.ItemType<Eelrod>());
-            recipe.AddIngredient(ModContent.ItemType<HydromancerCatalyst>());
             recipe.AddIngredient(ModContent.ItemType<OldGodGrasp>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

@@ -112,7 +112,7 @@ Effects of Yharim's Gift, Heart of the Elements, and The Sponge");
             recipe.AddIngredient(null, "DevastationForce");
             recipe.AddIngredient(null, "DesolationForce");
             recipe.AddIngredient(null, "ExaltationForce");
-            recipe.AddIngredient(ModContent.ItemType<MutantScale>(), 10);
+            recipe.AddIngredient(ModContent.ItemType<AbomEnergy>(), 10);
 
             recipe.AddTile(ModLoader.GetMod("Fargowiltas").TileType("CrucibleCosmosSheet"));
             recipe.SetResult(this);

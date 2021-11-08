@@ -8,8 +8,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class NiflheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -52,19 +50,10 @@ Effects of Concert Tickets, Conductor's Baton, Full Score, and Metronome");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //noble
             mod.GetItem("NobleEnchant").UpdateAccessory(player, hideVisual);
-            //cyber punk
             mod.GetItem("CyberPunkEnchant").UpdateAccessory(player, hideVisual);
-            //Maestro
             mod.GetItem("MaestroEnchant").UpdateAccessory(player, hideVisual);
-
-            //crier
-            thoriumPlayer.bardBuffDuration += 180;
-            //ornate
+            mod.GetItem("CrierEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("OrnateEnchant").UpdateAccessory(player, hideVisual);
         }
 

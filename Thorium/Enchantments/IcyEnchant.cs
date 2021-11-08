@@ -4,7 +4,6 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.Icy;
-using ThoriumMod.Items.HealerItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -22,7 +21,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Icy Enchantment");
             Tooltip.SetDefault(
 @"'Cold to the touch'
-An icy aura surrounds you, which freezes nearby enemies after a short delay");
+An icy aura surrounds you, freezing enemies that stay too long within it");
 
             DisplayName.AddTranslation(GameCulture.Chinese, "碎冰魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
@@ -45,13 +44,11 @@ An icy aura surrounds you, which freezes nearby enemies after a short delay");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            thoriumPlayer.setIcy = true;
-            if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.IcyBarrier))
             {
-                Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("IcyAura"), 0, 0f, player.whoAmI, 0f, 0f);
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("IcyBandana").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
         }
         

@@ -22,8 +22,6 @@ namespace FargowiltasSoulsDLC
         internal bool SoALoaded;
         internal bool DBZMODLoaded;
 
-        internal static readonly Dictionary<int, int> ModProjDict = new Dictionary<int, int>();
-
         public override void Load()
         {
             Instance = this;
@@ -103,6 +101,24 @@ namespace FargowiltasSoulsDLC
                 AddToggle("ThoriumTideDaggersConfig", "Tide Turner Daggers", "TideTurnerEnchant", "ffffff");
                 AddToggle("ThoriumAssassinDamageConfig", "Assassin Damage", "AssassinEnchant", "ffffff");
                 AddToggle("ThoriumpyromancerBurstsConfig", "Pyromancer Bursts", "PyromancerEnchant", "ffffff");
+
+
+                AddToggle("ThoriumKickPetalConfig", "Kick Petal", "BulbEnchant", "ffffff");
+                AddToggle("ThoriumMagmaConfig", "Magma Effects", "MagmaEnchant", "ffffff");
+                AddToggle("ThoriumDepthDiverEffectConfig", "Depth Diver Effect", "DepthDiverEnchant", "ffffff");
+                AddToggle("ThoriumDrownedDoubloonConfig", "Drowned Doubloon", "DepthDiverEnchant", "ffffff");
+                AddToggle("ThoriumIncandescentSparkConfig", "Incandescent Spark", "DurasteelEnchant", "ffffff");
+
+                AddToggle("ThoriumNoviceClericConfig", "Novice Cleric Effect", "NoviceClericEnchant", "ffffff");
+                AddToggle("ThoriumJungleHeartConfig", "Heart of the Jungle", "LifeBloomEnchant", "ffffff");
+                AddToggle("ThoriumSandstoneJumpConfig", "Sandstone Jump", "SandstoneEnchant", "ffffff");
+                AddToggle("ThoriumKarmicHolderConfig", "Karmic Holder", "SacredEnchant", "ffffff");
+
+                AddToggle("ThoriumSandweaversTiaraConfig", "Sandweaver's Tiara", "LodestoneEnchant", "ffffff");
+                AddToggle("ThoriumPlasmaGeneratorConfig", "Plasma Generator", "PyromancerEnchant", "ffffff");
+
+
+
             }
             else
             {
@@ -196,27 +212,12 @@ namespace FargowiltasSoulsDLC
                 ThoriumLoaded = ModLoader.GetMod("ThoriumMod") != null;
                 CalamityLoaded = ModLoader.GetMod("CalamityMod") != null;
                 SoALoaded = ModLoader.GetMod("SacredTools") != null;
-                DBZMODLoaded = ModLoader.GetMod("DBZMOD") != null;
-
-                if (ThoriumLoaded)
-                {
-                    AddThoriumPets();
-                }
-
-                
+                DBZMODLoaded = ModLoader.GetMod("DBZMOD") != null; 
             }
             catch (Exception e)
             {
                 Logger.Error("FargowiltasSoulsDLC PostSetupContent Error: " + e.StackTrace + e.Message);
             }
-        }
-
-        private void AddThoriumPets()
-        {
-            Mod thorium = ModLoader.GetMod("ThoriumMod");
-            
-            ModProjDict.Add(ModContent.ProjectileType<MinionSapling>(), 11);
-            
         }
 
         public override void AddRecipes()

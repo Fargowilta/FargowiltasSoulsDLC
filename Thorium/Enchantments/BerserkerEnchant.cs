@@ -8,6 +8,7 @@ using ThoriumMod.Items.Berserker;
 using ThoriumMod.Items.MeleeItems;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.FallenBeholder;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -28,7 +29,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Attack speed is increased by 5% at every 25% segment of life
 Fire surrounds your armour and melee weapons
 Enemies that you set on fire or singe will take additional damage over time
-Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
+Effects of Spring Steps, Slag Stompers, Molten Spear Tip, and Rapier Badge");
             DisplayName.AddTranslation(GameCulture.Chinese, "狂战士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese,
 @"'我更愿意为自己的生命而战斗, 而不只是为活而活'
@@ -54,38 +55,15 @@ Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BerserkerEffect))
             {
-                thoriumPlayer.orbital = true;
-                thoriumPlayer.orbitalRotation3 = Utils.RotatedBy(thoriumPlayer.orbitalRotation3, -0.075000002980232239, default(Vector2));
-                //making divers code less of a meme :scuseme:
-                if (player.statLife > player.statLifeMax * 0.75)
-                {
-                    modPlayer.AllDamageUp(.15f);
-                    thoriumPlayer.berserkStage = 1;
-                }
-                else if (player.statLife > player.statLifeMax * 0.5)
-                {
-                    modPlayer.AllDamageUp(.3f);
-                    thoriumPlayer.berserkStage = 2;
-                }
-                else if (player.statLife > player.statLifeMax * 0.25)
-                {
-                    modPlayer.AllDamageUp(.45f);
-                    thoriumPlayer.berserkStage = 3;
-                }
-                else
-                {
-                    modPlayer.AllDamageUp(.6f);
-                    thoriumPlayer.berserkStage = 4;
-                }
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("BerserkerMask").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
 
-            //magma
             mod.GetItem("MagmaEnchant").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("RapierBadge").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -97,9 +75,9 @@ Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
             recipe.AddIngredient(ModContent.ItemType<BerserkerMask>());
             recipe.AddIngredient(ModContent.ItemType<BerserkerBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<BerserkerGreaves>());
-            recipe.AddIngredient(ModContent.ItemType<ExileHelmet>());
             recipe.AddIngredient(ModContent.ItemType<MagmaEnchant>());
-            recipe.AddIngredient(ItemID.BreakerBlade);
+            recipe.AddIngredient(ModContent.ItemType<RapierBadge>());
+            recipe.AddIngredient(ModContent.ItemType<WyvernSlayer>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

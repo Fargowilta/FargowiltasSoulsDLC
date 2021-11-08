@@ -7,13 +7,12 @@ using ThoriumMod.Items.Steel;
 using ThoriumMod.Items.DD;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.BasicAccessories;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
     public class DurasteelEnchant : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -26,7 +25,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Masterfully forged by the Blacksmith'
 12% damage reduction at Full HP
 Grants immunity to shambler chain-balls
-Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
+Effects of Incandescent Spark and Spiked Bracers");
             DisplayName.AddTranslation(GameCulture.Chinese, "耐刚魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'精工打造'
@@ -49,7 +48,6 @@ Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //durasteel effect
             if (player.statLife == player.statLifeMax2)
             {
@@ -61,18 +59,13 @@ Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
             player.iceSkate = true;
             player.dash = 1;
 
-            //ball n chain
-            thoriumPlayer.ballnChain = true;
+            ModContent.GetModItem(ModContent.ItemType<BallnChain>()).UpdateAccessory(player, hideVisual);
+            ModContent.GetModItem(ModContent.ItemType<SpikedBracer>()).UpdateAccessory(player, hideVisual);
 
-            //spiked bracers
-            player.thorns += 0.25f;
-
-            //ogre sandals
-            ModContent.GetModItem(ModContent.ItemType<OgreSandal>()).UpdateAccessory(player, hideVisual);
-
-            //crystal spear tip
-            ModContent.GetModItem(ModContent.ItemType<CrystalSpearTip>()).UpdateAccessory(player, hideVisual);
-
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.IncandescentSpark))
+            {
+                ModContent.GetModItem(ModContent.ItemType<IncandescentSpark>()).UpdateAccessory(player, hideVisual);
+            }
         }
 
         public override void AddRecipes()
@@ -85,8 +78,8 @@ Effects of Ogre Sandals, Crystal Spear Tip, and Spiked Bracers");
             recipe.AddIngredient(ModContent.ItemType<DurasteelChestplate>());
             recipe.AddIngredient(ModContent.ItemType<DurasteelGreaves>());
             recipe.AddIngredient(ModContent.ItemType<DarksteelEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<OgreSandal>());
-            recipe.AddIngredient(ModContent.ItemType<CrystalSpearTip>());
+            recipe.AddIngredient(ModContent.ItemType<IncandescentSpark>());
+            recipe.AddIngredient(ModContent.ItemType<DurasteelBlade>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

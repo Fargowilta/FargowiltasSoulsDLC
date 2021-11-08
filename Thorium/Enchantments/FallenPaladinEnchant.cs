@@ -24,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'Silently, they walk the dungeon halls'
 Taking damage heals nearby allies equal to 15% of the damage taken
 If an ally is below half health, you will gain increased healing abilities
-Effects of Prydwen and Rebirth Statuette");
+Effects of Prydwen and Nirvana Statuette");
             DisplayName.AddTranslation(GameCulture.Chinese, "堕落圣骑士魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'静静地在地牢游荡'
@@ -47,22 +47,12 @@ Effects of Prydwen and Rebirth Statuette");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded || player.GetModPlayer<FargoDLCPlayer>().ThoriumSoul) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //paladin set bonus
-            thoriumPlayer.fallenPaladinSet = true;
-            //wyne
-            thoriumPlayer.Wynebgwrthucher = true;
-            //rebirth statue
-            thoriumPlayer.quickRevive = true;
-            //templar set bonus
-            for (int i = 0; i < 255; i++)
-            {
-                Player player2 = Main.player[i];
-                if (player2.active && !player2.dead && player2.statLife < (int)(player2.statLifeMax2 * 0.5) && player2 != player)
-                {
-                    player.AddBuff(thorium.BuffType("HealingMastery"), 120, false);
-                }
-            }
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("FallenPaladinFacegaurd").UpdateArmorSet(player);
+            thorium.GetItem("Wynebgwrthucher").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("NirvanaStatuette").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("TemplarsCirclet").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
         }
 
         public override void AddRecipes()
@@ -76,7 +66,7 @@ Effects of Prydwen and Rebirth Statuette");
             recipe.AddIngredient(ModContent.ItemType<FallenPaladinGreaves>());
             recipe.AddIngredient(ModContent.ItemType<TemplarEnchant>());
             recipe.AddIngredient(ModContent.ItemType<Wynebgwrthucher>());
-            recipe.AddIngredient(ModContent.ItemType<RebirthStatuette>());
+            recipe.AddIngredient(ModContent.ItemType<NirvanaStatuette>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

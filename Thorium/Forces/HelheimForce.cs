@@ -10,8 +10,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class HelheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -22,12 +20,12 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
             DisplayName.SetDefault("Force of Helheim");
             Tooltip.SetDefault(
 @"'From the halls of Hel, a vision of the end...'
-All armor bonuses from Spirit Trapper, Malignant, Dragon, Dread, Flesh, and Demon Blood
+All armor bonuses from Spirit Trapper, Dragon, Dread, Flesh, and Demon Blood
 All armor bonuses from Magma, Berserker, White Knight, and Harbinger
 Effects of Inner Flame, Crash Boots, and Dragon Talon Necklace
 Effects of Vile Flail-Core, Cursed Flail-Core, and Molten Spear Tip
 Effects of Vampire Gland, Spring Steps, and Slag Stompers
-Effects of Shade Band, Enchanted Shield, and Mana-Charged Rocketeers");
+Effects of Shade Band");
             DisplayName.AddTranslation(GameCulture.Chinese, "海姆冥界之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'从海姆冥界的大厅起始, 一派终末的景象...'
@@ -64,97 +62,11 @@ Effects of Shade Band, Enchanted Shield, and Mana-Charged Rocketeers");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //spirit trapper
-            modPlayer.SpiritTrapperEnchant = true;
-            thoriumPlayer.setSpiritTrapper = true;
-            //inner flame
-            thoriumPlayer.spiritFlame = true;
-
-            //malignant
-            modPlayer.MalignantEnchant = true;
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.ManaBoots))
-            {
-                //mana charge rockets
-                thorium.GetItem("ManaChargedRocketeers").UpdateAccessory(player, hideVisual);
-            }
-            //enchanted shield
-            thorium.GetItem("EnchantedShield").UpdateAccessory(player, hideVisual);
-
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DreadSpeed))
-            {
-                //dread
-                player.moveSpeed += 0.8f;
-                player.maxRunSpeed += 10f;
-                player.runAcceleration += 0.05f;
-                if (player.velocity.X > 0f || player.velocity.X < 0f)
-                {
-                    modPlayer.AllDamageUp(.25f);
-                    modPlayer.AllCritUp(20);
-
-                    for (int i = 0; i < 2; i++)
-                    {
-                        int num = Dust.NewDust(new Vector2(player.position.X, player.position.Y) - player.velocity * 0.5f, player.width, player.height, 65, 0f, 0f, 0, default(Color), 1.75f);
-                        int num2 = Dust.NewDust(new Vector2(player.position.X, player.position.Y) - player.velocity * 0.5f, player.width, player.height, 75, 0f, 0f, 0, default(Color), 1f);
-                        Main.dust[num].noGravity = true;
-                        Main.dust[num2].noGravity = true;
-                        Main.dust[num].noLight = true;
-                        Main.dust[num2].noLight = true;
-                    }
-                }
-            }
-            //music player
-            thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
-            //crash boots
-            thorium.GetItem("CrashBoots").UpdateAccessory(player, hideVisual);
-            player.moveSpeed -= 0.15f;
-            player.maxRunSpeed -= 1f;
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DragonFlames))
-            {
-                //dragon 
-                thoriumPlayer.dragonSet = true;
-            }
-            modPlayer.DragonEnchant = true;
-            //flail-cores
-            thoriumPlayer.accVileCore = true;
-            thoriumPlayer.accCursedCore = true;
-            //molten spear tip
-            thoriumPlayer.spearFlame = true;
-            //demon blood effect
-            modPlayer.DemonBloodEnchant = true;
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.FleshDrops))
-            {
-                //flesh set bonus
-                thoriumPlayer.Symbiotic = true;
-            }
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.VampireGland))
-            {
-                //vampire gland
-                thoriumPlayer.vampireGland = true;
-            }
-            modPlayer.FleshEnchant = true;
-            modPlayer.KnightEnchant = true;
-            
-            //berserker
+            mod.GetItem("SpiritTrapperEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("DreadEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("DemonBloodEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("BerserkerEnchant").UpdateAccessory(player, hideVisual);
-
-            //dragon tooth necklace
-            player.armorPenetration += 15;
-
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.HarbingerOvercharge))
-            {
-                //harbinger
-                if (player.statLife > (int)(player.statLifeMax2 * 0.75))
-                {
-                    thoriumPlayer.overCharge = true;
-                    modPlayer.AllDamageUp(.5f);
-                }
-            }
-            //shade band
-            thoriumPlayer.shadeBand = true;
-           
+            mod.GetItem("HarbingerEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -164,7 +76,6 @@ Effects of Shade Band, Enchanted Shield, and Mana-Charged Rocketeers");
             ModRecipe recipe = new ModRecipe(mod);
 
             recipe.AddIngredient(ModContent.ItemType<SpiritTrapperEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<MalignantEnchant>());
             recipe.AddIngredient(ModContent.ItemType<DreadEnchant>());
             recipe.AddIngredient(ModContent.ItemType<DemonBloodEnchant>());
             recipe.AddIngredient(ModContent.ItemType<BerserkerEnchant>());

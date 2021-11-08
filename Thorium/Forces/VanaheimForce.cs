@@ -9,8 +9,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class VanaheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -52,30 +50,10 @@ Effects of Lich's Gaze and Ascension Statuette");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //lich set bonus
-            modPlayer.LichEnchant = true;
-            //lich gaze
-            thoriumPlayer.lichGaze = true;
-            //plague doctor
-            thoriumPlayer.setPlague = true;
-
-            //white dwarf
-            modPlayer.WhiteDwarfEnchant = true;
-            
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.CelestialAura))
-            {
-                //celestial
-                thoriumPlayer.celestialSet = true;
-            }
-
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.AscensionStatue))
-            {
-                //ascension statue
-                thoriumPlayer.ascension = true;
-            }
+            mod.GetItem("LichEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("WhiteDwarfEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("CelestialEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("ShootingStarEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

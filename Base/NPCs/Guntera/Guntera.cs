@@ -38,7 +38,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs.Guntera
             npc.buffImmune[ModContent.BuffType<Gun>()] = false;
             npc.aiStyle = -1;
             npc.value = Item.buyPrice(2);
-            npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
+            //npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
 
             npc.boss = true;
             music = MusicID.Plantera;

@@ -48,15 +48,13 @@ Effects of Spiked Bracers");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //steel effect
             if (player.statLife == player.statLifeMax2)
             {
                 player.endurance += .1f;
             }
-            
-            //spiked bracers
-            player.thorns += 0.25f;
+
+            thorium.GetItem("SpikedBracer").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

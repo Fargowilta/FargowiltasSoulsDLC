@@ -55,8 +55,6 @@ Effects of Spiked Bracer");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //darksteel bonuses
             player.noKnockback = true;
             player.iceSkate = true;
@@ -66,10 +64,9 @@ Effects of Spiked Bracer");
             {
                 player.endurance += .1f;
             }
-            //spiked bracers
-            player.thorns += 0.35f;
-            //ball n chain
-            thoriumPlayer.ballnChain = true;
+
+            thorium.GetItem("SpikedBracer").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("BallnChain").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

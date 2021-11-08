@@ -50,19 +50,13 @@ Effects of Aloe Leaf and Equalizer");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("DewBinderMask").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
 
-            //life binder set bonus
-            thoriumPlayer.mistSet = true;
-            //aloe leaf
-            thoriumPlayer.aloePlant = true;
+            mod.GetItem("IridescentEnchant").UpdateAccessory(player, hideVisual);
 
-            //iridescent set bonus
-            thoriumPlayer.iridescentSet = true;
-
-            //equalizer 
-            thoriumPlayer.equilibrium = true;
+            thorium.GetItem("DewCollector").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -75,9 +69,8 @@ Effects of Aloe Leaf and Equalizer");
             recipe.AddIngredient(ModContent.ItemType<DewBinderBreastplate>());
             recipe.AddIngredient(ModContent.ItemType<DewBinderGreaves>());
             recipe.AddIngredient(ModContent.ItemType<IridescentEnchant>());
-            recipe.AddIngredient(ModContent.ItemType<AloeLeaf>());
+            recipe.AddIngredient(ModContent.ItemType<DewCollector>());
             recipe.AddIngredient(ModContent.ItemType<SunrayStaff>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

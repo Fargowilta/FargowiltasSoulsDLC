@@ -9,6 +9,7 @@ using ThoriumMod.Items.MiniBoss;
 using ThoriumMod.Items.Misc;
 using ThoriumMod.Items.Depths;
 using ThoriumMod.Items.MeleeItems;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -27,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'As if you weren't pink enough'
 Every third attack will unleash an illumite missile
-Effects of Jazz Music Player");
+Effects of The Nuclear Option and Jazz Music Player");
             DisplayName.AddTranslation(GameCulture.Chinese, "荧光魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'好像还不够粉'
@@ -51,9 +52,9 @@ Effects of Jazz Music Player");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             modPlayer.IllumiteEnchant = true;
-            //music player
+
+            thorium.GetItem("TheNuclearOption").UpdateAccessory(player, true);
             thorium.GetItem("TunePlayerLifeRegen").UpdateAccessory(player, true);
         }
 
@@ -66,9 +67,9 @@ Effects of Jazz Music Player");
             recipe.AddIngredient(ModContent.ItemType<IllumiteMask>());
             recipe.AddIngredient(ModContent.ItemType<IllumiteChestplate>());
             recipe.AddIngredient(ModContent.ItemType<IllumiteGreaves>());
+            recipe.AddIngredient(ModContent.ItemType<TheNuclearOption>());
             recipe.AddIngredient(ModContent.ItemType<TunePlayerLifeRegen>());
             recipe.AddIngredient(ModContent.ItemType<HandCannon>());
-            recipe.AddIngredient(ModContent.ItemType<IllumiteBlaster>());
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

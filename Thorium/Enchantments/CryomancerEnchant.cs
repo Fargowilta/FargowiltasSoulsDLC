@@ -5,8 +5,6 @@ using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.Blizzard;
 using ThoriumMod.Items.MagicItems;
-using ThoriumMod.Items.HealerItems;
-using ThoriumMod.Items.Painting;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -56,12 +54,8 @@ Effects of Ice Bound Strider Hide");
             modPlayer.CryoEnchant = true;
             //strider hide
             thoriumPlayer.frostBonusDamage = true;
-            //icy set bonus
-            thoriumPlayer.setIcy = true;
-            if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
-            {
-                Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("IcyAura"), 0, 0f, player.whoAmI, 0f, 0f);
-            }
+
+            mod.GetItem("IcyEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -76,7 +70,6 @@ Effects of Ice Bound Strider Hide");
             recipe.AddIngredient(ModContent.ItemType<IcyEnchant>());
             recipe.AddIngredient(ModContent.ItemType<IceBoundStriderHide>());
             recipe.AddIngredient(ModContent.ItemType<IceFairyStaff>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

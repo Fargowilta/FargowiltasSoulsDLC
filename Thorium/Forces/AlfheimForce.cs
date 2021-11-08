@@ -8,8 +8,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class AlfheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -56,18 +54,10 @@ Effects of Karmic Holder, Wynebgwrthucher, and Rebirth Statuette");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //sacred
             mod.GetItem("SacredEnchant").UpdateAccessory(player, hideVisual);
-            //warlock
             mod.GetItem("WarlockEnchant").UpdateAccessory(player, hideVisual);
-            //biotech
             mod.GetItem("BiotechEnchant").UpdateAccessory(player, hideVisual);
-            //life binder
             mod.GetItem("LifeBinderEnchant").UpdateAccessory(player, hideVisual);
-            //fallen paladin
             mod.GetItem("FallenPaladinEnchant").UpdateAccessory(player, hideVisual);
         }
 

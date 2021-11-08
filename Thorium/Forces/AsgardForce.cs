@@ -8,9 +8,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class AsgardForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int timer;
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -56,27 +53,11 @@ Effects of Dart Pouch");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //tide turner
             mod.GetItem("TideTurnerEnchant").UpdateAccessory(player, hideVisual);
-            //assassin
-            modPlayer.AssassinEnchant = true;
-            //dart pouch
-            thorium.GetItem("DartPouch").UpdateAccessory(player, hideVisual);
-            //pyro
-            modPlayer.PyroEnchant = true;
-            thoriumPlayer.napalmSet = true;
-            //dream weaver
-            thoriumPlayer.dreamHoodSet = true;
-            thoriumPlayer.dreamSet = true;
-
-            //rhapsodist
-            //hotkey buff allies 
-            thoriumPlayer.setInspirator = true;
-            //hotkey buff self
-            thoriumPlayer.setSoloist = true;
+            mod.GetItem("AssassinEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("PyromancerEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("DreamWeaverEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("RhapsodistEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

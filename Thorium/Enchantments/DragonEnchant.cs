@@ -48,15 +48,14 @@ Effects of Dragon Talon Necklace and Disco Music Player");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //dragon 
-            thoriumPlayer.dragonSet = true;
-            //dragon tooth necklace
-            player.armorPenetration += 15;
-            
-            modPlayer.DragonEnchant = true;
-
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DragonFlames))
+            {
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("DragonMask").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
+            }
+                
+            thorium.GetItem("DragonTalonNecklace").UpdateAccessory(player, hideVisual);
             thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
         }
 
@@ -72,7 +71,6 @@ Effects of Dragon Talon Necklace and Disco Music Player");
             recipe.AddIngredient(ModContent.ItemType<DragonTalonNecklace>());
             recipe.AddIngredient(ModContent.ItemType<TunePlayerMovementSpeed>());
             recipe.AddIngredient(ModContent.ItemType<EbonyTail>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

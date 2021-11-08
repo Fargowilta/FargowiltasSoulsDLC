@@ -47,96 +47,13 @@ Effects of Auto Tuner, Metal Music Player, and Diss Track");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.CyberStates))
             {
-                //cyber set bonus, good lord
-                thoriumPlayer.cyberHeadAllowed = true;
-                thoriumPlayer.cyberBodyAllowed = true;
-                thoriumPlayer.cyberLegsAllowed = true;
-
-                thoriumPlayer.setCyberPunk = true;
-
-                //EmpowermentPool empowermentPool = new EmpowermentPool();
-                
-                //empowermentPool.Add<FlatDamage>(2);
-                //empowermentPool.Add<Damage>(2);
-
-                //Main.NewText(thoriumPlayer.setCyberPunkValue);
-
-                switch (thoriumPlayer.setCyberPunkValue)
-                {
-                    case 0:
-                        {
-                            //EmpowermentLoader.appl
-
-                            Lighting.AddLight(player.position, 0.45f, 0.1f, 0.1f);
-                            EmpowermentTimer empTimer = thoriumPlayer.GetEmpTimer<FlatDamage>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                            }
-                            empTimer = thoriumPlayer.GetEmpTimer<Damage>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                                return;
-                            }
-                            break;
-                        }
-                    case 1:
-                        {
-                            Lighting.AddLight(player.position, 0.15f, 0.45f, 0.15f);
-                            EmpowermentTimer empTimer = thoriumPlayer.GetEmpTimer<MovementSpeed>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                            }
-                            empTimer = thoriumPlayer.GetEmpTimer<FlightTime>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                                return;
-                            }
-                            break;
-                        }
-                    case 2:
-                        {
-                            Lighting.AddLight(player.position, 0.35f, 0.1f, 0.45f);
-                            EmpowermentTimer empTimer = thoriumPlayer.GetEmpTimer<ResourceMaximum>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                            }
-                            empTimer = thoriumPlayer.GetEmpTimer<ResourceRegen>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                                return;
-                            }
-                            break;
-                        }
-                    case 3:
-                        {
-                            Lighting.AddLight(player.position, 0.1f, 0.2f, 0.65f);
-                            EmpowermentTimer empTimer = thoriumPlayer.GetEmpTimer<Defense>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                            }
-                            empTimer = thoriumPlayer.GetEmpTimer<DamageReduction>();
-                            if (empTimer.level == 2)
-                            {
-                                empTimer.fade = false;
-                            }
-                            break;
-                        }
-                    default:
-                        return;
-                }
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("CyberPunkHeadset").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
-
-
+                
             thorium.GetItem("AutoTuner").UpdateAccessory(player, hideVisual);
             thorium.GetItem("TunePlayerDamage").UpdateAccessory(player, hideVisual);
             thorium.GetItem("DissTrack").UpdateAccessory(player, hideVisual);

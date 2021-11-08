@@ -28,7 +28,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'So many lost souls...'
 Killing enemies or continually damaging bosses generates soul wisps
 After generating 5 wisps, they are instantly consumed to heal you for 10 life
-Effects of Inner Flame");
+Effects of Inner Flame and Scrying Glass");
             DisplayName.AddTranslation(GameCulture.Chinese, "猎魂者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'这么多失落的灵魂...'
@@ -54,10 +54,11 @@ Effects of Inner Flame");
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
-            thoriumPlayer.setSpiritTrapper = true;
+            //thoriumPlayer.setSpiritTrapper = true;
             modPlayer.SpiritTrapperEnchant = true;
-            //inner flame
-            thoriumPlayer.spiritFlame = true;
+
+            thorium.GetItem("SpiritFlame").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("ScryingGlass").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -70,7 +71,7 @@ Effects of Inner Flame");
             recipe.AddIngredient(ModContent.ItemType<SpiritTrapperCuirass>());
             recipe.AddIngredient(ModContent.ItemType<SpiritTrapperGreaves>());
             recipe.AddIngredient(ModContent.ItemType<SpiritFlame>());
-            recipe.AddIngredient(ModContent.ItemType<TabooWand>());
+            recipe.AddIngredient(ModContent.ItemType<ScryingGlass>());
             recipe.AddIngredient(ModContent.ItemType<SpiritBlastWand>());
 
             recipe.AddTile(TileID.DemonAltar);

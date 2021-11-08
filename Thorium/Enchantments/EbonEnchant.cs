@@ -4,7 +4,6 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.HealerItems;
-using ThoriumMod.Items.Painting;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -23,7 +22,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Great for brooding'
 Corrupts your radiant powers, causing them to take on dark forms and deal additional effects
-Effects if Dark Heart");
+Effects of Dark Heart");
             DisplayName.AddTranslation(GameCulture.Chinese, "黑檀魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'适合沉思'
@@ -44,9 +43,9 @@ Effects if Dark Heart");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            thoriumPlayer.darkAura = true;
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("EbonHood").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
 
             thorium.GetItem("DarkHeart").UpdateAccessory(player, hideVisual);
         }

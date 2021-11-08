@@ -6,7 +6,7 @@ using Terraria.Localization;
 using ThoriumMod.Items.Sandstone;
 using ThoriumMod.Items.ThrownItems;
 using ThoriumMod.Items.ThunderBird;
-using ThoriumMod.Items.Painting;
+using ThoriumMod.Items.NPCItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -24,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Sandstone Enchantment");
             Tooltip.SetDefault(
 @"'Enveloped by desert winds'
-Desert winds will augment your boots, giving you a double jump");
+Desert winds have granted you a sandy double jump");
             DisplayName.AddTranslation(GameCulture.Chinese, "砂石魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'沙暴环绕'
@@ -46,12 +46,11 @@ Desert winds will augment your boots, giving you a double jump");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            player.doubleJumpSandstorm = true;
-            if (Main.rand.Next(25) == 0)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.SandstoneJump))
             {
-                Projectile.NewProjectile(player.Center.X - 4f, player.Center.Y, 0f, 0f, thorium.ProjectileType("SandstoneEffect"), 0, 0f, Main.myPlayer, 0f, 0f);
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("hSandStoneHelmet").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
         }
 
@@ -64,11 +63,9 @@ Desert winds will augment your boots, giving you a double jump");
             recipe.AddIngredient(ModContent.ItemType<hSandStoneHelmet>());
             recipe.AddIngredient(ModContent.ItemType<iSandStoneMail>());
             recipe.AddIngredient(ModContent.ItemType<jSandStoneGreaves>());
-            recipe.AddIngredient(ModContent.ItemType<Wreath>());
             recipe.AddIngredient(ModContent.ItemType<StoneThrowingSpear>(), 300);
+            recipe.AddIngredient(ModContent.ItemType<Scorpain>());
             recipe.AddIngredient(ModContent.ItemType<TalonBurst>());
-
-
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

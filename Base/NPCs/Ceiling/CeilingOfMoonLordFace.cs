@@ -33,7 +33,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs.Ceiling
             for (int i = 0; i < npc.buffImmune.Length; i++)
                 npc.buffImmune[i] = true;
             npc.aiStyle = -1;
-            npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
+            //npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
         }
 
         public override void AI()

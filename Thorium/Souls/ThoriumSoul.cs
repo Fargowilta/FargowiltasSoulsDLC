@@ -108,7 +108,7 @@ Effects of Dart Pouch");
             recipe.AddIngredient(null, "VanaheimForce");
             recipe.AddIngredient(null, "HelheimForce");
             recipe.AddIngredient(null, "AsgardForce");
-            recipe.AddIngredient(ModContent.ItemType<MutantScale>(), 10);
+            recipe.AddIngredient(ModContent.ItemType<AbomEnergy>(), 10);
 
             recipe.AddTile(ModLoader.GetMod("Fargowiltas").TileType("CrucibleCosmosSheet"));
 

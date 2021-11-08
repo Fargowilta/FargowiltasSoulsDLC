@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.GameInput;
-using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -28,7 +25,6 @@ namespace FargowiltasSoulsDLC
         public bool KnightEnchant;
         public bool IllumiteEnchant;
         public bool JesterEnchant;
-        public bool MalignantEnchant;
         public bool WhiteDwarfEnchant;
         public bool YewEnchant;
         public bool CryoEnchant;
@@ -42,11 +38,10 @@ namespace FargowiltasSoulsDLC
         public bool LifeBloomEnchant;
         public bool LichEnchant;
         public bool DemonBloodEnchant;
-        public bool BulbEnchant;
         public bool MixTape;
         public bool ConduitEnchant;
-        public bool DragonEnchant;
-        public bool FleshEnchant;
+        //public bool DragonEnchant;
+        //public bool FleshEnchant;
 
         public bool ThoriumSoul;
 
@@ -60,7 +55,6 @@ namespace FargowiltasSoulsDLC
             KnightEnchant = false;
             IllumiteEnchant = false;
             JesterEnchant = false;
-            MalignantEnchant = false;
             WhiteDwarfEnchant = false;
             YewEnchant = false;
             CryoEnchant = false;
@@ -74,11 +68,10 @@ namespace FargowiltasSoulsDLC
             LifeBloomEnchant = false;
             LichEnchant = false;
             DemonBloodEnchant = false;
-            BulbEnchant = false;
             MixTape = false;
             ConduitEnchant = false;
-            DragonEnchant = false;
-            FleshEnchant = false;
+            //DragonEnchant = false;
+            //FleshEnchant = false;
 
             ThoriumSoul = false;
         }
@@ -192,23 +185,6 @@ namespace FargowiltasSoulsDLC
             {
                 target.immune[proj.owner] = 5;
                 Projectile.NewProjectile(target.Center.X, target.Center.Y - 600f, 0f, 15f, thorium.ProjectileType("LightStrike"), (int)(proj.damage / 4), 1f, proj.owner, 0f, 0f);
-            }
-
-            //malignant
-            if (MalignantEnchant && crit)
-            {
-                target.AddBuff(24, 900, true);
-                target.AddBuff(thorium.BuffType("lightCurse"), 900, true);
-                for (int i = 0; i < 8; i++)
-                {
-                    int num5 = Dust.NewDust(target.position, target.width, target.height, 127, (float)Main.rand.Next(-6, 6), (float)Main.rand.Next(-10, 10), 0, default(Color), 1.2f);
-                    Main.dust[num5].noGravity = true;
-                }
-                for (int j = 0; j < 8; j++)
-                {
-                    int num6 = Dust.NewDust(target.position, target.width, target.height, 65, (float)Main.rand.Next(-6, 6), (float)Main.rand.Next(-10, 10), 0, default(Color), 1.2f);
-                    Main.dust[num6].noGravity = true;
-                }
             }
 
             //white dwarf
@@ -340,23 +316,6 @@ namespace FargowiltasSoulsDLC
                 Projectile.NewProjectile(target.Center.X, target.Center.Y - 600f, 0f, 15f, thorium.ProjectileType("LightStrike"), (int)(item.damage / 4), 1f, player.whoAmI, 0f, 0f);
             }
 
-            //malignant
-            if (MalignantEnchant && crit)
-            {
-                target.AddBuff(24, 900, true);
-                target.AddBuff(thorium.BuffType("lightCurse"), 900, true);
-                for (int i = 0; i < 8; i++)
-                {
-                    int num5 = Dust.NewDust(target.position, target.width, target.height, 127, (float)Main.rand.Next(-6, 6), (float)Main.rand.Next(-10, 10), 0, default(Color), 1.2f);
-                    Main.dust[num5].noGravity = true;
-                }
-                for (int j = 0; j < 8; j++)
-                {
-                    int num6 = Dust.NewDust(target.position, target.width, target.height, 65, (float)Main.rand.Next(-6, 6), (float)Main.rand.Next(-10, 10), 0, default(Color), 1.2f);
-                    Main.dust[num6].noGravity = true;
-                }
-            }
-
             //white dwarf
             if (WhiteDwarfEnchant && SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.WhiteDwarf) && crit)
             {
@@ -403,13 +362,6 @@ namespace FargowiltasSoulsDLC
         private void ThoriumHitProj(Projectile proj, NPC target, int damage, bool crit)
         {
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            if (BulbEnchant && !ThoriumSoul && Main.rand.Next(4) == 0)
-            {
-                Main.PlaySound(SoundID.Item, (int)proj.position.X, (int)proj.position.Y, 34, 1f, 0f);
-                Projectile.NewProjectile(target.Center.X, target.Center.Y, 0f, 0f, thorium.ProjectileType("BloomCloud"), 0, 0f, proj.owner, 0f, 0f);
-                Projectile.NewProjectile(target.Center.X, target.Center.Y, 0f, 0f, thorium.ProjectileType("BloomCloudDamage"), (int)(10f * player.magicDamage), 0f, proj.owner, 0f, 0f);
-            }
 
             if (SpiritTrapperEnchant && SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.SpiritTrapperWisps) && !proj.minion)
             {
@@ -518,13 +470,6 @@ namespace FargowiltasSoulsDLC
         private void ThoriumHitNPC(NPC target, Item item, bool crit)
         {
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            if (BulbEnchant && !ThoriumSoul && Main.rand.Next(4) == 0)
-            {
-                Main.PlaySound(SoundID.Item, (int)player.Center.X, (int)player.Center.Y, 34, 1f, 0f);
-                Projectile.NewProjectile(target.Center.X, target.Center.Y, 0f, 0f, thorium.ProjectileType("BloomCloud"), 0, 0f, player.whoAmI, 0f, 0f);
-                Projectile.NewProjectile(target.Center.X, target.Center.Y, 0f, 0f, thorium.ProjectileType("BloomCloudDamage"), (int)(10f * player.magicDamage), 0f, player.whoAmI, 0f, 0f);
-            }
 
             if (SpiritTrapperEnchant && SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.SpiritTrapperWisps) && !item.summon)
             {

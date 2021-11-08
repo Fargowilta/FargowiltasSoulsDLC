@@ -56,6 +56,7 @@ Effects of Crash Boots, Dragon Talon Necklace, Disco Music Player, and Cursed Fl
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
+
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DreadSpeed))
             {
                 //dread set bonus
@@ -79,19 +80,9 @@ Effects of Crash Boots, Dragon Talon Necklace, Disco Music Player, and Cursed Fl
                 }
             }
 
-            //crash boots
+            mod.GetItem("DragonEnchant").UpdateAccessory(player, hideVisual);
             thorium.GetItem("CrashBoots").UpdateAccessory(player, hideVisual);
-            player.moveSpeed -= 0.15f;
-            player.maxRunSpeed -= 1f;
-            //cursed core
-            thoriumPlayer.accCursedCore = true;
-            //dragon 
-            thoriumPlayer.dragonSet = true;
-            //dragon tooth necklace
-            player.armorPenetration += 15;
-            modPlayer.DragonEnchant = true;
-            //music player
-            thorium.GetItem("TunePlayerMovementSpeed").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("CursedCore").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

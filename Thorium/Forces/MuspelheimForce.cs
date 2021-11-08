@@ -10,8 +10,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class MuspelheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -51,46 +49,11 @@ Effects of Nightshade Flower, Flawless Chrysalis, and Bee Booties");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoPlayer fargoPlayer = player.GetModPlayer<FargoPlayer>();
-
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            
-            //life bloom effect
-            modPlayer.LifeBloomEnchant = true;
-            //chrysalis
-            thoriumPlayer.cocoonAcc = true;
-            //egg
-            thorium.GetItem("FabergeEgg").UpdateAccessory(player, hideVisual);
-            //petal shield
-            thorium.GetItem("PetalShield").UpdateAccessory(player, hideVisual);
-            //kick petal
-            thorium.GetItem("KickPetal").UpdateAccessory(player, hideVisual);
-            //living wood set bonus
-            thoriumPlayer.setLivingWood = true;
-            //free boi
-            modPlayer.LivingWoodEnchant = true;
-            modPlayer.AddMinion(SoulConfig.Instance.thoriumToggles.SaplingMinion, thorium.ProjectileType("MinionSapling"), 10, 2f);
-
-            //bulb set bonus
-            modPlayer.BulbEnchant = true;
-            //bee booties
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeeBooties))
-            {
-                thorium.GetItem("BeeBoots").UpdateAccessory(player, hideVisual);
-                player.moveSpeed -= 0.15f;
-                player.maxRunSpeed -= 1f;
-            }
-
-            //sandstone
-            player.doubleJumpSandstorm = true;
-            //danger
+            mod.GetItem("LifeBloomEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("SandstoneEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("DangerEnchant").UpdateAccessory(player, hideVisual);
-            //flight
-            fargoPlayer.wingTimeModifier += 1f;
-            //fungus
-            modPlayer.FungusEnchant = true;
-
+            mod.GetItem("FlightEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("FungusEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

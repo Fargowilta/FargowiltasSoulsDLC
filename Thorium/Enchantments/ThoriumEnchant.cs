@@ -12,7 +12,6 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
     public class ThoriumEnchant : ModItem
     {
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int timer;
 
         public override bool Autoload(ref string name)
         {
@@ -53,14 +52,15 @@ Effects of Crietz, Band of Replenishment, and Fan Letter");
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //diverman meme
             modPlayer.ThoriumEnchant = true;
-            //crietz
-            thorium.GetItem("Crietz").UpdateAccessory(player, hideVisual);
-            //band of replenish
-            thoriumPlayer.accReplenishment = true;
-            //jester bonus
-            modPlayer.JesterEnchant = true;
-            //fan letter
-            thoriumPlayer.bardResourceMax2 += 2;
+
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.Crietz))
+            {
+                thorium.GetItem("Crietz").UpdateAccessory(player, hideVisual);
+            }
+
+            thorium.GetItem("BandofReplenishment").UpdateAccessory(player, hideVisual);
+
+            mod.GetItem("JesterEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

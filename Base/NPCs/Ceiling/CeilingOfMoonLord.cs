@@ -38,7 +38,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs.Ceiling
             npc.buffImmune[BuffID.Confused] = true;
             npc.aiStyle = -1;
             npc.value = Item.buyPrice(1, 50);
-            npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
+            //npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
 
             npc.boss = true;
             music = MusicID.LunarBoss;

@@ -49,14 +49,17 @@ Effects of Vampire Gland");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //flesh set bonus
-            thoriumPlayer.Symbiotic = true;
-            //vampire gland
-            thoriumPlayer.vampireGland = true;
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.FleshDrops))
+            {
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("FleshMask").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
+            }
 
-            modPlayer.FleshEnchant = true;
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.VampireGland))
+            {
+                thorium.GetItem("VampireGland").UpdateAccessory(player, true);
+            }
         }
 
         public override void AddRecipes()
@@ -71,7 +74,6 @@ Effects of Vampire Gland");
             recipe.AddIngredient(ModContent.ItemType<VampireGland>());
             recipe.AddIngredient(ModContent.ItemType<FleshMace>());
             recipe.AddIngredient(ModContent.ItemType<BloodRage>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

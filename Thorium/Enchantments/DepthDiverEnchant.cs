@@ -8,6 +8,7 @@ using ThoriumMod.Items.Depths;
 using ThoriumMod.Items.QueenJelly;
 using ThoriumMod.Items.NPCItems;
 using ThoriumMod.Items.Painting;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -28,7 +29,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 Allows you and nearby allies to breathe underwater
 Grants the ability to swim
 You and nearby allies gain 10% increased damage and movement speed
-Effects of Sea Breeze Pendant and Bubble Magnet");
+Effects of Sea Breeze Pendant, Bubble Magnet, and Drowned Doubloon");
             DisplayName.AddTranslation(GameCulture.Chinese, "深渊潜游者魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'成为无私的保卫者'
@@ -52,32 +53,26 @@ Effects of Sea Breeze Pendant and Bubble Magnet");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //depth diver set
-            for (int i = 0; i < 255; i++)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DepthDiverEffect))
             {
-                Player player2 = Main.player[i];
-                if (player2.active && Vector2.Distance(player2.Center, player.Center) < 250f)
+                for (int i = 0; i < 255; i++)
                 {
-                    player2.AddBuff(thorium.BuffType("DepthSpeed"), 30, false);
-                    player2.AddBuff(thorium.BuffType("DepthDamage"), 30, false);
-                    player2.AddBuff(thorium.BuffType("DepthBreath"), 30, false);
+                    Player player2 = Main.player[i];
+                    if (player2.active && Vector2.Distance(player2.Center, player.Center) < 250f)
+                    {
+                        player2.AddBuff(thorium.BuffType("DepthSpeed"), 30, false);
+                        player2.AddBuff(thorium.BuffType("DepthDamage"), 30, false);
+                        player2.AddBuff(thorium.BuffType("DepthBreath"), 30, false);
+                    }
                 }
             }
-            
-            //sea breeze pendant
-            player.accFlipper = true;
 
-            if (player.wet || thoriumPlayer.drownedDoubloon)
+            mod.GetItem("OceanEnchant").UpdateAccessory(player, hideVisual);
+
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DrownedDoubloon))
             {
-                player.AddBuff(thorium.BuffType("AquaticAptitude"), 60, true);
-                player.GetModPlayer<FargoDLCPlayer>().AllDamageUp(.1f);
+                thorium.GetItem("DrownedDoubloon").UpdateAccessory(player, hideVisual);
             }
-
-            //bubble magnet
-            thoriumPlayer.bubbleMagnet = true;
-            modPlayer.DepthEnchant = true;
         }
 
         public override void AddRecipes()
@@ -90,10 +85,9 @@ Effects of Sea Breeze Pendant and Bubble Magnet");
             recipe.AddIngredient(ModContent.ItemType<DepthDiverChestplate>());
             recipe.AddIngredient(ModContent.ItemType<DepthDiverGreaves>());
             recipe.AddIngredient(ModContent.ItemType<OceanEnchant>());
+            recipe.AddIngredient(ModContent.ItemType<DrownedDoubloon>());
             recipe.AddIngredient(ModContent.ItemType<MagicConch>());
-            recipe.AddIngredient(ModContent.ItemType<GeyserStaff>());
-
-
+            
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();

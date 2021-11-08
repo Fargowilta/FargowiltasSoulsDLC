@@ -43,17 +43,9 @@ If an ally is below half health, you will gain increased healing abilities");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            for (int i = 0; i < 255; i++)
-            {
-                Player player2 = Main.player[i];
-                if (player2.active && !player2.dead && player2.statLife < (int)(player2.statLifeMax2 * 0.5) && player2 != player)
-                {
-                    player.lifeRegen += 3;
-                    player.moveSpeed += .1f;
-                }
-            }
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("TemplarsCirclet").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
         }
 
         public override void AddRecipes()

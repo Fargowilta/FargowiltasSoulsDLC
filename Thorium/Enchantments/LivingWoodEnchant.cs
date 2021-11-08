@@ -22,7 +22,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Living Wood Enchantment");
             Tooltip.SetDefault(
 @"'Become one with nature'
-Summons a living wood sapling and its attacks will home in on enemies");
+Summons a living wood sapling
++1 maximum minions");
             DisplayName.AddTranslation(GameCulture.Chinese, "生命木魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'与自然融为一体'
@@ -45,9 +46,9 @@ Summons a living wood sapling and its attacks will home in on enemies");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            thoriumPlayer.setLivingWood = true;
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("LivingWoodMask").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
             //free boi
             modPlayer.LivingWoodEnchant = true;
             modPlayer.AddMinion(SoulConfig.Instance.thoriumToggles.SaplingMinion, thorium.ProjectileType("MinionSapling"), 10, 2f);
@@ -65,7 +66,6 @@ Summons a living wood sapling and its attacks will home in on enemies");
             recipe.AddIngredient(ModContent.ItemType<LivingWoodSprout>());
             recipe.AddIngredient(ModContent.ItemType<AntlionStaff>());
             recipe.AddIngredient(ModContent.ItemType<ChiTea>(), 5);
-
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

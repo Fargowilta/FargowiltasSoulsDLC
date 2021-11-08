@@ -6,16 +6,12 @@ using Terraria.Localization;
 using ThoriumMod.Items.Magma;
 using ThoriumMod.Items.Misc;
 using ThoriumMod.Items.BasicAccessories;
-using ThoriumMod.Items.Consumable;
-using ThoriumMod.Items.ThrownItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
     public class MagmaEnchant : ModItem
     {
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public bool allowJump = true;
-        public int timer;
 
         public override bool Autoload(ref string name)
         {
@@ -27,8 +23,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Magma Enchantment");
             Tooltip.SetDefault(
 @"'Bursting with heat'
-Fire surrounds your armour and melee weapons
-Enemies that you set on fire or singe will take additional damage over time
+Inflicts fire damage on melee attack
+Increases effectiveness of On Fire! and Singed debuffs
 Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
             DisplayName.AddTranslation(GameCulture.Chinese, "熔岩魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
@@ -44,7 +40,7 @@ Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
             item.height = 20;
             item.accessory = true;
             ItemID.Sets.ItemNoGravity[item.type] = true;
-            item.rare = 2;
+            item.rare = ItemRarityID.Green;
             item.value = 60000;
         }
 
@@ -52,11 +48,13 @@ Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            player.magmaStone = true;
-            thoriumPlayer.setMagma = true;
-            //spring steps
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.MagmaEffect))
+            {
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("MagmaHelmet").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
+            }
+
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.SpringSteps))
             {
                 thorium.GetItem("SpringSteps").UpdateAccessory(player, hideVisual);
@@ -64,16 +62,10 @@ Effects of Spring Steps, Slag Stompers, and Molten Spear Tip");
                 
             if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.SlagStompers))
             {
-                //slag stompers
-                timer++;
-                if (timer > 20)
-                {
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0.1f * Main.rand.Next(-25, 25), 2f, thorium.ProjectileType("SlagPro"), 20, 1f, Main.myPlayer, 0f, 0f);
-                    timer = 0;
-                }
+                thorium.GetItem("SlagStompers").UpdateAccessory(player, hideVisual);
             }
-            //molten spear tip
-            thoriumPlayer.spearFlame = true;
+
+            thorium.GetItem("MoltenSpearTip").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

@@ -14,7 +14,6 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
     public class TerrariumEnchant : ModItem
     {
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int timer;
 
         public override bool Autoload(ref string name)
         {
@@ -66,34 +65,15 @@ Effects of Terrarium Surround Sound and Fan Letter");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //terrarium set bonus
-            timer++;
-            if (timer > 60)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.TerrariumSpirits))
             {
-                Projectile.NewProjectile(player.Center.X + 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 0f);
-                Projectile.NewProjectile(player.Center.X + 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 1f);
-                Projectile.NewProjectile(player.Center.X + 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 2f);
-                Projectile.NewProjectile(player.Center.X, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 3f);
-                Projectile.NewProjectile(player.Center.X - 4f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 4f);
-                Projectile.NewProjectile(player.Center.X - 9f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 5f);
-                Projectile.NewProjectile(player.Center.X - 14f, player.Center.Y - 20f, 0f, 2f, thorium.ProjectileType("TerrariumSetPro"), 50, 0f, Main.myPlayer, 0f, 6f);
-                timer = 0;
+                string oldSetBonus = player.setBonus;
+                thorium.GetItem("TerrariumHelmet").UpdateArmorSet(player);
+                player.setBonus = oldSetBonus;
             }
-            //subwoofer
-            thoriumPlayer.accSubwooferTerrarium = true;
 
-            //diverman meme
-            modPlayer.ThoriumEnchant = true;
-            //crietz
-            thorium.GetItem("Crietz").UpdateAccessory(player, hideVisual);
-            //band of replenishment
-            thoriumPlayer.accReplenishment = true;
-            //jester bonus
-            modPlayer.JesterEnchant = true;
-            //fan letter
-            thoriumPlayer.bardResourceMax2 += 2;
+            mod.GetItem("ThoriumEnchant").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("TerrariumSubwoofer").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

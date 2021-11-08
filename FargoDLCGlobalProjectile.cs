@@ -1,16 +1,10 @@
-﻿using CalamityMod.Buffs.Pets;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThoriumMod.Buffs.Healer;
-using ThoriumMod.Buffs.Pet;
 using ThoriumMod.Buffs.Summon;
+using ThoriumMod.Projectiles.Minions;
 
 namespace FargowiltasSoulsDLC
 {
@@ -25,13 +19,13 @@ namespace FargowiltasSoulsDLC
         }
 
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        private readonly Mod calamity = ModLoader.GetMod("CalamityMod");
 
-        public int ModProjID;
-
-        public override void SetDefaults(Projectile projectile)
+        public override void AI(Projectile projectile)
         {
-            FargowiltasSoulsDLC.ModProjDict.TryGetValue(projectile.type, out ModProjID);
+            if (FargowiltasSoulsDLC.Instance.ThoriumLoaded)
+            {
+                ThoriumPets(projectile);
+            }
         }
 
         private void ThoriumPets(Projectile projectile)
@@ -39,13 +33,9 @@ namespace FargowiltasSoulsDLC
             Player player = Main.player[projectile.owner];
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
 
-            switch (ModProjID)
+            if (projectile.type == ModContent.ProjectileType<MinionSapling>())
             {
-
-                case 11:
-                    KillPet(projectile, player, ModContent.BuffType<SaplingBuff>(), modPlayer.LivingWoodEnchant, SoulConfig.Instance.thoriumToggles.SaplingMinion, true);
-                    break;
-
+                KillPet(projectile, player, ModContent.BuffType<SaplingBuff>(), modPlayer.LivingWoodEnchant, SoulConfig.Instance.thoriumToggles.SaplingMinion, true);
             }
         }
 

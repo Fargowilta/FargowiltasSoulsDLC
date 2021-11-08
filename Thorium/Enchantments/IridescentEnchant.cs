@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.HealerItems;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -23,7 +24,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
 @"'All the colors of the rainbow'
 Your radiant damage has a 15% chance to release a blinding flash of light
 The flash heals nearby allies equal to your bonus healing and confuses enemies
-Effects of Equalizer");
+Effects of Equalizer and Life Quartz Shield");
             DisplayName.AddTranslation(GameCulture.Chinese, "光辉魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'五颜六色'
@@ -46,11 +47,12 @@ Effects of Equalizer");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            thoriumPlayer.iridescentSet = true;
-            //equalizer 
-            thoriumPlayer.equilibrium = true;
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("IridescentHelmet").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
+
+            thorium.GetItem("Equalizer").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("LifeQuartzShield").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -63,9 +65,8 @@ Effects of Equalizer");
             recipe.AddIngredient(ModContent.ItemType<IridescentMail>());
             recipe.AddIngredient(ModContent.ItemType<IridescentGreaves>());
             recipe.AddIngredient(ModContent.ItemType<Equalizer>());
+            recipe.AddIngredient(ModContent.ItemType<LifeQuartzShield>());
             recipe.AddIngredient(ModContent.ItemType<HereticBreaker>());
-            recipe.AddIngredient(ModContent.ItemType<SpiritPouch>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

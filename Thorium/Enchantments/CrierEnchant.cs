@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.BardItems;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -21,7 +22,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Crier Enchantment");
             Tooltip.SetDefault(
 @"'Nothing to cry about'
-Your symphonic empowerments will last an additional 3 seconds");
+Your symphonic empowerments will last an additional 3 seconds
+Effects of Lucky Rabbit's Foot");
             DisplayName.AddTranslation(GameCulture.Chinese, "传迅员魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'没什么可说的'
@@ -43,8 +45,11 @@ Your symphonic empowerments will last an additional 3 seconds");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            thoriumPlayer.bardBuffDuration += 180;
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("BardCap").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
+
+            thorium.GetItem("LuckyRabbitsFoot").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -56,9 +61,9 @@ Your symphonic empowerments will last an additional 3 seconds");
             recipe.AddIngredient(ModContent.ItemType<BardCap>());
             recipe.AddIngredient(ModContent.ItemType<BardChest>());
             recipe.AddIngredient(ModContent.ItemType<BardLeggings>());
+            recipe.AddIngredient(ModContent.ItemType<LuckyRabbitsFoot>());
             recipe.AddIngredient(ModContent.ItemType<WoodenWhistle>());
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyBugleHorn");
-            recipe.AddIngredient(ModContent.ItemType<Ukulele>());
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

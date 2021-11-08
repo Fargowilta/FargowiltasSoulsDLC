@@ -54,17 +54,14 @@ Effects of Vampire Gland and Vile Flail-Core");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //demon blood effect
-            modPlayer.DemonBloodEnchant = true;
-            //vile core
-            thoriumPlayer.accVileCore = true;
-            //flesh set bonus
-            thoriumPlayer.Symbiotic = true;
-            //vampire gland
-            thoriumPlayer.vampireGland = true;
-            modPlayer.FleshEnchant = true;
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.DemonBloodEffect))
+            {
+                FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
+                modPlayer.DemonBloodEnchant = true;
+            }
+
+            mod.GetItem("FleshEnchant").UpdateAccessory(player, true);
+            thorium.GetItem("VileCore").UpdateAccessory(player, true);
         }
 
         public override void AddRecipes()

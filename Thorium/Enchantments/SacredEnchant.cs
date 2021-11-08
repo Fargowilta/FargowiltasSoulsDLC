@@ -52,34 +52,14 @@ Effects of Karmic Holder");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //sacred effect
             modPlayer.SacredEnchant = true;
 
-            //novice cleric set bonus
-            thoriumPlayer.clericSet = true;
-            thoriumPlayer.orbital = true;
-            thoriumPlayer.orbitalRotation3 = Utils.RotatedBy(thoriumPlayer.orbitalRotation3, -0.05000000074505806, default(Vector2));
-            timer++;
-            if (thoriumPlayer.clericSetCrosses < 3)
-            {
-                if (timer > 300)
-                {
-                    thoriumPlayer.clericSetCrosses++;
-                    timer = 0;
-                    return;
-                }
-            }
-            else
-            {
-                timer = 0;
-            }
+            mod.GetItem("NoviceClericEnchant").UpdateAccessory(player, true);
 
-            //karmic holder
-            thoriumPlayer.karmicHolder = true;
-            if (thoriumPlayer.healStreak >= 0 && player.ownedProjectileCounts[thorium.ProjectileType("KarmicHolderPro")] < 1)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.KarmicHolder))
             {
-                Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("KarmicHolderPro"), 0, 0f, player.whoAmI, 0f, 0f);
+                thorium.GetItem("KarmicHolder").UpdateAccessory(player, true);
             }
         }
 
@@ -95,7 +75,6 @@ Effects of Karmic Holder");
             recipe.AddIngredient(ModContent.ItemType<NoviceClericEnchant>());
             recipe.AddIngredient(ModContent.ItemType<KarmicHolder>());
             recipe.AddIngredient(ModContent.ItemType<Liberation>());
-
 
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this);

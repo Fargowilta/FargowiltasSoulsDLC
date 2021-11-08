@@ -10,8 +10,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class JotunheimForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -57,63 +55,11 @@ Effects of Goblin War Shield, Agnor's Bowl, and Ice Bound Strider Hide");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoPlayer fargoPlayer = player.GetModPlayer<FargoPlayer>();
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //bubble magnet
-            thoriumPlayer.bubbleMagnet = true;
-            modPlayer.DepthEnchant = true;
-
-            //tide hunter
-            modPlayer.TideHunterEnchant = true;
-            //angler bowl
-            thorium.GetItem("AnglerBowl").UpdateAccessory(player, hideVisual);
-            //yew wood
-            modPlayer.YewEnchant = true;
-            
-            //strider hide
-            thoriumPlayer.frostBonusDamage = true;
-
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.IcyBarrier))
-            {
-                //icy set bonus
-                thoriumPlayer.setIcy = true;
-                if (player.ownedProjectileCounts[thorium.ProjectileType("IcyAura")] < 1)
-                {
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y, 0f, 0f, thorium.ProjectileType("IcyAura"), 0, 0f, player.whoAmI, 0f, 0f);
-                }
-            }
-            //cryo
-            modPlayer.CryoEnchant = true;
-            
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.WhisperingTentacles))
-            {
-                mod.GetItem("WhisperingEnchant").UpdateAccessory(player, hideVisual);
-            }
-
-            //water bonuses
-            if (player.breath <= player.breathMax + 2)
-            {
-                player.breath = player.breathMax + 3;
-            }
-            //sea breeze pendant
-            player.accFlipper = true;
-            if (player.wet || thoriumPlayer.drownedDoubloon)
-            {
-                player.AddBuff(thorium.BuffType("AquaticAptitude"), 60, true);
-                player.GetModPlayer<FargoDLCPlayer>().AllDamageUp(.1f);
-                fargoPlayer.AttackSpeed += .2f;
-            }
-            //quicker in water
-            player.ignoreWater = true;
-            if (player.wet)
-            {
-                player.moveSpeed += 0.15f;
-            }
-
-            //goblin war shield
-            thorium.GetItem("GoblinWarshield").UpdateAccessory(player, hideVisual);
+            mod.GetItem("DepthDiverEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("TideHunterEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("NagaSkinEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("CryomancerEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("WhisperingEnchant").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

@@ -2,24 +2,25 @@ Fargo's Soul Mod DLC
 -This mod adds cross mod Enchantments and Souls for Thorium, Calamity, Shadows of Abbadon, and DragonBall Terraria
 -Fargo's Soul Mod is required for this mod to work
 
-NEW UPDATE - V 0.3.1
-Removed Demon Blood Badge from Demon Blood Enchantment
-Add Config Toggle for Snow Ruffian Wings
+NEW UPDATE - V 0.4
 
-Tooltips of several Enchantments, nearly every Force, and the Soul of Yggdrasil now list the effects of all components. Translated tooltips are not changed, because I don't know Chinese and do not trust Google Translate enough to use that
-Demon Blood Enchantment and upgrades no longer mention or use Demon Blood Badge, though no replacement item is included in the Enchant's recipe, as I do not know what item would fit best as a replacement (that's up to Fargo/Terry to decide)
-Items which lost effects of components (such as Maestro Enchant losing Marching Band's Full Score effect) now include the effects of all components (including Soul of Yggdrasil- every item that had a return call while SoY was active no longer has that because it doesn't make sense to me)
-Fixed Terrarium Enchantment and upgrades not summoning Terrarium Spirits even with the config option enabled (Terrarium Spirits' projectile IDs were changed in Thorium, which broke Terrarium Enchant)
+Thorium:
+-Updated most out of date or missing tooltips
+-Added several missing accessories and their effects to Enchantments
+-All effects that were lost for the Soul of Yggdrasil are now maintained
+-Added several missing toggles and toggles will work in all cases (For some it only worked in Forces and above)
+-Added Geode Enchantment to Force of Midgard
+-Removed Demon Blood Badge from Demon Blood Enchantment
+-Removed Malignant Enchantment
+-Fixed Living Wood Enchantment minion not despawning
+-Fixed Blooming Enchantment still having its old effect
+-Fixed Cyber Punk Enchantment main effect not functioning
+-Fixed Terrarium Enchantment main effect not functioning
 
+Calamity:
+-Added Config Toggle for Snow Ruffian Wings
 
+Other:
+-Fixed incompatability between Souls and DLC
 -EchDeath speed tweaks
 -EchDeath p2 gains bigger hitbox for players
-
-NEW UPDATE - V 0.3
--Added Icon
--All Enchantment recipes drastically reduced (especially Calamity)
--All pets removed
--Several missing effects added
--Several tooltips fixed
--Essence recipes updated to be post Mechanical Bosses
--Fixed several issues with new Thorium beta

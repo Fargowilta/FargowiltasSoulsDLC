@@ -2,19 +2,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
-using Microsoft.Xna.Framework;
 using Terraria.Localization;
 using ThoriumMod.Items.Bronze;
 using ThoriumMod.Items.ThrownItems;
 using ThoriumMod.Items.Hero;
-using ThoriumMod.Items.NPCItems;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
     public class BronzeEnchant : ModItem
     {
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int timer;
 
         public override bool Autoload(ref string name)
         {
@@ -26,7 +23,7 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Bronze Enchantment");
             Tooltip.SetDefault(
 @"'You have the favor of Zeus'
-Attacks have a chance to cause a lightning bolt to strike
+Attacks have a 20% chance to unleash a piercing lightning strike
 Effects of Olympic Torch, Champion's Rebuttal, and Spartan Sandals");
             DisplayName.AddTranslation(GameCulture.Chinese, "青铜魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
@@ -50,18 +47,12 @@ Effects of Olympic Torch, Champion's Rebuttal, and Spartan Sandals");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //lightning
             modPlayer.BronzeEnchant = true;
-            //rebuttal
-            thoriumPlayer.championShield = true;
-            //sandles
+
+            thorium.GetItem("ChampionsBarrier").UpdateAccessory(player, hideVisual);
             thorium.GetItem("SpartanSandles").UpdateAccessory(player, hideVisual);
-            player.moveSpeed -= 0.15f;
-            player.maxRunSpeed -= 1f;
-            //olympic torch
-            thoriumPlayer.olympicTorch = true;
-           
+            thorium.GetItem("OlympicTorch").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()

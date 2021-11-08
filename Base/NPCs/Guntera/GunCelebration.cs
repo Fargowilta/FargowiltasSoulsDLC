@@ -34,7 +34,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs.Guntera
                 npc.buffImmune[i] = true;
             npc.buffImmune[ModContent.BuffType<Gun>()] = false;
             npc.aiStyle = -1;
-            npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
+            //npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
         }
 
         public virtual void Offset(NPC guntera)

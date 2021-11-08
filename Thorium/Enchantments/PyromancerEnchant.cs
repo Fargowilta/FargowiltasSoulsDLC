@@ -6,10 +6,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
 using ThoriumMod.Items.EndofDays.Slag;
-using ThoriumMod.Items.MiniBoss;
-using ThoriumMod.Items.MagicItems;
-using ThoriumMod.Items.SummonItems;
 using ThoriumMod.Items.Cultist;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
@@ -28,7 +26,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             Tooltip.SetDefault(
 @"'Your magma fortified army's molten gaze shall be feared'
 Attacks will heavily burn and damage all adjacent enemies
-Pressing the 'Special Ability' key will unleash an echo of Slag Fury's power");
+Pressing the 'Special Ability' key will unleash an echo of Slag Fury's power
+Effects of Plasma Generator");
             DisplayName.AddTranslation(GameCulture.Chinese, "炎法魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'你那熔岩加护的军队炽热的注视令人畏惧'
@@ -62,11 +61,17 @@ Pressing the 'Special Ability' key will unleash an echo of Slag Fury's power");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //pyro magic set
             modPlayer.PyroEnchant = true;
-            //pyro summon bonus
-            thoriumPlayer.napalmSet = true;
+
+            string oldSetBonus = player.setBonus;
+            //thorium.GetItem("PyromancerCowl").UpdateArmorSet(player);
+            thorium.GetItem("PyroSummonHat").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
+
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.PlasmaGenerator))
+            {
+                thorium.GetItem("PlasmaGenerator").UpdateAccessory(player, hideVisual);
+            }
         }
 
         public override void AddRecipes()
@@ -79,7 +84,7 @@ Pressing the 'Special Ability' key will unleash an echo of Slag Fury's power");
             //recipe.AddIngredient(ModContent.ItemType<PyromancerCowl>());
             recipe.AddIngredient(ModContent.ItemType<PyromancerTabard>());
             recipe.AddIngredient(ModContent.ItemType<PyromancerLeggings>());
-            recipe.AddIngredient(ModContent.ItemType<StalagmiteBook>());
+            recipe.AddIngredient(ModContent.ItemType<PlasmaGenerator>());
             recipe.AddIngredient(ModContent.ItemType<AncientFlame>());
             recipe.AddIngredient(ModContent.ItemType<AlmanacofDespair>());
 

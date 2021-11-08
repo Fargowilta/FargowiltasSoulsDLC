@@ -33,7 +33,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs
             npc.lavaImmune = true;
             npc.aiStyle = -1;
             npc.boss = true;
-            npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
+            //npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
 
             if (ModLoader.GetMod("MasomodeEX") != null)
             {

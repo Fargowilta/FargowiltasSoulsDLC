@@ -4,13 +4,13 @@ using Terraria.ModLoader;
 using ThoriumMod;
 using Terraria.Localization;
 using ThoriumMod.Items.ThrownItems;
+using ThoriumMod.Items.Donate;
 
 namespace FargowiltasSoulsDLC.Thorium.Enchantments
 {
     public class ShadeMasterEnchant : ModItem
     {
         private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        private readonly Mod fargos = ModLoader.GetMod("FargowiltasSoulsDLC");
 
         public override bool Autoload(ref string name)
         {
@@ -22,7 +22,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             DisplayName.SetDefault("Shade Master Enchantment");
             Tooltip.SetDefault(
 @"'Live in the shadows, and strike with precision'
-50% of the damage you take is staggered over the next 10 seconds");
+50% of the damage you take is staggered over the next 10 seconds
+Effects of Shinobi Sigil");
             DisplayName.AddTranslation(GameCulture.Chinese, "暗影大师魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'匿于阴影, 致命一击'
@@ -45,9 +46,11 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus
-            thoriumPlayer.setShade = true;
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("ShadeMasterMask").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
+
+            thorium.GetItem("ShinobiSigil").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -59,8 +62,8 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
             recipe.AddIngredient(ModContent.ItemType<ShadeMasterMask>());
             recipe.AddIngredient(ModContent.ItemType<ShadeMasterGarb>());
             recipe.AddIngredient(ModContent.ItemType<ShadeMasterTreads>());
+            recipe.AddIngredient(ModContent.ItemType<ShinobiSigil>());
             recipe.AddIngredient(ModContent.ItemType<ShadeKunai>(), 300);
-            recipe.AddIngredient(ModContent.ItemType<Soulslasher>(), 300);
             recipe.AddIngredient(ModContent.ItemType<TechniqueShadowDance>());
 
             recipe.AddTile(TileID.CrystalBall);

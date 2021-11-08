@@ -51,7 +51,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs.Ceiling
                 };
 
             projectile.hide = true; //fixes weird issues on spawn with scaling
-            projectile.GetGlobalProjectile<FargoGlobalProjectile>().ImmuneToGuttedHeart = true;
+            //projectile.GetGlobalProjectile<FargoGlobalProjectile>().ImmuneToGuttedHeart = true;
         }
 
         public override void PostAI()

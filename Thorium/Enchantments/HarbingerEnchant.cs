@@ -58,11 +58,14 @@ Effects of Shade Band");
             ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             //set bonus
             player.statManaMax2 += (int)(player.statManaMax2 * 0.5);
-            if (player.statMana > (int)(player.statManaMax2 * 0.75) || player.statMana > 300)
+            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.HarbingerOvercharge))
             {
-                player.AddBuff(thorium.BuffType("Overcharge"), 2, true);
-                player.magicDamage += 0.5f;
-                player.magicCrit += 26;
+                //harbinger
+                if (player.statLife > (int)(player.statLifeMax2 * 0.75))
+                {
+                    thoriumPlayer.overCharge = true;
+                    modPlayer.AllDamageUp(.5f);
+                }
             }
             //shade band
             thoriumPlayer.shadeBand = true;

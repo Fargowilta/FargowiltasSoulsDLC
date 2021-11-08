@@ -33,7 +33,7 @@ namespace FargowiltasSoulsDLC.Base.NPCs.Ceiling
             npc.buffImmune[BuffID.Suffocation] = true;
             npc.buffImmune[BuffID.Confused] = true;
             npc.aiStyle = -1;
-            npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
+            //npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
         }
 
         public override void AI()

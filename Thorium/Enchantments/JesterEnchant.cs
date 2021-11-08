@@ -46,10 +46,9 @@ Effects of Fan Letter");
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
             FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
             modPlayer.JesterEnchant = true;
-            //fan letter
-            thoriumPlayer.bardResourceMax2 += 2;
+
+            thorium.GetItem("FanLetter").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -65,7 +64,6 @@ Effects of Fan Letter");
             recipe.AddRecipeGroup("FargowiltasSoulsDLC:AnyTambourine");
             recipe.AddIngredient(ModContent.ItemType<SkywareLute>());
  
-
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);
             recipe.AddRecipe();

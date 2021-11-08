@@ -21,11 +21,10 @@ namespace FargowiltasSoulsDLC.Thorium.Enchantments
         
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Ocean Enchantment");
+            DisplayName.SetDefault("Coral Enchantment");
             Tooltip.SetDefault(
 @"'For swimming with the fishes'
-Allows you to breathe underwater
-Grants the ability to swim
+Radiant damage builds up to 20 life shield and life shielding no longer decays on you. Healing an ally transfers the life shield to them
 Effects of Sea Breeze Pendant and Bubble Magnet");
             DisplayName.AddTranslation(GameCulture.Chinese, "海洋魔石");
             Tooltip.AddTranslation(GameCulture.Chinese, 
@@ -49,23 +48,12 @@ Effects of Sea Breeze Pendant and Bubble Magnet");
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-            //set bonus, breath underwater
-            if (player.breath <= player.breathMax + 2)
-            {
-                player.breath = player.breathMax + 3;
-            }
-            //sea breeze pendant
-            player.accFlipper = true;
+            string oldSetBonus = player.setBonus;
+            thorium.GetItem("OceanHelmet").UpdateArmorSet(player);
+            player.setBonus = oldSetBonus;
 
-            if (player.wet || thoriumPlayer.drownedDoubloon)
-            {
-                player.AddBuff(thorium.BuffType("AquaticAptitude"), 60, true);
-                player.GetModPlayer<FargoDLCPlayer>().AllDamageUp(.1f);
-            }
-
-            //bubble magnet
-            thoriumPlayer.bubbleMagnet = true;
+            thorium.GetItem("SeaBreezePendant").UpdateAccessory(player, hideVisual);
+            thorium.GetItem("BubbleMagnet").UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -80,7 +68,6 @@ Effects of Sea Breeze Pendant and Bubble Magnet");
             recipe.AddIngredient(ModContent.ItemType<SeaBreezePendant>());
             recipe.AddIngredient(ModContent.ItemType<BubbleMagnet>());
             recipe.AddIngredient(ItemID.Swordfish);
-        
 
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this);

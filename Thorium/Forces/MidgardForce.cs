@@ -8,10 +8,6 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
 {
     public class MidgardForce : ModItem
     {
-        private readonly Mod thorium = ModLoader.GetMod("ThoriumMod");
-        public int lightGen;
-        public int timer;
-
         public override bool Autoload(ref string name)
         {
             return ModLoader.GetMod("ThoriumMod") != null;
@@ -23,9 +19,10 @@ namespace FargowiltasSoulsDLC.Thorium.Forces
             Tooltip.SetDefault(
 @"'Behold the power of Mankind...'
 All armor bonuses from Lodestone, Valadium, Illumite, and Shade Master
-All armor bonuses from Jester, Thorium, and Terrarium
+All armor bonuses from Jester, Thorium, Geode, and Terrarium
 Effects of Astro-Beetle Husk, Obsidian Scale, Mirror of the Beholder, and Jazz Music Player
-Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sound");
+Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sound
+Effects of Crystaline Charm and Crystal Spear Tip");
             DisplayName.AddTranslation(GameCulture.Chinese, "米德加德之力");
             Tooltip.AddTranslation(GameCulture.Chinese, 
 @"'人类的力量'
@@ -56,38 +53,12 @@ Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sou
         {
             if (!FargowiltasSoulsDLC.Instance.ThoriumLoaded) return;
 
-            FargoDLCPlayer modPlayer = player.GetModPlayer<FargoDLCPlayer>();
-            ThoriumPlayer thoriumPlayer = player.GetModPlayer<ThoriumPlayer>();
-
-            //lodestone
+            mod.GetItem("GeodeEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("LodestoneEnchant").UpdateAccessory(player, hideVisual);
-
-            if (SoulConfig.Instance.GetValue(SoulConfig.Instance.thoriumToggles.BeholderEye))
-            {
-                //mirror of beholder
-                thorium.GetItem("EyeofBeholder").UpdateAccessory(player, hideVisual);
-            }
-
-            //shade
-            thoriumPlayer.setShade = true;
-
-            //terrarium
+            mod.GetItem("ValadiumEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("IllumiteEnchant").UpdateAccessory(player, hideVisual);
+            mod.GetItem("ShadeMasterEnchant").UpdateAccessory(player, hideVisual);
             mod.GetItem("TerrariumEnchant").UpdateAccessory(player, hideVisual);
-
-            //valadium
-            //if (SoulConfig.Instance.GetValue(SoulConfig.Instance.GravityControl))
-            //{
-                player.gravControl = true;
-                if (player.gravDir == -1f)
-                {
-                    modPlayer.AllDamageUp(.12f);
-                }
-            //}
-            //music player
-            thorium.GetItem("TunePlayerLifeRegen").UpdateAccessory(player, true);
-            //terrarium woofer
-            thoriumPlayer.accSubwooferTerrarium = true;
-
         }
 
         public override void AddRecipes()
@@ -96,6 +67,7 @@ Effects of Crietz, Band of Replenishment, Fan Letter, and Terrarium Surround Sou
 
             ModRecipe recipe = new ModRecipe(mod);
 
+            recipe.AddIngredient(null, "GeodeEnchant");
             recipe.AddIngredient(null, "LodestoneEnchant");
             recipe.AddIngredient(null, "ValadiumEnchant");
             recipe.AddIngredient(null, "IllumiteEnchant");

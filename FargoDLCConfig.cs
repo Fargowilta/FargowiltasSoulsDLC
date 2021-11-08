@@ -278,6 +278,59 @@ namespace FargowiltasSoulsDLC
         [DefaultValue(true)]
         public bool PyromancerBursts;
 
+
+
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumKickPetalConfig")]
+        [DefaultValue(true)]
+        public bool KickPetal;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumMagmaConfig")]
+        [DefaultValue(true)]
+        public bool MagmaEffect;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumDrownedDoubloonConfig")]
+        [DefaultValue(true)]
+        public bool DrownedDoubloon;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumIncandescentSparkConfig")]
+        [DefaultValue(true)]
+        public bool IncandescentSpark;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumNoviceClericConfig")]
+        [DefaultValue(true)]
+        public bool NoviceClericEffect;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumJungleHeartConfig")]
+        [DefaultValue(true)]
+        public bool JungleHeart;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumSandstoneJumpConfig")]
+        [DefaultValue(true)]
+        public bool SandstoneJump;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumKarmicHolderConfig")]
+        [DefaultValue(true)]
+        public bool KarmicHolder;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumSandweaversTiaraConfig")]
+        [DefaultValue(true)]
+        public bool SandweaversTiara;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumPlasmaGeneratorConfig")]
+        [DefaultValue(true)]
+        public bool PlasmaGenerator;
+
+        [Label("$Mods.FargowiltasSoulsDLC.ThoriumDepthDiverEffectConfig")]
+        [DefaultValue(true)]
+        public bool DepthDiverEffect;
+
+
+
+
+
+
+
     }
 
     public class CalamityToggles
