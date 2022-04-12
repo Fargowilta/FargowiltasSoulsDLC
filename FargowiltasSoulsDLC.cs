@@ -1,4 +1,5 @@
 using CalamityMod.Items.Armor;
+using CalamityMod.Items.Armor.Vanity;
 using CalamityMod.Items.Placeables.Furniture;
 using SacredTools.Items.Armor.Asthraltite;
 using SacredTools.Items.Armor.Dragon;
@@ -296,7 +297,7 @@ namespace FargowiltasSoulsDLC
             RecipeGroup.RegisterGroup("FargowiltasSoulsDLC:AnyGodslayerHelmet", group);
 
             // Reaver
-            group = new RecipeGroup(() => Lang.misc[37] + " Reaver Helmet", ModContent.ItemType<ReaverHelm>(), ModContent.ItemType<ReaverVisage>(), ModContent.ItemType<ReaverMask>(), ModContent.ItemType<ReaverHelmet>(), ModContent.ItemType<ReaverCap>());
+            group = new RecipeGroup(() => Lang.misc[37] + " Reaver Helmet", ModContent.ItemType<ReaverHelm>(), ModContent.ItemType<ReaverVisage>(), ModContent.ItemType<ReaverHeadgear>());
             RecipeGroup.RegisterGroup("FargowiltasSoulsDLC:AnyReaverHelmet", group);
 
             //Silva
