@@ -10,6 +10,8 @@ using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Weapons.Ranged;
 using CalamityMod.Items.Weapons.Rogue;
 using CalamityMod.Items.Weapons.Summon;
+using CalamityMod;
+using CalamityMod.Cooldowns;
 
 namespace FargowiltasSoulsDLC.Calamity.Enchantments
 {
@@ -86,23 +88,27 @@ Effects of the Abyssal Diving Suit and Mutated Truffle");
             {
                 calamity.Call("SetSetBonus", player, "omegablue", true);
                 CalamityPlayer modPlayer = player.GetModPlayer<CalamityPlayer>();
-                
-                if (modPlayer.omegaBlueCooldown > 0)
+
+                CooldownInstance value;
+
+                if (player.HasCooldown(CalamityMod.Cooldowns.OmegaBlue.ID))
                 {
-                    if (modPlayer.omegaBlueCooldown == 1)
+                    player.AddCooldown(OmegaBlue.ID, 1800);
+                    if (modPlayer.cooldowns.TryGetValue(OmegaBlue.ID, out value) && value.timeLeft == 1)
                     {
-                        for (int i = 0; i < 66; i++)
+                        for (int num23 = 0; num23 < 66; num23++)
                         {
-                            int num = Dust.NewDust(player.position, player.width, player.height, 20, 0f, 0f, 100, Color.Transparent, 2.6f);
-                            Main.dust[num].noGravity = true;
-                            Main.dust[num].noLight = true;
-                            Main.dust[num].fadeIn = 1f;
-                            Main.dust[num].velocity *= 6.6f;
+
+                            int num24 = Dust.NewDust(player.position, player.width, player.height, 20, 0f, 0f, 100, Color.Transparent, 2.6f);
+                            Main.dust[num24].noGravity = true;
+                            Main.dust[num24].noLight = true;
+                            Main.dust[num24].fadeIn = 1f;
+                            Main.dust[num24].velocity *= 6.6f;
                         }
                     }
-                    modPlayer.omegaBlueCooldown--;
                 }
-                if (modPlayer.omegaBlueCooldown > 1500)
+
+                if (modPlayer.cooldowns.TryGetValue(OmegaBlue.ID, out value) && value.timeLeft > 1500)
                 {
                     modPlayer.omegaBlueHentai = true;
                     int num2 = Dust.NewDust(player.position, player.width, player.height, 20, 0f, 0f, 100, Color.Transparent, 1.6f);
