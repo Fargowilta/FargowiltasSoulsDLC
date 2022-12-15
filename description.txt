@@ -1,26 +1,11 @@
 Fargo's Soul Mod DLC
--This mod adds cross mod Enchantments and Souls for Thorium, Calamity, Shadows of Abbadon, and DragonBall Terraria
+-This mod adds fun extras that go along with Fargo's Soul Mod
 -Fargo's Soul Mod is required for this mod to work
 
-NEW UPDATE - V 0.4
+NEW UPDATE V 0.5
+-First version on 1.4
+-Added Pandora's Box and Pandora's Tome
+-Added Nekomi, Gaia, Eridanus, Styx, and True Mutant Enchantments
+-Added Force of Eternity
+-Moved Soul of the Void from Souls to here. Added every single missing pet (with toggle)
 
-Thorium:
--Updated most out of date or missing tooltips
--Added several missing accessories and their effects to Enchantments
--All effects that were lost for the Soul of Yggdrasil are now maintained
--Added several missing toggles and toggles will work in all cases (For some it only worked in Forces and above)
--Added Geode Enchantment to Force of Midgard
--Removed Demon Blood Badge from Demon Blood Enchantment
--Removed Malignant Enchantment
--Fixed Living Wood Enchantment minion not despawning
--Fixed Blooming Enchantment still having its old effect
--Fixed Cyber Punk Enchantment main effect not functioning
--Fixed Terrarium Enchantment main effect not functioning
-
-Calamity:
--Added Config Toggle for Snow Ruffian Wings
-
-Other:
--Fixed incompatability between Souls and DLC
--EchDeath speed tweaks
--EchDeath p2 gains bigger hitbox for players

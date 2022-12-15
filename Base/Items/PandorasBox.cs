@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.Audio;
 
 namespace FargowiltasSoulsDLC.Base.Items
 {
@@ -13,62 +14,63 @@ namespace FargowiltasSoulsDLC.Base.Items
             DisplayName.SetDefault("Pandora's Box");
             Tooltip.SetDefault("Summons something at random\n" +
                                 "Much friendlier options during the day");
-            DisplayName.AddTranslation(GameCulture.Chinese, "潘多拉之盒");
-            Tooltip.AddTranslation(GameCulture.Chinese, "随机召唤\n" +
+
+            DisplayName.AddTranslation((int)GameCulture.CultureName.Chinese, "潘多拉之盒");
+            Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "随机召唤\n" +
                                                         "白天时使用是个更友好的选择");
         }
 
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 20;
-            item.value = 1000;
-            item.rare = 1;
-            item.useAnimation = 30;
-            item.useTime = 30;
-            item.useStyle = 4;
-            item.consumable = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 20;
+            Item.value = 1000;
+            Item.rare = ItemRarityID.Blue;
+            Item.useAnimation = 30;
+            Item.useTime = 30;
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.consumable = true;
         }
 
-        public override bool UseItem(Player player)
+        public override bool? UseItem(Player player)
         {
             Tile centerTile = Framing.GetTileSafely(player.Center);
             
-            if (centerTile.type == ModLoader.GetMod("Fargowiltas").TileType("EchPaintingSheet")
-                && centerTile.wall == WallID.LihzahrdBrickUnsafe && Main.eclipse && Main.moonPhase == 0
-                && NPC.AnyNPCs(NPCID.DungeonGuardian)
-                && player.controlUp && player.controlDown && !player.controlLeft && !player.controlRight)
-            {
-                Tile floorTile = Framing.GetTileSafely(new Vector2(player.Center.X, player.position.Y + player.height + 8));
-                if (floorTile.type == TileID.LunarBrick)
-                {
-                    int type = mod.NPCType("Echdeath");
-                    NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
-                    Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
-                    return true;
-                }
-            }
+            //if (centerTile.type == ModLoader.GetMod("Fargowiltas").TileType("EchPaintingSheet")
+            //    && centerTile.wall == WallID.LihzahrdBrickUnsafe && Main.eclipse && Main.moonPhase == 0
+            //    && NPC.AnyNPCs(NPCID.DungeonGuardian)
+            //    && player.controlUp && player.controlDown && !player.controlLeft && !player.controlRight)
+            //{
+            //    Tile floorTile = Framing.GetTileSafely(new Vector2(player.Center.X, player.position.Y + player.height + 8));
+            //    if (floorTile.type == TileID.LunarBrick)
+            //    {
+            //        int type = mod.NPCType("Echdeath");
+            //        NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
+            //        Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
+            //        return true;
+            //    }
+            //}
             
-            if (centerTile.type == TileID.PlanteraBulb) //spawn guntera when in front of bulb
-            {
-                int type = ModContent.NPCType<NPCs.Guntera.Guntera>();
-                NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
-                Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
-                return true;
-            }
+            //if (centerTile.type == TileID.PlanteraBulb) //spawn guntera when in front of bulb
+            //{
+            //    int type = ModContent.NPCType<NPCs.Guntera.Guntera>();
+            //    NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
+            //    Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
+            //    return true;
+            //}
 
-            if (centerTile.wall == WallID.Flesh) //spawn ceiling when in front of flesh wall and on luminite brick
-            {
-                Tile floorTile = Framing.GetTileSafely(new Vector2(player.Center.X, player.position.Y + player.height + 8));
-                if (floorTile.type == TileID.LunarBrick)
-                {
-                    int type = ModContent.NPCType<NPCs.Ceiling.CeilingOfMoonLord>();
-                    NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
-                    Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
-                    return true;
-                }
-            }
+            //if (centerTile.wall == WallID.Flesh) //spawn ceiling when in front of flesh wall and on luminite brick
+            //{
+            //    Tile floorTile = Framing.GetTileSafely(new Vector2(player.Center.X, player.position.Y + player.height + 8));
+            //    if (floorTile.type == TileID.LunarBrick)
+            //    {
+            //        int type = ModContent.NPCType<NPCs.Ceiling.CeilingOfMoonLord>();
+            //        NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), type);
+            //        Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
+            //        return true;
+            //    }
+            //}
 
             int totalNPCs = NPCLoader.NPCCount;
 
@@ -93,7 +95,7 @@ namespace FargowiltasSoulsDLC.Base.Items
                     }
                     else
                     {
-                        NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), npc.type);
+                        NPC.NewNPC(player.GetSource_ItemUse(Item), (int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), npc.type);
                     }
                 }
                 //night
@@ -105,12 +107,12 @@ namespace FargowiltasSoulsDLC.Base.Items
                     }
                     else
                     {
-                        NPC.NewNPC((int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), npc.type);
+                        NPC.NewNPC(player.GetSource_ItemUse(Item), (int)player.position.X + Main.rand.Next(-800, 800), (int)player.position.Y + Main.rand.Next(-1000, -250), npc.type);
                     }
                 }
             }
 
-            Main.PlaySound(SoundID.Roar, (int)player.position.X, (int)player.position.Y, 0);
+            SoundEngine.PlaySound(SoundID.Roar, player.position);
             return true;
         }
     }
