@@ -9,3 +9,13 @@ NEW UPDATE V 0.5
 -Added Force of Eternity
 -Moved Soul of the Void from Souls to here. Added every single missing pet (with toggle)
 
+Fargo魂石的DLC模组
+-本模组延续了Fargo的魂石模组，添加了一些额外的好玩东西
+-本模组运行需要Fargo的魂石模组
+
+新更新 - V0.5
+-在1.4泰拉上的第一个版本
+-添加了潘多拉之盒和潘多拉之巨著
+-添加了猫猫睡衣、盖亚、波江、冥河以及真·突变魔石
+-添加了永恒之力
+-将魂石模组中的虚空之魂移动到了这里，并且加上了每一个宠物！（有开关）

@@ -1,0 +1,36 @@
+﻿Mods:{
+	FargowiltasSoulsDLC:{
+		ItemName:{
+			//==Enchantments==
+			NekomiEnchantment: 猫猫睡衣魔石
+			GaiaEnchantment: 盖亚魔石
+			EridanusEnchantment: 波江魔石
+			StyxEnchantment: 冥河魔石
+			TrueMutantEnchantment: 真·突变魔石
+			//==Force==
+			EternityForce: 永恒之力
+			//==Misc==
+			PandorasBox: 潘多拉之盒
+			PandoraTwo: 潘多拉之巨著
+			//==Soul
+			VoidSoul: 虚空之魂
+		}
+		ItemTooltip:{
+			//==Misc==
+			PandorasBox:
+			'''
+			随机召唤某些东西
+			“在白天使用是个更好的选择”
+			'''
+			PandoraTwo:
+			'''
+			真正的，一堆弹幕的一坨浆糊！
+			'''
+			//==Souls==
+			VoidSoul:
+			'''
+			召唤 某 些 东 西
+			'''
+		}
+	}
+}
