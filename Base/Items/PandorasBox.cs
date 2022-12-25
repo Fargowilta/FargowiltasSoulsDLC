@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using Terraria.Audio;
 
 namespace FargowiltasSoulsDLC.Base.Items
@@ -15,9 +14,9 @@ namespace FargowiltasSoulsDLC.Base.Items
             Tooltip.SetDefault("Summons something at random\n" +
                                 "Much friendlier options during the day");
 
-            DisplayName.AddTranslation((int)GameCulture.CultureName.Chinese, "潘多拉之盒");
-            Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "随机召唤\n" +
-                                                        "白天时使用是个更友好的选择");
+            //DisplayName.AddTranslation((int)GameCulture.CultureName.Chinese, "潘多拉之盒");
+            //Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "随机召唤\n" +
+                                                        //"白天时使用是个更友好的选择");
         }
 
         public override void SetDefaults()

@@ -4,6 +4,7 @@ using FargowiltasSouls.Items.Accessories.Forces;
 using FargowiltasSouls.Items.Materials;
 using Terraria.ModLoader;
 using Terraria;
+using Terraria.Localization;
 
 namespace FargowiltasSoulsDLC.Base.Items.Enchantments
 {
@@ -29,6 +30,8 @@ $"[i:{ModContent.ItemType<NekomiEnchantment>()}] [i:{ModContent.ItemType<GaiaEnc
 $"Grants all effects of material Enchantments\n" +
 "'0.00001% of the Lumberjack's power'";
             Tooltip.SetDefault(tooltip);
+            string tooltip_zh = @"[i:{0}][i:{1}][i:{2}][i:{3}][i:{4}] 获得猫猫睡衣盔甲、盖亚盔甲、波江盔甲、冥河盔甲、真·突变盔甲的所有套装效果" + "\n" + "“伐木工0.00001%的力量”";
+            Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, string.Format(tooltip_zh, Enchants[0], Enchants[1], Enchants[2], Enchants[3], Enchants[4]));
 
         }
 

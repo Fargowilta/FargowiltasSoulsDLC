@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using Terraria.DataStructures;
 
 namespace FargowiltasSoulsDLC.Base.Items
@@ -19,8 +18,8 @@ namespace FargowiltasSoulsDLC.Base.Items
             DisplayName.SetDefault("Pandora's Tome");
             Tooltip.SetDefault("A true mess of projectiles");
 
-            DisplayName.AddTranslation((int)GameCulture.CultureName.Chinese, "潘多拉之书");
-            Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "一大堆抛射物");
+            //DisplayName.AddTranslation((int)GameCulture.CultureName.Chinese, "潘多拉之书");
+            //Tooltip.AddTranslation((int)GameCulture.CultureName.Chinese, "一大堆抛射物");
         }
 
         public override void SetDefaults()
