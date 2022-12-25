@@ -6,8 +6,6 @@ using System.Diagnostics.Metrics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-//using ThoriumMod.Buffs.Summon;
-//using ThoriumMod.Projectiles.Minions;
 
 namespace FargowiltasSoulsDLC
 {
@@ -37,7 +35,6 @@ namespace FargowiltasSoulsDLC
         public override void AI(Projectile projectile)
         {
             Player player = Main.player[projectile.owner];
-            FargoSoulsPlayer modPlayer = player.GetModPlayer<FargoSoulsPlayer>();
 
             switch (projectile.type)
             {
