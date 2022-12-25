@@ -3,9 +3,8 @@ Fargo's Soul Mod DLC
 -Fargo's Soul Mod is required for this mod to work
 
 NEW UPDATE V 0.5
--First version on 1.4
+-First version on tmod 1.4
 -Added Pandora's Box and Pandora's Tome
 -Added Nekomi, Gaia, Eridanus, Styx, and True Mutant Enchantments
 -Added Force of Eternity
 -Moved Soul of the Void from Souls to here. Added every single missing pet (with toggle)
-
